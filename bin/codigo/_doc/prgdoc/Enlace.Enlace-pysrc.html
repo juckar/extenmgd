@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Enlace.Enlace</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;Enlace ::
+        Module&nbsp;Enlace
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="Enlace.Enlace-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="Enlace.Enlace-module.html">Module Enlace.Enlace</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: latin-1 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">ctypes</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">types</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Method jFechas.clFecha.datetime()=jFechas.clFecha-class.html#datetime"><a title="jFechas.clFecha.datetime" class="py-name" href="#" onclick="return doclink('link-0', 'datetime', 'link-0');">datetime</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">global</tt> <tt id="link-1" class="py-name" targets="Variable Enlace.Enlace._dll=Enlace.Enlace-module.html#_dll"><a title="Enlace.Enlace._dll" class="py-name" href="#" onclick="return doclink('link-1', '_dll', 'link-1');">_dll</a></tt><tt class="py-op">,</tt> <tt id="link-2" class="py-name" targets="Variable Enlace.Enlace._dllDir=Enlace.Enlace-module.html#_dllDir"><a title="Enlace.Enlace._dllDir" class="py-name" href="#" onclick="return doclink('link-2', '_dllDir', 'link-2');">_dllDir</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Variable Enlace.Enlace._siEnlaceDBF=Enlace.Enlace-module.html#_siEnlaceDBF"><a title="Enlace.Enlace._siEnlaceDBF" class="py-name" href="#" onclick="return doclink('link-3', '_siEnlaceDBF', 'link-3');">_siEnlaceDBF</a></tt><tt class="py-op">,</tt> <tt id="link-4" class="py-name" targets="Variable Enlace.Enlace._siEnlaceMGD=Enlace.Enlace-module.html#_siEnlaceMGD"><a title="Enlace.Enlace._siEnlaceMGD" class="py-name" href="#" onclick="return doclink('link-4', '_siEnlaceMGD', 'link-4');">_siEnlaceMGD</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt id="link-5" class="py-name"><a title="Enlace.Enlace._dll" class="py-name" href="#" onclick="return doclink('link-5', '_dll', 'link-1');">_dll</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt id="link-6" class="py-name"><a title="Enlace.Enlace._dllDir" class="py-name" href="#" onclick="return doclink('link-6', '_dllDir', 'link-2');">_dllDir</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt id="link-7" class="py-name"><a title="Enlace.Enlace._siEnlaceDBF" class="py-name" href="#" onclick="return doclink('link-7', '_siEnlaceDBF', 'link-3');">_siEnlaceDBF</a></tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt id="link-8" class="py-name"><a title="Enlace.Enlace._siEnlaceMGD" class="py-name" href="#" onclick="return doclink('link-8', '_siEnlaceMGD', 'link-4');">_siEnlaceMGD</a></tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="ponDirEnlace"></a><div id="ponDirEnlace-def"><a name="L19"></a><tt class="py-lineno"> 19</tt> <a class="py-toggle" href="#" id="ponDirEnlace-toggle" onclick="return toggle('ponDirEnlace');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Enlace.Enlace-module.html#ponDirEnlace">ponDirEnlace</a><tt class="py-op">(</tt> <tt class="py-param">carpeta</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ponDirEnlace-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ponDirEnlace-expanded"><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-9" class="py-name"><a title="Enlace.Enlace._dllDir" class="py-name" href="#" onclick="return doclink('link-9', '_dllDir', 'link-2');">_dllDir</a></tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">    <tt id="link-10" class="py-name"><a title="Enlace.Enlace._dllDir" class="py-name" href="#" onclick="return doclink('link-10', '_dllDir', 'link-2');">_dllDir</a></tt> <tt class="py-op">=</tt> <tt class="py-name">carpeta</tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">     </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="abreDLL"></a><div id="abreDLL-def"><a name="L25"></a><tt class="py-lineno"> 25</tt> <a class="py-toggle" href="#" id="abreDLL-toggle" onclick="return toggle('abreDLL');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Enlace.Enlace-module.html#abreDLL">abreDLL</a><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="abreDLL-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="abreDLL-expanded"><a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-11" class="py-name"><a title="Enlace.Enlace._dll" class="py-name" href="#" onclick="return doclink('link-11', '_dll', 'link-1');">_dll</a></tt><tt class="py-op">,</tt> <tt id="link-12" class="py-name"><a title="Enlace.Enlace._dllDir" class="py-name" href="#" onclick="return doclink('link-12', '_dllDir', 'link-2');">_dllDir</a></tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-13" class="py-name"><a title="Enlace.Enlace._dll" class="py-name" href="#" onclick="return doclink('link-13', '_dll', 'link-1');">_dll</a></tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt> <tt class="py-op">:</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-name">trabajoDir</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt>  </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt> <tt id="link-14" class="py-name"><a title="Enlace.Enlace._dllDir" class="py-name" href="#" onclick="return doclink('link-14', '_dllDir', 'link-2');">_dllDir</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt id="link-15" class="py-name"><a title="Enlace.Enlace._dll" class="py-name" href="#" onclick="return doclink('link-15', '_dll', 'link-1');">_dll</a></tt> <tt class="py-op">=</tt> <tt class="py-name">CDLL</tt><tt class="py-op">(</tt> <tt class="py-string">"mgd.dll"</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt> <tt class="py-name">trabajoDir</tt> <tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-16" class="py-name"><a title="Enlace.Enlace._dll" class="py-name" href="#" onclick="return doclink('link-16', '_dll', 'link-1');">_dll</a></tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">     </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="enlaceDBF"></a><div id="enlaceDBF-def"><a name="L36"></a><tt class="py-lineno"> 36</tt> <a class="py-toggle" href="#" id="enlaceDBF-toggle" onclick="return toggle('enlaceDBF');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Enlace.Enlace-module.html#enlaceDBF">enlaceDBF</a><tt class="py-op">(</tt>  <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="enlaceDBF-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="enlaceDBF-expanded"><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">     </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">    <tt class="py-name">dll</tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name" targets="Function Enlace.Enlace.abreDLL()=Enlace.Enlace-module.html#abreDLL"><a title="Enlace.Enlace.abreDLL" class="py-name" href="#" onclick="return doclink('link-17', 'abreDLL', 'link-17');">abreDLL</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-18" class="py-name"><a title="Enlace.Enlace._siEnlaceDBF" class="py-name" href="#" onclick="return doclink('link-18', '_siEnlaceDBF', 'link-3');">_siEnlaceDBF</a></tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">     </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt id="link-19" class="py-name"><a title="Enlace.Enlace._siEnlaceDBF" class="py-name" href="#" onclick="return doclink('link-19', '_siEnlaceDBF', 'link-3');">_siEnlaceDBF</a></tt> <tt class="py-op">:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt id="link-20" class="py-name"><a title="Enlace.Enlace._siEnlaceDBF" class="py-name" href="#" onclick="return doclink('link-20', '_siEnlaceDBF', 'link-3');">_siEnlaceDBF</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">         </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_inicio</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_open</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">,</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_open</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_int</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_close</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_orden</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_orden_1</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_orden_1R</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_orden_1R</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_orden_2</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_orden_R</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_orden_R</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">         </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_access</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_access</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">         </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_marca</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_marca</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_int</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_recupera</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_field</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_field</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">         </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_new</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_new</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_int</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_newCampo</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_newCrea</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_newCrea</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_int</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">dbf_inicio</tt><tt class="py-op">(</tt> <tt class="py-string">"init"</tt> <tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">     </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">dll</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">     </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="enlaceMGD"></a><div id="enlaceMGD-def"><a name="L80"></a><tt class="py-lineno"> 80</tt> <a class="py-toggle" href="#" id="enlaceMGD-toggle" onclick="return toggle('enlaceMGD');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Enlace.Enlace-module.html#enlaceMGD">enlaceMGD</a><tt class="py-op">(</tt>  <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="enlaceMGD-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="enlaceMGD-expanded"><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">     </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-name">dll</tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="Enlace.Enlace.abreDLL" class="py-name" href="#" onclick="return doclink('link-21', 'abreDLL', 'link-17');">abreDLL</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-22" class="py-name"><a title="Enlace.Enlace._siEnlaceMGD" class="py-name" href="#" onclick="return doclink('link-22', '_siEnlaceMGD', 'link-4');">_siEnlaceMGD</a></tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">     </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt id="link-23" class="py-name"><a title="Enlace.Enlace._siEnlaceMGD" class="py-name" href="#" onclick="return doclink('link-23', '_siEnlaceMGD', 'link-4');">_siEnlaceMGD</a></tt> <tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt id="link-24" class="py-name"><a title="Enlace.Enlace._siEnlaceMGD" class="py-name" href="#" onclick="return doclink('link-24', '_siEnlaceMGD', 'link-4');">_siEnlaceMGD</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">     </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">xInicio</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">xUsaEmpresa</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">xCerrar</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">leeparametro</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">leeparametro</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">cierraDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ordenDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ordenDBF_1</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ordenDBF_1R</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ordenDBF_1R</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ordenDBF_2</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ordenDBF_R</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ordenDBF_R</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">accessDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">accessDBF</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">marcaDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">marcaDBF</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_int</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">recuperaDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">contabilizaDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">accessDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">accessDBF</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ultimoDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">ultimoDBF</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_int</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">cnumeroDBF</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">cnumeroDBF</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">recalculasaldos</tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_int</tt><tt class="py-op">]</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">recalculasaldos</tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_int</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method Enlace.Empresa.Empresa.vencimientoCliente()=Enlace.Empresa.Empresa-class.html#vencimientoCliente"><a title="Enlace.Empresa.Empresa.vencimientoCliente" class="py-name" href="#" onclick="return doclink('link-25', 'vencimientoCliente', 'link-25');">vencimientoCliente</a></tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="Enlace.Empresa.Empresa.vencimientoCliente" class="py-name" href="#" onclick="return doclink('link-26', 'vencimientoCliente', 'link-25');">vencimientoCliente</a></tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method Enlace.Empresa.Empresa.vencimientoProveedor()=Enlace.Empresa.Empresa-class.html#vencimientoProveedor"><a title="Enlace.Empresa.Empresa.vencimientoProveedor" class="py-name" href="#" onclick="return doclink('link-27', 'vencimientoProveedor', 'link-27');">vencimientoProveedor</a></tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="Enlace.Empresa.Empresa.vencimientoProveedor" class="py-name" href="#" onclick="return doclink('link-28', 'vencimientoProveedor', 'link-27');">vencimientoProveedor</a></tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Method Enlace.Empresa.Empresa.vencimientoAutomatico()=Enlace.Empresa.Empresa-class.html#vencimientoAutomatico"><a title="Enlace.Empresa.Empresa.vencimientoAutomatico" class="py-name" href="#" onclick="return doclink('link-29', 'vencimientoAutomatico', 'link-29');">vencimientoAutomatico</a></tt><tt class="py-op">.</tt><tt class="py-name">argtype</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">c_char_p</tt><tt class="py-op">,</tt> <tt class="py-name">c_char_p</tt><tt class="py-op">]</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="Enlace.Empresa.Empresa.vencimientoAutomatico" class="py-name" href="#" onclick="return doclink('link-30', 'vencimientoAutomatico', 'link-29');">vencimientoAutomatico</a></tt><tt class="py-op">.</tt><tt class="py-name">restype</tt> <tt class="py-op">=</tt> <tt class="py-name">c_char_p</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-name">dll</tt><tt class="py-op">.</tt><tt class="py-name">xInicio</tt><tt class="py-op">(</tt> <tt class="py-string">"-"</tt> <tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">     </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">dll</tt> </tt>
+</div><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="convierteZ"></a><div id="convierteZ-def"><a name="L135"></a><tt class="py-lineno">135</tt> <a class="py-toggle" href="#" id="convierteZ-toggle" onclick="return toggle('convierteZ');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Enlace.Enlace-module.html#convierteZ">convierteZ</a><tt class="py-op">(</tt> <tt class="py-param">valor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="convierteZ-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="convierteZ-expanded"><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">    <tt class="py-name">t</tt> <tt class="py-op">=</tt> <tt class="py-name">type</tt><tt class="py-op">(</tt> <tt class="py-name">valor</tt> <tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">t</tt> <tt class="py-op">==</tt> <tt class="py-name">types</tt><tt class="py-op">.</tt><tt class="py-name">StringType</tt> <tt class="py-op">:</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-name">valor</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-string">"C"</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">t</tt> <tt class="py-op">==</tt> <tt class="py-name">types</tt><tt class="py-op">.</tt><tt class="py-name">BooleanType</tt> <tt class="py-op">:</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-string">"S"</tt> <tt class="py-keyword">if</tt> <tt class="py-name">valor</tt> <tt class="py-keyword">else</tt> <tt class="py-string">"N"</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">        <tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-string">"L"</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">t</tt> <tt class="py-op">==</tt> <tt class="py-name">types</tt><tt class="py-op">.</tt><tt class="py-name">IntType</tt> <tt class="py-op">:</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-string">"E"</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">t</tt> <tt class="py-op">==</tt> <tt class="py-name">types</tt><tt class="py-op">.</tt><tt class="py-name">FloatType</tt> <tt class="py-op">:</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-string">"F"</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt>  <tt class="py-op">:</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-string">"%4d%02d%02d"</tt><tt class="py-op">%</tt><tt class="py-op">(</tt> <tt class="py-name">valor</tt><tt class="py-op">.</tt><tt class="py-name">year</tt><tt class="py-op">,</tt> <tt class="py-name">valor</tt><tt class="py-op">.</tt><tt class="py-name">month</tt><tt class="py-op">,</tt> <tt class="py-name">valor</tt><tt class="py-op">.</tt><tt class="py-name">day</tt> <tt class="py-op">)</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">        <tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-string">"D"</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">tipo</tt> <tt class="py-op">+</tt> <tt class="py-name">v</tt> </tt>
+</div><a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="Zconvierte"></a><div id="Zconvierte-def"><a name="L157"></a><tt class="py-lineno">157</tt> <a class="py-toggle" href="#" id="Zconvierte-toggle" onclick="return toggle('Zconvierte');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Enlace.Enlace-module.html#Zconvierte">Zconvierte</a><tt class="py-op">(</tt> <tt class="py-param">valor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Zconvierte-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Zconvierte-expanded"><a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">    <tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-name">valor</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">    <tt class="py-name">valor</tt> <tt class="py-op">=</tt> <tt class="py-name">valor</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">tipo</tt> <tt class="py-op">==</tt> <tt class="py-string">"C"</tt> <tt class="py-op">:</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-name">valor</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">tipo</tt> <tt class="py-op">==</tt> <tt class="py-string">"L"</tt> <tt class="py-op">:</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-name">valor</tt> <tt class="py-op">==</tt> <tt class="py-string">"S"</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">tipo</tt> <tt class="py-op">==</tt> <tt class="py-string">"F"</tt> <tt class="py-op">:</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">)</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">tipo</tt> <tt class="py-op">==</tt> <tt class="py-string">"E"</tt> <tt class="py-op">:</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">)</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">tipo</tt> <tt class="py-op">==</tt> <tt class="py-string">"D"</tt> <tt class="py-op">:</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">        <tt class="py-name">v</tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name"><a title="jFechas.clFecha.datetime" class="py-name" href="#" onclick="return doclink('link-31', 'datetime', 'link-0');">datetime</a></tt><tt class="py-op">.</tt><tt class="py-name">date</tt><tt class="py-op">(</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">:</tt><tt class="py-number">6</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">[</tt><tt class="py-number">6</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">v</tt> </tt>
+</div><a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="Field"></a><div id="Field-def"><a name="L174"></a><tt class="py-lineno">174</tt> <a class="py-toggle" href="#" id="Field-toggle" onclick="return toggle('Field');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="Enlace.Enlace.Field-class.html">Field</a> <tt class="py-op">:</tt> </tt>
+</div><div id="Field-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Field-expanded"><a name="Field.__init__"></a><div id="Field.__init__-def"><a name="L175"></a><tt class="py-lineno">175</tt> <a class="py-toggle" href="#" id="Field.__init__-toggle" onclick="return toggle('Field.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Enlace.Enlace.Field-class.html#__init__">__init__</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nombre</tt><tt class="py-op">,</tt> <tt class="py-param">tipo</tt><tt class="py-op">,</tt> <tt class="py-param">ancho</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-param">decimales</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Field.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Field.__init__-expanded"><a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nombre</tt> <tt class="py-op">=</tt> <tt class="py-name">nombre</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tipo</tt> <tt class="py-op">=</tt> <tt class="py-name">tipo</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">ancho</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt> <tt class="py-op">:</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">            <tt class="py-name">ancho</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> <tt class="py-string">"D"</tt><tt class="py-op">:</tt><tt class="py-number">8</tt><tt class="py-op">,</tt> <tt class="py-string">"M"</tt><tt class="py-op">:</tt><tt class="py-number">10</tt><tt class="py-op">,</tt> <tt class="py-string">"L"</tt><tt class="py-op">:</tt><tt class="py-number">1</tt> <tt class="py-op">}</tt><tt class="py-op">[</tt><tt class="py-name">tipo</tt><tt class="py-op">]</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">ancho</tt> <tt class="py-op">=</tt> <tt class="py-name">ancho</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">decimales</tt> <tt class="py-op">=</tt> <tt class="py-name">decimales</tt> </tt>
+</div></div><a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-comment">#===================================================================================================================</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Nov 04 09:36:30 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

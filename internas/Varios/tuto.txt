@@ -1,0 +1,59 @@
+El último es el dígito de control que puede ser un número ó una letra. Según la información que me habeis hecho llegar la forma en que se asigna número o una letra es la siguiente:
+
+Letra	Naturaleza Jurídica	Carácter de control
+A	Sociedades anónimas	Número
+B	Sociedades de responsabilidad limitada	Número
+C	Sociedades colectivas	Letra
+D	Sociedades comanditarias	Número
+E	Comunidades de bienes y herencias yacentes	Número
+F	Sociedades cooperativas	Número
+G	Asociaciones	Número
+H	Comunidades de propietarios en régimen de propiedad horizontal	Número
+J	Sociedades civiles, con o sin personalidad jurídica	Número
+K	Españoles menores de 14 años	Letra
+L	Españoles residentes en el extranjero sin DNI	Letra
+M	Extranjeros que no tienen NIE	Letra
+N	Entidades extranjeras	Letra
+P	Corporaciones Locales	Letra
+Q	Organismos públicos	Letra
+R	Congregaciones e instituciones religiosas	Letra
+S	Organos de la Administración del Estado y de las Comunidades Autónomas	Letra
+U	Uniones Temporales de Empresas	Número
+V	Otros tipos no definidos en el resto de claves	Número
+W	Establecimientos permanentes de entidades no residentes en España	Letra
+Las operaciones para calcular este dígito de control se realizan sobre los siete dígitos centrales y son las siguientes:
+
+Sumar los dígitos de la posiciones pares. Suma = A
+Para cada uno de los dígitos de la posiciones impares, multiplicarlo por 2 y sumar los dígitos del resultado.
+Ej.: ( 8 * 2 = 16 --> 1 + 6 = 7 ). Acumular el resultado. Suma = B
+Calcular la suma A + B = C
+Tomar sólo el dígito de las unidades de C y restárselo a 10. Esta resta nos da D.
+A partir de D ya se obtiene el dígito de control. Si ha de ser numérico es directamente D y si se trata de una letra se corresponde con la relación:
+A = 1, B = 2, C = 3, D = 4, E = 5, F = 6, G = 7, H = 8, I = 9, J = 10 ó 0
+Ejemplo para el C.I.F.: A58818501
+
+De entrada, a la vista de las tablas anteriores, sabemos que se trata de una sociedad anónima ubicada en Barcelona.
+
+- Utilizamos los siete dígitos centrales = 5881850
+
+- Sumamos los dígitos pares: A = 8 + 1 + 5 = 14
+
+- Posiciones impares:
+5 * 2 = 10 -> 1 + 0 = 1
+
+8 * 2 = 16 -> 1 + 6 = 7
+
+8 * 2 = 16 -> 1 + 6 = 7
+
+0 * 2 = 0 -> = 0
+
+Sumamos los resultados: B = 1 + 7 + 7 + 0 = 15
+
+- Suma parcial: C = A + B = 14 + 15 = 29
+
+- El dígito de las unidades de C es 9. Se lo restamos a 10 y nos da: D = 10 - 9 = 1
+
+- Como el tipo de organización es A será número 1, en caso de haber sido letra hubiera sido la "A".
+
+ 
+ 

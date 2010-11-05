@@ -1,0 +1,1586 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>QT.Controles</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;QT ::
+        Module&nbsp;Controles
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="QT.Controles-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="QT.Controles-module.html">Module QT.Controles</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: latin-1 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">PySide</tt> <tt class="py-keyword">import</tt> <tt class="py-name">QtCore</tt><tt class="py-op">,</tt> <tt class="py-name">QtGui</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module QT.Colocacion=QT.Colocacion-module.html"><a title="QT.Colocacion" class="py-name" href="#" onclick="return doclink('link-0', 'Colocacion', 'link-0');">Colocacion</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="ED"></a><div id="ED-def"><a name="L9"></a><tt class="py-lineno">  9</tt> <a class="py-toggle" href="#" id="ED-toggle" onclick="return toggle('ED');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.ED-class.html">ED</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QLineEdit</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ED-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ED-expanded"><a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    Control de entrada de texto en una l&#237;nea.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.__init__"></a><div id="ED.__init__-def"><a name="L15"></a><tt class="py-lineno"> 15</tt> <a class="py-toggle" href="#" id="ED.__init__-toggle" onclick="return toggle('ED.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ED.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.__init__-expanded"><a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">        @param parent: ventana propietaria.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">        @param texto: texto inicial.</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-1" class="py-name" targets="Method QT.Controles.ED.texto()=QT.Controles.ED-class.html#texto,Method QT.Controles.EM.texto()=QT.Controles.EM-class.html#texto,Method QT.Controles.LB.texto()=QT.Controles.LB-class.html#texto"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-1', 'texto', 'link-1');">texto</a></tt> <tt class="py-op">:</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">            <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QLineEdit</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method ED.BarraProgreso.__init__()=ED.BarraProgreso-class.html#__init__,Method ED.OPENFILENAME.__init__()=ED.OPENFILENAME-class.html#__init__,Method ED.OSVERSIONINFO.__init__()=ED.OSVERSIONINFO-class.html#__init__,Method ED.ProgressBar.__init__()=ED.ProgressBar-class.html#__init__,Method Enlace.DBF.DBF.__init__()=Enlace.DBF.DBF-class.html#__init__,Method Enlace.DBFexten.DBFexten.__init__()=Enlace.DBFexten.DBFexten-class.html#__init__,Method Enlace.DBFmgdGen.ActividadBase.__init__()=Enlace.DBFmgdGen.ActividadBase-class.html#__init__,Method Enlace.DBFmgdGen.AjustesBase.__init__()=Enlace.DBFmgdGen.AjustesBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbEmiBase.__init__()=Enlace.DBFmgdGen.AlbEmiBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbInvBase.__init__()=Enlace.DBFmgdGen.AlbInvBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPedBase.__init__()=Enlace.DBFmgdGen.AlbPedBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPedEBase.__init__()=Enlace.DBFmgdGen.AlbPedEBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPreBase.__init__()=Enlace.DBFmgdGen.AlbPreBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbRecBase.__init__()=Enlace.DBFmgdGen.AlbRecBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbRepBase.__init__()=Enlace.DBFmgdGen.AlbRepBase-class.html#__init__,Method Enlace.DBFmgdGen.AnaliticaBase.__init__()=Enlace.DBFmgdGen.AnaliticaBase-class.html#__init__,Method Enlace.DBFmgdGen.ApuntesBase.__init__()=Enlace.DBFmgdGen.ApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ArticulosBase.__init__()=Enlace.DBFmgdGen.ArticulosBase-class.html#__init__,Method Enlace.DBFmgdGen.ArticulosCBase.__init__()=Enlace.DBFmgdGen.ArticulosCBase-class.html#__init__,Method Enlace.DBFmgdGen.BancosBase.__init__()=Enlace.DBFmgdGen.BancosBase-class.html#__init__,Method Enlace.DBFmgdGen.ClientesBase.__init__()=Enlace.DBFmgdGen.ClientesBase-class.html#__init__,Method Enlace.DBFmgdGen.CuentasBase.__init__()=Enlace.DBFmgdGen.CuentasBase-class.html#__init__,Method Enlace.DBFmgdGen.DiarioBase.__init__()=Enlace.DBFmgdGen.DiarioBase-class.html#__init__,Method Enlace.DBFmgdGen.DiarioTxtBase.__init__()=Enlace.DBFmgdGen.DiarioTxtBase-class.html#__init__,Method Enlace.DBFmgdGen.DirectosBase.__init__()=Enlace.DBFmgdGen.DirectosBase-class.html#__init__,Method Enlace.DBFmgdGen.EmitidasBase.__init__()=Enlace.DBFmgdGen.EmitidasBase-class.html#__init__,Method Enlace.DBFmgdGen.ErivaBase.__init__()=Enlace.DBFmgdGen.ErivaBase-class.html#__init__,Method Enlace.DBFmgdGen.EtiCodBase.__init__()=Enlace.DBFmgdGen.EtiCodBase-class.html#__init__,Method Enlace.DBFmgdGen.EtiDatBase.__init__()=Enlace.DBFmgdGen.EtiDatBase-class.html#__init__,Method Enlace.DBFmgdGen.ExApuntesBase.__init__()=Enlace.DBFmgdGen.ExApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ExPlantillasBase.__init__()=Enlace.DBFmgdGen.ExPlantillasBase-class.html#__init__,Method Enlace.DBFmgdGen.ExtrasBase.__init__()=Enlace.DBFmgdGen.ExtrasBase-class.html#__init__,Method Enlace.DBFmgdGen.FamiliasBase.__init__()=Enlace.DBFmgdGen.FamiliasBase-class.html#__init__,Method Enlace.DBFmgdGen.FamiliasCBase.__init__()=Enlace.DBFmgdGen.FamiliasCBase-class.html#__init__,Method Enlace.DBFmgdGen.FormdocBase.__init__()=Enlace.DBFmgdGen.FormdocBase-class.html#__init__,Method Enlace.DBFmgdGen.FormhojaBase.__init__()=Enlace.DBFmgdGen.FormhojaBase-class.html#__init__,Method Enlace.DBFmgdGen.FotosBase.__init__()=Enlace.DBFmgdGen.FotosBase-class.html#__init__,Method Enlace.DBFmgdGen.IVABase.__init__()=Enlace.DBFmgdGen.IVABase-class.html#__init__,Method Enlace.DBFmgdGen.InfapunBase.__init__()=Enlace.DBFmgdGen.InfapunBase-class.html#__init__,Method Enlace.DBFmgdGen.InformesBase.__init__()=Enlace.DBFmgdGen.InformesBase-class.html#__init__,Method Enlace.DBFmgdGen.LbiBase.__init__()=Enlace.DBFmgdGen.LbiBase-class.html#__init__,Method Enlace.DBFmgdGen.MovBancosBase.__init__()=Enlace.DBFmgdGen.MovBancosBase-class.html#__init__,Method Enlace.DBFmgdGen.OperacionesBase.__init__()=Enlace.DBFmgdGen.OperacionesBase-class.html#__init__,Method Enlace.DBFmgdGen.PagosBase.__init__()=Enlace.DBFmgdGen.PagosBase-class.html#__init__,Method Enlace.DBFmgdGen.ParametrosBase.__init__()=Enlace.DBFmgdGen.ParametrosBase-class.html#__init__,Method Enlace.DBFmgdGen.ProveedoresBase.__init__()=Enlace.DBFmgdGen.ProveedoresBase-class.html#__init__,Method Enlace.DBFmgdGen.RecibidasBase.__init__()=Enlace.DBFmgdGen.RecibidasBase-class.html#__init__,Method Enlace.DBFmgdGen.RecibosBase.__init__()=Enlace.DBFmgdGen.RecibosBase-class.html#__init__,Method Enlace.DBFmgdGen.RefApuntesBase.__init__()=Enlace.DBFmgdGen.RefApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ReferenciasBase.__init__()=Enlace.DBFmgdGen.ReferenciasBase-class.html#__init__,Method Enlace.DBFmgdGen.TipoVtosBase.__init__()=Enlace.DBFmgdGen.TipoVtosBase-class.html#__init__,Method Enlace.DBFmgdGen.VencimientosBase.__init__()=Enlace.DBFmgdGen.VencimientosBase-class.html#__init__,Method Enlace.Empresa.Empresa.__init__()=Enlace.Empresa.Empresa-class.html#__init__,Method Enlace.Enlace.Field.__init__()=Enlace.Enlace.Field-class.html#__init__,Method QT.Columnas.Columna.__init__()=QT.Columnas.Columna-class.html#__init__,Method QT.Columnas.ListaColumnas.__init__()=QT.Columnas.ListaColumnas-class.html#__init__,Method QT.Controles.ED.__init__()=QT.Controles.ED-class.html#__init__,Method QT.Controles.EM.__init__()=QT.Controles.EM-class.html#__init__,Method QT.Controles.GB.__init__()=QT.Controles.GB-class.html#__init__,Method QT.Controles.LB.__init__()=QT.Controles.LB-class.html#__init__,Method QT.Controles.LMenu.__init__()=QT.Controles.LMenu-class.html#__init__,Method QT.Controles.PB.__init__()=QT.Controles.PB-class.html#__init__,Method QT.Controles.PBAR.__init__()=QT.Controles.PBAR-class.html#__init__,Method QT.Controles.RB.__init__()=QT.Controles.RB-class.html#__init__,Method QT.Grid.Cabecera.__init__()=QT.Grid.Cabecera-class.html#__init__,Method QT.Grid.ControlGrid.__init__()=QT.Grid.ControlGrid-class.html#__init__,Method QT.Grid.Grid.__init__()=QT.Grid.Grid-class.html#__init__,Method QT.QTUtil.BarraProgreso.__init__()=QT.QTUtil.BarraProgreso-class.html#__init__,Method QT.QTUtil.MensEspera.__init__()=QT.QTUtil.MensEspera-class.html#__init__,Method QT.QTUtil.Mensaje.__init__()=QT.QTUtil.Mensaje-class.html#__init__,Method QT.QTUtil.Proceso.__init__()=QT.QTUtil.Proceso-class.html#__init__,Method Util.Config.ConfigI.__init__()=Util.Config.ConfigI-class.html#__init__,Method Util.Config.ConfigX.__init__()=Util.Config.ConfigX-class.html#__init__,Method VarExten.DicOrdenado.__init__()=VarExten.DicOrdenado-class.html#__init__,Method dbAccess.MotorDB.__init__()=dbAccess.MotorDB-class.html#__init__,Method jDBF.clDBF.__init__()=jDBF.clDBF-class.html#__init__,Method jFechas.clFecha.__init__()=jFechas.clFecha-class.html#__init__,Method jFusion.clFusion.__init__()=jFusion.clFusion-class.html#__init__,Method jFusion.clLog.__init__()=jFusion.clLog-class.html#__init__"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-2', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-3', 'texto', 'link-1');">texto</a></tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">            <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QLineEdit</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-4', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">parent</tt> <tt class="py-op">=</tt> <tt class="py-name">parent</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siMayusculas</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">menu</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="ED.soloLectura"></a><div id="ED.soloLectura-def"><a name="L30"></a><tt class="py-lineno"> 30</tt> <a class="py-toggle" href="#" id="ED.soloLectura-toggle" onclick="return toggle('ED.soloLectura');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#soloLectura">soloLectura</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sino</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.soloLectura-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.soloLectura-expanded"><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setReadOnly</tt><tt class="py-op">(</tt> <tt class="py-name">sino</tt> <tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="ED.deshabilitado"></a><div id="ED.deshabilitado-def"><a name="L34"></a><tt class="py-lineno"> 34</tt> <a class="py-toggle" href="#" id="ED.deshabilitado-toggle" onclick="return toggle('ED.deshabilitado');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#deshabilitado">deshabilitado</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sino</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.deshabilitado-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.deshabilitado-expanded"><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setDisabled</tt><tt class="py-op">(</tt> <tt class="py-name">sino</tt> <tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="ED.capturaIntro"></a><div id="ED.capturaIntro-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="ED.capturaIntro-toggle" onclick="return toggle('ED.capturaIntro');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#capturaIntro">capturaIntro</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">rutina</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.capturaIntro-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.capturaIntro-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">parent</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt> <tt class="py-string">" returnPressed ()"</tt> <tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">rutina</tt> <tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.ponTexto"></a><div id="ED.ponTexto-def"><a name="L43"></a><tt class="py-lineno"> 43</tt> <a class="py-toggle" href="#" id="ED.ponTexto-toggle" onclick="return toggle('ED.ponTexto');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#ponTexto">ponTexto</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.ponTexto-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.ponTexto-expanded"><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">        Pone el texto en el campo.</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setText</tt><tt class="py-op">(</tt> <tt id="link-5" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-5', 'texto', 'link-1');">texto</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.texto"></a><div id="ED.texto-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="ED.texto-toggle" onclick="return toggle('ED.texto');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#texto">texto</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.texto-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.texto-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring">        Recupera el texto del campo.</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">txt</tt> <tt class="py-op">=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">(</tt> <tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">txt</tt> </tt>
+</div><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.alinCentrado"></a><div id="ED.alinCentrado-def"><a name="L58"></a><tt class="py-lineno"> 58</tt> <a class="py-toggle" href="#" id="ED.alinCentrado-toggle" onclick="return toggle('ED.alinCentrado');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#alinCentrado">alinCentrado</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.alinCentrado-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.alinCentrado-expanded"><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">        Alinea al centro.</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setAlignment</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignHCenter</tt> <tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.alinDerecha"></a><div id="ED.alinDerecha-def"><a name="L66"></a><tt class="py-lineno"> 66</tt> <a class="py-toggle" href="#" id="ED.alinDerecha-toggle" onclick="return toggle('ED.alinDerecha');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#alinDerecha">alinDerecha</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.alinDerecha-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.alinDerecha-expanded"><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring">        Alinea a la derecha.</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setAlignment</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignRight</tt> <tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.anchoMinimo"></a><div id="ED.anchoMinimo-def"><a name="L74"></a><tt class="py-lineno"> 74</tt> <a class="py-toggle" href="#" id="ED.anchoMinimo-toggle" onclick="return toggle('ED.anchoMinimo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#anchoMinimo">anchoMinimo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.anchoMinimo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.anchoMinimo-expanded"><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho m&#237;nimo del campo.</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMinimumWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.caracteres"></a><div id="ED.caracteres-def"><a name="L82"></a><tt class="py-lineno"> 82</tt> <a class="py-toggle" href="#" id="ED.caracteres-toggle" onclick="return toggle('ED.caracteres');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#caracteres">caracteres</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">num</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.caracteres-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.caracteres-expanded"><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">        N&#250;mero m&#225;ximo de caracteres.</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">        @param num: n&#250;mero de caracteres m&#225;ximo que puede contener.</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMaxLength</tt><tt class="py-op">(</tt> <tt class="py-name">num</tt> <tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">numCaracteres</tt> <tt class="py-op">=</tt> <tt class="py-name">num</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.anchoFijo"></a><div id="ED.anchoFijo-def"><a name="L92"></a><tt class="py-lineno"> 92</tt> <a class="py-toggle" href="#" id="ED.anchoFijo-toggle" onclick="return toggle('ED.anchoFijo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#anchoFijo">anchoFijo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.anchoFijo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.anchoFijo-expanded"><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho fijo del campo.</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">        @param tam: tama&#241;o en pixels.</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFixedWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.controlrx"></a><div id="ED.controlrx-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="ED.controlrx-toggle" onclick="return toggle('ED.controlrx');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#controlrx">controlrx</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">regexpr</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.controlrx-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.controlrx-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-name">rx</tt> <tt class="py-op">=</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QRegExp</tt><tt class="py-op">(</tt> <tt class="py-name">regexpr</tt> <tt class="py-op">)</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">validator</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QRegExpValidator</tt><tt class="py-op">(</tt> <tt class="py-name">rx</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setValidator</tt><tt class="py-op">(</tt> <tt class="py-name">validator</tt> <tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="ED.ponFuente"></a><div id="ED.ponFuente-def"><a name="L108"></a><tt class="py-lineno">108</tt> <a class="py-toggle" href="#" id="ED.ponFuente-toggle" onclick="return toggle('ED.ponFuente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.ED-class.html#ponFuente">ponFuente</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">f</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ED.ponFuente-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ED.ponFuente-expanded"><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">f</tt> <tt class="py-op">)</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div></div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="spinBoxLB"></a><div id="spinBoxLB-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="spinBoxLB-toggle" onclick="return toggle('spinBoxLB');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles-module.html#spinBoxLB">spinBoxLB</a><tt class="py-op">(</tt> <tt class="py-param">valor</tt><tt class="py-op">,</tt> <tt class="py-param">desde</tt><tt class="py-op">,</tt> <tt class="py-param">hasta</tt><tt class="py-op">,</tt> <tt class="py-param">etiqueta</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">maxTam</tt><tt class="py-op">=</tt><tt class="py-name">None</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="spinBoxLB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="spinBoxLB-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-name">ed</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QSpinBox</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">    <tt class="py-name">ed</tt><tt class="py-op">.</tt><tt class="py-name">setRange</tt><tt class="py-op">(</tt><tt class="py-name">desde</tt><tt class="py-op">,</tt> <tt class="py-name">hasta</tt><tt class="py-op">)</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">    <tt class="py-name">ed</tt><tt class="py-op">.</tt><tt class="py-name">setSingleStep</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">    <tt class="py-name">ed</tt><tt class="py-op">.</tt><tt class="py-name">setValue</tt><tt class="py-op">(</tt><tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">valor</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">maxTam</tt> <tt class="py-op">:</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-name">ed</tt><tt class="py-op">.</tt><tt class="py-name">setFixedWidth</tt><tt class="py-op">(</tt> <tt class="py-name">maxTam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">etiqueta</tt> <tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt id="link-6" class="py-name" targets="Method ED.ProgressBar.label()=ED.ProgressBar-class.html#label"><a title="ED.ProgressBar.label" class="py-name" href="#" onclick="return doclink('link-6', 'label', 'link-6');">label</a></tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name" targets="Class QT.Controles.LB=QT.Controles.LB-class.html"><a title="QT.Controles.LB" class="py-name" href="#" onclick="return doclink('link-7', 'LB', 'link-7');">LB</a></tt><tt class="py-op">(</tt> <tt class="py-name">etiqueta</tt> <tt class="py-op">+</tt> <tt class="py-string">" :"</tt> <tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">ed</tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name"><a title="ED.ProgressBar.label" class="py-name" href="#" onclick="return doclink('link-8', 'label', 'link-6');">label</a></tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">ed</tt> </tt>
+</div><a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="comboBoxLB"></a><div id="comboBoxLB-def"><a name="L127"></a><tt class="py-lineno">127</tt> <a class="py-toggle" href="#" id="comboBoxLB-toggle" onclick="return toggle('comboBoxLB');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles-module.html#comboBoxLB">comboBoxLB</a><tt class="py-op">(</tt> <tt class="py-param">liOpciones</tt><tt class="py-op">,</tt> <tt class="py-param">valor</tt><tt class="py-op">,</tt> <tt class="py-param">etiqueta</tt><tt class="py-op">=</tt><tt class="py-name">None</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="comboBoxLB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="comboBoxLB-expanded"><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">    <tt class="py-name">cb</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QComboBox</tt><tt class="py-op">(</tt>  <tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">n</tt><tt class="py-op">,</tt> <tt class="py-name">tp</tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">liOpciones</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-name">cb</tt><tt class="py-op">.</tt><tt class="py-name">addItem</tt><tt class="py-op">(</tt> <tt class="py-name">tp</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-name">tp</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">tp</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-name">valor</tt> <tt class="py-op">:</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">            <tt class="py-name">cb</tt><tt class="py-op">.</tt><tt class="py-name">setCurrentIndex</tt><tt class="py-op">(</tt> <tt class="py-name">n</tt> <tt class="py-op">)</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">etiqueta</tt> <tt class="py-op">:</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">cb</tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name"><a title="QT.Controles.LB" class="py-name" href="#" onclick="return doclink('link-9', 'LB', 'link-7');">LB</a></tt><tt class="py-op">(</tt> <tt class="py-name">etiqueta</tt> <tt class="py-op">+</tt> <tt class="py-string">" :"</tt>  <tt class="py-op">)</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">cb</tt> </tt>
+</div><a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"> </tt>
+<a name="respComboBox"></a><div id="respComboBox-def"><a name="L138"></a><tt class="py-lineno">138</tt> <a class="py-toggle" href="#" id="respComboBox-toggle" onclick="return toggle('respComboBox');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles-module.html#respComboBox">respComboBox</a><tt class="py-op">(</tt> <tt class="py-param">cb</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="respComboBox-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="respComboBox-expanded"><a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">cb</tt><tt class="py-op">.</tt><tt class="py-name">itemData</tt><tt class="py-op">(</tt><tt class="py-name">cb</tt><tt class="py-op">.</tt><tt class="py-name">currentIndex</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">toString</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="checkBoxLB"></a><div id="checkBoxLB-def"><a name="L142"></a><tt class="py-lineno">142</tt> <a class="py-toggle" href="#" id="checkBoxLB-toggle" onclick="return toggle('checkBoxLB');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles-module.html#checkBoxLB">checkBoxLB</a><tt class="py-op">(</tt> <tt class="py-param">etiqueta</tt><tt class="py-op">,</tt> <tt class="py-param">valor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="checkBoxLB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="checkBoxLB-expanded"><a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">    <tt class="py-name">cb</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QCheckBox</tt><tt class="py-op">(</tt> <tt class="py-name">etiqueta</tt> <tt class="py-op">)</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-name">cb</tt><tt class="py-op">.</tt><tt class="py-name">setChecked</tt><tt class="py-op">(</tt> <tt class="py-name">valor</tt> <tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">cb</tt> </tt>
+</div><a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="creaTB"></a><div id="creaTB-def"><a name="L148"></a><tt class="py-lineno">148</tt> <a class="py-toggle" href="#" id="creaTB-toggle" onclick="return toggle('creaTB');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles-module.html#creaTB">creaTB</a><tt class="py-op">(</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">liAcciones</tt><tt class="py-op">,</tt> <tt class="py-param">siTexto</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-param">tamIcon</tt><tt class="py-op">=</tt><tt class="py-number">32</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="creaTB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="creaTB-expanded"><a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">    <tt class="py-name">tb</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QToolBar</tt><tt class="py-op">(</tt><tt class="py-string">"BASICO"</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-name">tb</tt><tt class="py-op">.</tt><tt class="py-name">setIconSize</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QSize</tt><tt class="py-op">(</tt> <tt class="py-name">tamIcon</tt><tt class="py-op">,</tt> <tt class="py-name">tamIcon</tt> <tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">siTexto</tt> <tt class="py-op">:</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt class="py-name">tb</tt><tt class="py-op">.</tt><tt class="py-name">setToolButtonStyle</tt><tt class="py-op">(</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ToolButtonTextUnderIcon</tt><tt class="py-op">)</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">    <tt class="py-name">lista</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">datos</tt> <tt class="py-keyword">in</tt> <tt class="py-name">liAcciones</tt> <tt class="py-op">:</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">datos</tt> <tt class="py-op">:</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">            <tt class="py-name">titulo</tt><tt class="py-op">,</tt> <tt class="py-name">cIcono</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name" targets="Method jFusion.clFusion.clave()=jFusion.clFusion-class.html#clave"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-10', 'clave', 'link-10');">clave</a></tt> <tt class="py-op">=</tt> <tt class="py-name">datos</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">            <tt class="py-name">accion</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAction</tt><tt class="py-op">(</tt> <tt class="py-name">titulo</tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">)</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">            <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt class="py-name">setIcon</tt><tt class="py-op">(</tt> <tt class="py-name">eval</tt><tt class="py-op">(</tt> <tt class="py-string">"Iconos.%s()"</tt><tt class="py-op">%</tt><tt class="py-name">cIcono</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">            <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt class="py-name">setIconText</tt><tt class="py-op">(</tt> <tt class="py-name">titulo</tt> <tt class="py-op">)</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">            <tt class="py-name">parent</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt> <tt class="py-name">accion</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt><tt class="py-string">"triggered()"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">.</tt><tt class="py-name">procesarTB</tt> <tt class="py-op">)</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">            <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-11', 'clave', 'link-10');">clave</a></tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-12', 'clave', 'link-10');">clave</a></tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">            <tt class="py-name">lista</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method Enlace.DBF.DBF.append()=Enlace.DBF.DBF-class.html#append,Method Enlace.DBFexten.DBFexten.append()=Enlace.DBFexten.DBFexten-class.html#append"><a title="Enlace.DBF.DBF.append
+Enlace.DBFexten.DBFexten.append" class="py-name" href="#" onclick="return doclink('link-13', 'append', 'link-13');">append</a></tt><tt class="py-op">(</tt> <tt class="py-name">accion</tt> <tt class="py-op">)</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">            <tt class="py-name">tb</tt><tt class="py-op">.</tt><tt class="py-name">addAction</tt><tt class="py-op">(</tt> <tt class="py-name">accion</tt> <tt class="py-op">)</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">            <tt class="py-name">tb</tt><tt class="py-op">.</tt><tt class="py-name">addSeparator</tt><tt class="py-op">(</tt>  <tt class="py-op">)</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">    <tt class="py-name">tb</tt><tt class="py-op">.</tt><tt class="py-name">liAcciones</tt> <tt class="py-op">=</tt> <tt class="py-name">lista</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">tb</tt> </tt>
+</div><a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="accionTB"></a><div id="accionTB-def"><a name="L173"></a><tt class="py-lineno">173</tt> <a class="py-toggle" href="#" id="accionTB-toggle" onclick="return toggle('accionTB');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles-module.html#accionTB">accionTB</a><tt class="py-op">(</tt> <tt class="py-param">tb</tt><tt class="py-op">,</tt> <tt class="py-param">clave</tt><tt class="py-op">,</tt> <tt class="py-param">siHabilitar</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="accionTB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="accionTB-expanded"><a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">accion</tt> <tt class="py-keyword">in</tt> <tt class="py-name">tb</tt><tt class="py-op">.</tt><tt class="py-name">liAcciones</tt> <tt class="py-op">:</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-14', 'clave', 'link-10');">clave</a></tt> <tt class="py-op">==</tt> <tt id="link-15" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-15', 'clave', 'link-10');">clave</a></tt> <tt class="py-op">:</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">            <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt class="py-name">setEnabled</tt><tt class="py-op">(</tt> <tt class="py-name">siHabilitar</tt> <tt class="py-op">)</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> </tt>
+</div><a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="LB"></a><div id="LB-def"><a name="L182"></a><tt class="py-lineno">182</tt> <a class="py-toggle" href="#" id="LB-toggle" onclick="return toggle('LB');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.LB-class.html">LB</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QLabel</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="LB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="LB-expanded"><a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-docstring">    Etiquetas de texto.</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.__init__"></a><div id="LB.__init__-def"><a name="L188"></a><tt class="py-lineno">188</tt> <a class="py-toggle" href="#" id="LB.__init__-toggle" onclick="return toggle('LB.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="LB.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.__init__-expanded"><a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line"><tt class="py-docstring">        @param texto: texto inicial.</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-16" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-16', 'texto', 'link-1');">texto</a></tt> <tt class="py-op">:</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">            <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QLabel</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-17', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-18" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-18', 'texto', 'link-1');">texto</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">            <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QLabel</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-19', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setOpenExternalLinks</tt><tt class="py-op">(</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line"> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponTexto"></a><div id="LB.ponTexto-def"><a name="L200"></a><tt class="py-lineno">200</tt> <a class="py-toggle" href="#" id="LB.ponTexto-toggle" onclick="return toggle('LB.ponTexto');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponTexto">ponTexto</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponTexto-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponTexto-expanded"><a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line"><tt class="py-docstring">        Asigna un texto a la etiqueta.</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setText</tt><tt class="py-op">(</tt> <tt id="link-20" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-20', 'texto', 'link-1');">texto</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.texto"></a><div id="LB.texto-def"><a name="L207"></a><tt class="py-lineno">207</tt> <a class="py-toggle" href="#" id="LB.texto-toggle" onclick="return toggle('LB.texto');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#texto">texto</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.texto-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.texto-expanded"><a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line"> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponFuente"></a><div id="LB.ponFuente-def"><a name="L211"></a><tt class="py-lineno">211</tt> <a class="py-toggle" href="#" id="LB.ponFuente-toggle" onclick="return toggle('LB.ponFuente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponFuente">ponFuente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">f</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponFuente-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponFuente-expanded"><a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">f</tt> <tt class="py-op">)</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line"> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.alinCentrado"></a><div id="LB.alinCentrado-def"><a name="L216"></a><tt class="py-lineno">216</tt> <a class="py-toggle" href="#" id="LB.alinCentrado-toggle" onclick="return toggle('LB.alinCentrado');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#alinCentrado">alinCentrado</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.alinCentrado-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.alinCentrado-expanded"><a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line"><tt class="py-docstring">        Alinea al centro.</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setAlignment</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignCenter</tt> <tt class="py-op">)</tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line"> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.alinDerecha"></a><div id="LB.alinDerecha-def"><a name="L224"></a><tt class="py-lineno">224</tt> <a class="py-toggle" href="#" id="LB.alinDerecha-toggle" onclick="return toggle('LB.alinDerecha');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#alinDerecha">alinDerecha</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.alinDerecha-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.alinDerecha-expanded"><a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"><tt class="py-docstring">        Alinea a la derecha.</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setAlignment</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignRight</tt><tt class="py-op">|</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignVCenter</tt> <tt class="py-op">)</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.anchoFijo"></a><div id="LB.anchoFijo-def"><a name="L232"></a><tt class="py-lineno">232</tt> <a class="py-toggle" href="#" id="LB.anchoFijo-toggle" onclick="return toggle('LB.anchoFijo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#anchoFijo">anchoFijo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.anchoFijo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.anchoFijo-expanded"><a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho fijo del campo.</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFixedWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line"> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.anchoMinimo"></a><div id="LB.anchoMinimo-def"><a name="L240"></a><tt class="py-lineno">240</tt> <a class="py-toggle" href="#" id="LB.anchoMinimo-toggle" onclick="return toggle('LB.anchoMinimo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#anchoMinimo">anchoMinimo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.anchoMinimo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.anchoMinimo-expanded"><a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho m&#237;nimo del campo.</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMinimumWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.altoFijo"></a><div id="LB.altoFijo-def"><a name="L248"></a><tt class="py-lineno">248</tt> <a class="py-toggle" href="#" id="LB.altoFijo-toggle" onclick="return toggle('LB.altoFijo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#altoFijo">altoFijo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.altoFijo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.altoFijo-expanded"><a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line"><tt class="py-docstring">        Alto fijo del campo.</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFixedHeight</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line"> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponImagen"></a><div id="LB.ponImagen-def"><a name="L256"></a><tt class="py-lineno">256</tt> <a class="py-toggle" href="#" id="LB.ponImagen-toggle" onclick="return toggle('LB.ponImagen');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponImagen">ponImagen</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">pm</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponImagen-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponImagen-expanded"><a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setPixmap</tt><tt class="py-op">(</tt> <tt class="py-name">pm</tt> <tt class="py-op">)</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line"> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponFondo"></a><div id="LB.ponFondo-def"><a name="L261"></a><tt class="py-lineno">261</tt> <a class="py-toggle" href="#" id="LB.ponFondo-toggle" onclick="return toggle('LB.ponFondo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponFondo">ponFondo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponFondo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponFondo-expanded"><a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method QT.Controles.LB.ponFondoN()=QT.Controles.LB-class.html#ponFondoN,Method QT.Controles.PB.ponFondoN()=QT.Controles.PB-class.html#ponFondoN"><a title="QT.Controles.LB.ponFondoN
+QT.Controles.PB.ponFondoN" class="py-name" href="#" onclick="return doclink('link-21', 'ponFondoN', 'link-21');">ponFondoN</a></tt><tt class="py-op">(</tt> <tt class="py-name">color</tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line"> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponFondoN"></a><div id="LB.ponFondoN-def"><a name="L265"></a><tt class="py-lineno">265</tt> <a class="py-toggle" href="#" id="LB.ponFondoN-toggle" onclick="return toggle('LB.ponFondoN');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponFondoN">ponFondoN</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponFondoN-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponFondoN-expanded"><a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setStyleSheet</tt><tt class="py-op">(</tt><tt class="py-string">"QWidget { background-color: %s }"</tt> <tt class="py-op">%</tt> <tt class="py-name">color</tt><tt class="py-op">)</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line"> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponColor"></a><div id="LB.ponColor-def"><a name="L270"></a><tt class="py-lineno">270</tt> <a class="py-toggle" href="#" id="LB.ponColor-toggle" onclick="return toggle('LB.ponColor');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponColor">ponColor</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponColor-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponColor-expanded"><a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method QT.Controles.LB.ponColorN()=QT.Controles.LB-class.html#ponColorN"><a title="QT.Controles.LB.ponColorN" class="py-name" href="#" onclick="return doclink('link-22', 'ponColorN', 'link-22');">ponColorN</a></tt><tt class="py-op">(</tt> <tt class="py-name">color</tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line"> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponColorN"></a><div id="LB.ponColorN-def"><a name="L274"></a><tt class="py-lineno">274</tt> <a class="py-toggle" href="#" id="LB.ponColorN-toggle" onclick="return toggle('LB.ponColorN');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponColorN">ponColorN</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponColorN-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponColorN-expanded"><a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setStyleSheet</tt><tt class="py-op">(</tt><tt class="py-string">"QWidget { color: %s }"</tt> <tt class="py-op">%</tt> <tt class="py-name">color</tt><tt class="py-op">)</tt> </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line"> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponColorFondoN"></a><div id="LB.ponColorFondoN-def"><a name="L279"></a><tt class="py-lineno">279</tt> <a class="py-toggle" href="#" id="LB.ponColorFondoN-toggle" onclick="return toggle('LB.ponColorFondoN');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponColorFondoN">ponColorFondoN</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">,</tt> <tt class="py-param">fondo</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponColorFondoN-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponColorFondoN-expanded"><a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setStyleSheet</tt><tt class="py-op">(</tt><tt class="py-string">"QWidget { color: %s; background-color: %s}"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">,</tt><tt class="py-name">fondo</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line"> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LB.ponWrap"></a><div id="LB.ponWrap-def"><a name="L284"></a><tt class="py-lineno">284</tt> <a class="py-toggle" href="#" id="LB.ponWrap-toggle" onclick="return toggle('LB.ponWrap');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LB-class.html#ponWrap">ponWrap</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LB.ponWrap-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LB.ponWrap-expanded"><a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWordWrap</tt><tt class="py-op">(</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div></div><a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line"> </tt>
+<a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="PB"></a><div id="PB-def"><a name="L289"></a><tt class="py-lineno">289</tt> <a class="py-toggle" href="#" id="PB-toggle" onclick="return toggle('PB');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.PB-class.html">PB</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QPushButton</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="PB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="PB-expanded"><a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line"><tt class="py-docstring">    Bot&#243;n.</tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line"> </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.__init__"></a><div id="PB.__init__-def"><a name="L295"></a><tt class="py-lineno">295</tt> <a class="py-toggle" href="#" id="PB.__init__-toggle" onclick="return toggle('PB.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt><tt class="py-op">,</tt> <tt class="py-param">rutina</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">plano</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="PB.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.__init__-expanded"><a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L297"></a><tt class="py-lineno">297</tt>  <tt class="py-line"><tt class="py-docstring">        @param parent: ventana propietaria, necesario para conectar una rutina.</tt> </tt>
+<a name="L298"></a><tt class="py-lineno">298</tt>  <tt class="py-line"><tt class="py-docstring">        @param texto: etiqueta inicial.</tt> </tt>
+<a name="L299"></a><tt class="py-lineno">299</tt>  <tt class="py-line"><tt class="py-docstring">        @param rutina: rutina a la que se conecta el bot&#243;n.</tt> </tt>
+<a name="L300"></a><tt class="py-lineno">300</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L301"></a><tt class="py-lineno">301</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QPushButton</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-23', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-24" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-24', 'texto', 'link-1');">texto</a></tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L302"></a><tt class="py-lineno">302</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt> <tt class="py-op">=</tt> <tt class="py-name">parent</tt> </tt>
+<a name="L303"></a><tt class="py-lineno">303</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFlat</tt><tt class="py-op">(</tt> <tt class="py-name">plano</tt> <tt class="py-op">)</tt> </tt>
+<a name="L304"></a><tt class="py-lineno">304</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">rutina</tt> <tt class="py-op">:</tt> </tt>
+<a name="L305"></a><tt class="py-lineno">305</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method QT.Controles.GB.conectar()=QT.Controles.GB-class.html#conectar,Method QT.Controles.PB.conectar()=QT.Controles.PB-class.html#conectar"><a title="QT.Controles.GB.conectar
+QT.Controles.PB.conectar" class="py-name" href="#" onclick="return doclink('link-25', 'conectar', 'link-25');">conectar</a></tt><tt class="py-op">(</tt> <tt class="py-name">rutina</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L306"></a><tt class="py-lineno">306</tt>  <tt class="py-line"> </tt>
+<a name="L307"></a><tt class="py-lineno">307</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.ponIcono"></a><div id="PB.ponIcono-def"><a name="L308"></a><tt class="py-lineno">308</tt> <a class="py-toggle" href="#" id="PB.ponIcono-toggle" onclick="return toggle('PB.ponIcono');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#ponIcono">ponIcono</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">icono</tt><tt class="py-op">,</tt> <tt class="py-param">tamIcon</tt> <tt class="py-op">=</tt> <tt class="py-number">16</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.ponIcono-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.ponIcono-expanded"><a name="L309"></a><tt class="py-lineno">309</tt>  <tt class="py-line"> </tt>
+<a name="L310"></a><tt class="py-lineno">310</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setIcon</tt><tt class="py-op">(</tt> <tt class="py-name">icono</tt> <tt class="py-op">)</tt> </tt>
+<a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setIconSize</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QSize</tt><tt class="py-op">(</tt> <tt class="py-name">tamIcon</tt><tt class="py-op">,</tt> <tt class="py-name">tamIcon</tt> <tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L312"></a><tt class="py-lineno">312</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L313"></a><tt class="py-lineno">313</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.ponFuente"></a><div id="PB.ponFuente-def"><a name="L314"></a><tt class="py-lineno">314</tt> <a class="py-toggle" href="#" id="PB.ponFuente-toggle" onclick="return toggle('PB.ponFuente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#ponFuente">ponFuente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">f</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.ponFuente-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.ponFuente-expanded"><a name="L315"></a><tt class="py-lineno">315</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">f</tt> <tt class="py-op">)</tt> </tt>
+<a name="L316"></a><tt class="py-lineno">316</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L317"></a><tt class="py-lineno">317</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.anchoFijo"></a><div id="PB.anchoFijo-def"><a name="L318"></a><tt class="py-lineno">318</tt> <a class="py-toggle" href="#" id="PB.anchoFijo-toggle" onclick="return toggle('PB.anchoFijo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#anchoFijo">anchoFijo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.anchoFijo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.anchoFijo-expanded"><a name="L319"></a><tt class="py-lineno">319</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L320"></a><tt class="py-lineno">320</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho fijo del campo.</tt> </tt>
+<a name="L321"></a><tt class="py-lineno">321</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L322"></a><tt class="py-lineno">322</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFixedWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L323"></a><tt class="py-lineno">323</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L324"></a><tt class="py-lineno">324</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.altoFijo"></a><div id="PB.altoFijo-def"><a name="L325"></a><tt class="py-lineno">325</tt> <a class="py-toggle" href="#" id="PB.altoFijo-toggle" onclick="return toggle('PB.altoFijo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#altoFijo">altoFijo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.altoFijo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.altoFijo-expanded"><a name="L326"></a><tt class="py-lineno">326</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L327"></a><tt class="py-lineno">327</tt>  <tt class="py-line"><tt class="py-docstring">        Alto fijo del campo.</tt> </tt>
+<a name="L328"></a><tt class="py-lineno">328</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L329"></a><tt class="py-lineno">329</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFixedHeight</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L330"></a><tt class="py-lineno">330</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L331"></a><tt class="py-lineno">331</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.cuadrado"></a><div id="PB.cuadrado-def"><a name="L332"></a><tt class="py-lineno">332</tt> <a class="py-toggle" href="#" id="PB.cuadrado-toggle" onclick="return toggle('PB.cuadrado');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#cuadrado">cuadrado</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.cuadrado-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.cuadrado-expanded"><a name="L333"></a><tt class="py-lineno">333</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFixedSize</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt><tt class="py-op">,</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L334"></a><tt class="py-lineno">334</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line"> </tt>
+<a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.anchoMinimo"></a><div id="PB.anchoMinimo-def"><a name="L337"></a><tt class="py-lineno">337</tt> <a class="py-toggle" href="#" id="PB.anchoMinimo-toggle" onclick="return toggle('PB.anchoMinimo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#anchoMinimo">anchoMinimo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.anchoMinimo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.anchoMinimo-expanded"><a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L339"></a><tt class="py-lineno">339</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho m&#237;nimo del campo.</tt> </tt>
+<a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L341"></a><tt class="py-lineno">341</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMinimumWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L342"></a><tt class="py-lineno">342</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L343"></a><tt class="py-lineno">343</tt>  <tt class="py-line"> </tt>
+<a name="L344"></a><tt class="py-lineno">344</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.conectar"></a><div id="PB.conectar-def"><a name="L345"></a><tt class="py-lineno">345</tt> <a class="py-toggle" href="#" id="PB.conectar-toggle" onclick="return toggle('PB.conectar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#conectar">conectar</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">rutina</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.conectar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.conectar-expanded"><a name="L346"></a><tt class="py-lineno">346</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L347"></a><tt class="py-lineno">347</tt>  <tt class="py-line"><tt class="py-docstring">        Se indica la rutina asociada cuando se presiona.</tt> </tt>
+<a name="L348"></a><tt class="py-lineno">348</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L349"></a><tt class="py-lineno">349</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt><tt class="py-string">"clicked()"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">rutina</tt> <tt class="py-op">)</tt> </tt>
+<a name="L350"></a><tt class="py-lineno">350</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L351"></a><tt class="py-lineno">351</tt>  <tt class="py-line"> </tt>
+<a name="L352"></a><tt class="py-lineno">352</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.ponFondo"></a><div id="PB.ponFondo-def"><a name="L353"></a><tt class="py-lineno">353</tt> <a class="py-toggle" href="#" id="PB.ponFondo-toggle" onclick="return toggle('PB.ponFondo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#ponFondo">ponFondo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">txtFondo</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.ponFondo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.ponFondo-expanded"><a name="L354"></a><tt class="py-lineno">354</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setStyleSheet</tt><tt class="py-op">(</tt><tt class="py-string">"QWidget { background: %s }"</tt><tt class="py-op">%</tt><tt class="py-name">txtFondo</tt><tt class="py-op">)</tt> </tt>
+<a name="L355"></a><tt class="py-lineno">355</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L356"></a><tt class="py-lineno">356</tt>  <tt class="py-line"> </tt>
+<a name="L357"></a><tt class="py-lineno">357</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.ponFondoN"></a><div id="PB.ponFondoN-def"><a name="L358"></a><tt class="py-lineno">358</tt> <a class="py-toggle" href="#" id="PB.ponFondoN-toggle" onclick="return toggle('PB.ponFondoN');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#ponFondoN">ponFondoN</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">ncolor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.ponFondoN-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.ponFondoN-expanded"><a name="L359"></a><tt class="py-lineno">359</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setStyleSheet</tt><tt class="py-op">(</tt><tt class="py-string">"QWidget { background-color: %d }"</tt> <tt class="py-op">%</tt> <tt class="py-name">ncolor</tt><tt class="py-op">)</tt> </tt>
+<a name="L360"></a><tt class="py-lineno">360</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L361"></a><tt class="py-lineno">361</tt>  <tt class="py-line"> </tt>
+<a name="L362"></a><tt class="py-lineno">362</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.ponPlano"></a><div id="PB.ponPlano-def"><a name="L363"></a><tt class="py-lineno">363</tt> <a class="py-toggle" href="#" id="PB.ponPlano-toggle" onclick="return toggle('PB.ponPlano');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#ponPlano">ponPlano</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">siPlano</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.ponPlano-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.ponPlano-expanded"><a name="L364"></a><tt class="py-lineno">364</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFlat</tt><tt class="py-op">(</tt> <tt class="py-name">siPlano</tt> <tt class="py-op">)</tt> </tt>
+<a name="L365"></a><tt class="py-lineno">365</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L366"></a><tt class="py-lineno">366</tt>  <tt class="py-line"> </tt>
+<a name="L367"></a><tt class="py-lineno">367</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.ponToolTip"></a><div id="PB.ponToolTip-def"><a name="L368"></a><tt class="py-lineno">368</tt> <a class="py-toggle" href="#" id="PB.ponToolTip-toggle" onclick="return toggle('PB.ponToolTip');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#ponToolTip">ponToolTip</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">txt</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.ponToolTip-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.ponToolTip-expanded"><a name="L369"></a><tt class="py-lineno">369</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setToolTip</tt><tt class="py-op">(</tt> <tt class="py-name">txt</tt> <tt class="py-op">)</tt> </tt>
+<a name="L370"></a><tt class="py-lineno">370</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L371"></a><tt class="py-lineno">371</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PB.ponTexto"></a><div id="PB.ponTexto-def"><a name="L372"></a><tt class="py-lineno">372</tt> <a class="py-toggle" href="#" id="PB.ponTexto-toggle" onclick="return toggle('PB.ponTexto');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PB-class.html#ponTexto">ponTexto</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">txt</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PB.ponTexto-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PB.ponTexto-expanded"><a name="L373"></a><tt class="py-lineno">373</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setText</tt><tt class="py-op">(</tt> <tt class="py-name">txt</tt> <tt class="py-op">)</tt> </tt>
+</div></div><a name="L374"></a><tt class="py-lineno">374</tt>  <tt class="py-line"> </tt>
+<a name="L375"></a><tt class="py-lineno">375</tt>  <tt class="py-line"><tt class="py-comment"># --------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="RB"></a><div id="RB-def"><a name="L376"></a><tt class="py-lineno">376</tt> <a class="py-toggle" href="#" id="RB-toggle" onclick="return toggle('RB');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.RB-class.html">RB</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QRadioButton</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="RB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="RB-expanded"><a name="L377"></a><tt class="py-lineno">377</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="RB.__init__"></a><div id="RB.__init__-def"><a name="L378"></a><tt class="py-lineno">378</tt> <a class="py-toggle" href="#" id="RB.__init__-toggle" onclick="return toggle('RB.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.RB-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wParent</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt><tt class="py-op">,</tt> <tt class="py-param">rutina</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RB.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RB.__init__-expanded"><a name="L379"></a><tt class="py-lineno">379</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QRadioButton</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-26', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-27" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-27', 'texto', 'link-1');">texto</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L380"></a><tt class="py-lineno">380</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">rutina</tt> <tt class="py-op">:</tt> </tt>
+<a name="L381"></a><tt class="py-lineno">381</tt>  <tt class="py-line">            <tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt><tt class="py-string">"clicked()"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">rutina</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L382"></a><tt class="py-lineno">382</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="RB.activa"></a><div id="RB.activa-def"><a name="L383"></a><tt class="py-lineno">383</tt> <a class="py-toggle" href="#" id="RB.activa-toggle" onclick="return toggle('RB.activa');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.RB-class.html#activa">activa</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">siActivar</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="RB.activa-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RB.activa-expanded"><a name="L384"></a><tt class="py-lineno">384</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setChecked</tt><tt class="py-op">(</tt> <tt class="py-name">siActivar</tt> <tt class="py-op">)</tt> </tt>
+<a name="L385"></a><tt class="py-lineno">385</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div></div><a name="L386"></a><tt class="py-lineno">386</tt>  <tt class="py-line"> </tt>
+<a name="L387"></a><tt class="py-lineno">387</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="GB"></a><div id="GB-def"><a name="L388"></a><tt class="py-lineno">388</tt> <a class="py-toggle" href="#" id="GB-toggle" onclick="return toggle('GB');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.GB-class.html">GB</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QGroupBox</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="GB-expanded"><a name="L389"></a><tt class="py-lineno">389</tt>  <tt class="py-line"> </tt>
+<a name="L390"></a><tt class="py-lineno">390</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="GB.__init__"></a><div id="GB.__init__-def"><a name="L391"></a><tt class="py-lineno">391</tt> <a class="py-toggle" href="#" id="GB.__init__-toggle" onclick="return toggle('GB.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.GB-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wParent</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt><tt class="py-op">,</tt> <tt class="py-param">layout</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="GB.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GB.__init__-expanded"><a name="L392"></a><tt class="py-lineno">392</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QGroupBox</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-28', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-29" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-29', 'texto', 'link-1');">texto</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L393"></a><tt class="py-lineno">393</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setLayout</tt><tt class="py-op">(</tt><tt class="py-name">layout</tt><tt class="py-op">)</tt> </tt>
+<a name="L394"></a><tt class="py-lineno">394</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt> <tt class="py-op">=</tt> <tt class="py-name">wParent</tt> </tt>
+</div><a name="L395"></a><tt class="py-lineno">395</tt>  <tt class="py-line"> </tt>
+<a name="L396"></a><tt class="py-lineno">396</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="GB.ponFuente"></a><div id="GB.ponFuente-def"><a name="L397"></a><tt class="py-lineno">397</tt> <a class="py-toggle" href="#" id="GB.ponFuente-toggle" onclick="return toggle('GB.ponFuente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.GB-class.html#ponFuente">ponFuente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">f</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="GB.ponFuente-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GB.ponFuente-expanded"><a name="L398"></a><tt class="py-lineno">398</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">f</tt> <tt class="py-op">)</tt> </tt>
+<a name="L399"></a><tt class="py-lineno">399</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L400"></a><tt class="py-lineno">400</tt>  <tt class="py-line"> </tt>
+<a name="L401"></a><tt class="py-lineno">401</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="GB.alinCentrado"></a><div id="GB.alinCentrado-def"><a name="L402"></a><tt class="py-lineno">402</tt> <a class="py-toggle" href="#" id="GB.alinCentrado-toggle" onclick="return toggle('GB.alinCentrado');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.GB-class.html#alinCentrado">alinCentrado</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="GB.alinCentrado-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GB.alinCentrado-expanded"><a name="L403"></a><tt class="py-lineno">403</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setAlignment</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignHCenter</tt> <tt class="py-op">)</tt> </tt>
+<a name="L404"></a><tt class="py-lineno">404</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L405"></a><tt class="py-lineno">405</tt>  <tt class="py-line"> </tt>
+<a name="L406"></a><tt class="py-lineno">406</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="GB.conectar"></a><div id="GB.conectar-def"><a name="L407"></a><tt class="py-lineno">407</tt> <a class="py-toggle" href="#" id="GB.conectar-toggle" onclick="return toggle('GB.conectar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.GB-class.html#conectar">conectar</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">rutina</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="GB.conectar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GB.conectar-expanded"><a name="L408"></a><tt class="py-lineno">408</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L409"></a><tt class="py-lineno">409</tt>  <tt class="py-line"><tt class="py-docstring">        Se indica la rutina asociada cuando se presiona.</tt> </tt>
+<a name="L410"></a><tt class="py-lineno">410</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L411"></a><tt class="py-lineno">411</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setCheckable</tt><tt class="py-op">(</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+<a name="L412"></a><tt class="py-lineno">412</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setChecked</tt><tt class="py-op">(</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt> </tt>
+<a name="L413"></a><tt class="py-lineno">413</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt><tt class="py-string">"clicked()"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">rutina</tt> <tt class="py-op">)</tt> </tt>
+<a name="L414"></a><tt class="py-lineno">414</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div></div><a name="L415"></a><tt class="py-lineno">415</tt>  <tt class="py-line"> </tt>
+<a name="L416"></a><tt class="py-lineno">416</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="Fichas"></a><div id="Fichas-def"><a name="L417"></a><tt class="py-lineno">417</tt> <a class="py-toggle" href="#" id="Fichas-toggle" onclick="return toggle('Fichas');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.Fichas-class.html">Fichas</a><tt class="py-op">(</tt> <tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QTabWidget</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Fichas-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Fichas-expanded"><a name="Fichas.nueva"></a><div id="Fichas.nueva-def"><a name="L418"></a><tt class="py-lineno">418</tt> <a class="py-toggle" href="#" id="Fichas.nueva-toggle" onclick="return toggle('Fichas.nueva');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.Fichas-class.html#nueva">nueva</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">control</tt><tt class="py-op">,</tt> <tt class="py-param">titulo</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Fichas.nueva-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Fichas.nueva-expanded"><a name="L419"></a><tt class="py-lineno">419</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">addTab</tt><tt class="py-op">(</tt><tt id="link-30" class="py-name" targets="Method QT.Colocacion.G.control()=QT.Colocacion.G-class.html#control,Method QT.Colocacion.H.control()=QT.Colocacion.H-class.html#control,Method QT.Colocacion.V.control()=QT.Colocacion.V-class.html#control"><a title="QT.Colocacion.G.control
+QT.Colocacion.H.control
+QT.Colocacion.V.control" class="py-name" href="#" onclick="return doclink('link-30', 'control', 'link-30');">control</a></tt><tt class="py-op">,</tt> <tt class="py-name">titulo</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L420"></a><tt class="py-lineno">420</tt>  <tt class="py-line"> </tt>
+<a name="L421"></a><tt class="py-lineno">421</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="EM"></a><div id="EM-def"><a name="L422"></a><tt class="py-lineno">422</tt> <a class="py-toggle" href="#" id="EM-toggle" onclick="return toggle('EM');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.EM-class.html">EM</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QTextEdit</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EM-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="EM-expanded"><a name="L423"></a><tt class="py-lineno">423</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L424"></a><tt class="py-lineno">424</tt>  <tt class="py-line"><tt class="py-docstring">    Control de entrada de texto en varias l&#237;neas.</tt> </tt>
+<a name="L425"></a><tt class="py-lineno">425</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L426"></a><tt class="py-lineno">426</tt>  <tt class="py-line"> </tt>
+<a name="L427"></a><tt class="py-lineno">427</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.__init__"></a><div id="EM.__init__-def"><a name="L428"></a><tt class="py-lineno">428</tt> <a class="py-toggle" href="#" id="EM.__init__-toggle" onclick="return toggle('EM.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EM.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.__init__-expanded"><a name="L429"></a><tt class="py-lineno">429</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L430"></a><tt class="py-lineno">430</tt>  <tt class="py-line"><tt class="py-docstring">        @param texto: texto inicial.</tt> </tt>
+<a name="L431"></a><tt class="py-lineno">431</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L432"></a><tt class="py-lineno">432</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-31" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-31', 'texto', 'link-1');">texto</a></tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt> <tt class="py-op">:</tt> </tt>
+<a name="L433"></a><tt class="py-lineno">433</tt>  <tt class="py-line">            <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QTextEdit</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-32', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">)</tt> </tt>
+<a name="L434"></a><tt class="py-lineno">434</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L435"></a><tt class="py-lineno">435</tt>  <tt class="py-line">            <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QTextEdit</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-33', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-34" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-34', 'texto', 'link-1');">texto</a></tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">)</tt> </tt>
+<a name="L436"></a><tt class="py-lineno">436</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">parent</tt> <tt class="py-op">=</tt> <tt class="py-name">parent</tt> </tt>
+<a name="L437"></a><tt class="py-lineno">437</tt>  <tt class="py-line"> </tt>
+<a name="L438"></a><tt class="py-lineno">438</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">menu</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> <tt class="py-comment"># men&#250; de contexto</tt> </tt>
+</div><a name="L439"></a><tt class="py-lineno">439</tt>  <tt class="py-line"> </tt>
+<a name="L440"></a><tt class="py-lineno">440</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.ponHtml"></a><div id="EM.ponHtml-def"><a name="L441"></a><tt class="py-lineno">441</tt> <a class="py-toggle" href="#" id="EM.ponHtml-toggle" onclick="return toggle('EM.ponHtml');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#ponHtml">ponHtml</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.ponHtml-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.ponHtml-expanded"><a name="L442"></a><tt class="py-lineno">442</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L443"></a><tt class="py-lineno">443</tt>  <tt class="py-line"><tt class="py-docstring">        Pone el texto en el campo.</tt> </tt>
+<a name="L444"></a><tt class="py-lineno">444</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L445"></a><tt class="py-lineno">445</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setHtml</tt><tt class="py-op">(</tt> <tt id="link-35" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-35', 'texto', 'link-1');">texto</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L446"></a><tt class="py-lineno">446</tt>  <tt class="py-line"> </tt>
+<a name="L447"></a><tt class="py-lineno">447</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.insertarHtml"></a><div id="EM.insertarHtml-def"><a name="L448"></a><tt class="py-lineno">448</tt> <a class="py-toggle" href="#" id="EM.insertarHtml-toggle" onclick="return toggle('EM.insertarHtml');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#insertarHtml">insertarHtml</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">texto</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.insertarHtml-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.insertarHtml-expanded"><a name="L449"></a><tt class="py-lineno">449</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L450"></a><tt class="py-lineno">450</tt>  <tt class="py-line"><tt class="py-docstring">        Inserta un texto en la posici&#243;n del cursor.</tt> </tt>
+<a name="L451"></a><tt class="py-lineno">451</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L452"></a><tt class="py-lineno">452</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">insertHtml</tt><tt class="py-op">(</tt> <tt id="link-36" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-36', 'texto', 'link-1');">texto</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L453"></a><tt class="py-lineno">453</tt>  <tt class="py-line"> </tt>
+<a name="L454"></a><tt class="py-lineno">454</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.soloLectura"></a><div id="EM.soloLectura-def"><a name="L455"></a><tt class="py-lineno">455</tt> <a class="py-toggle" href="#" id="EM.soloLectura-toggle" onclick="return toggle('EM.soloLectura');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#soloLectura">soloLectura</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.soloLectura-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.soloLectura-expanded"><a name="L456"></a><tt class="py-lineno">456</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setReadOnly</tt><tt class="py-op">(</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+<a name="L457"></a><tt class="py-lineno">457</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L458"></a><tt class="py-lineno">458</tt>  <tt class="py-line"> </tt>
+<a name="L459"></a><tt class="py-lineno">459</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.texto"></a><div id="EM.texto-def"><a name="L460"></a><tt class="py-lineno">460</tt> <a class="py-toggle" href="#" id="EM.texto-toggle" onclick="return toggle('EM.texto');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#texto">texto</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.texto-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.texto-expanded"><a name="L461"></a><tt class="py-lineno">461</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L462"></a><tt class="py-lineno">462</tt>  <tt class="py-line"><tt class="py-docstring">        Recupera el texto del campo.</tt> </tt>
+<a name="L463"></a><tt class="py-lineno">463</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L464"></a><tt class="py-lineno">464</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">toPlainText</tt><tt class="py-op">(</tt> <tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L465"></a><tt class="py-lineno">465</tt>  <tt class="py-line"> </tt>
+<a name="L466"></a><tt class="py-lineno">466</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.anchoMinimo"></a><div id="EM.anchoMinimo-def"><a name="L467"></a><tt class="py-lineno">467</tt> <a class="py-toggle" href="#" id="EM.anchoMinimo-toggle" onclick="return toggle('EM.anchoMinimo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#anchoMinimo">anchoMinimo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.anchoMinimo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.anchoMinimo-expanded"><a name="L468"></a><tt class="py-lineno">468</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L469"></a><tt class="py-lineno">469</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho m&#237;nimo del campo.</tt> </tt>
+<a name="L470"></a><tt class="py-lineno">470</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L471"></a><tt class="py-lineno">471</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMinimumWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L472"></a><tt class="py-lineno">472</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L473"></a><tt class="py-lineno">473</tt>  <tt class="py-line"> </tt>
+<a name="L474"></a><tt class="py-lineno">474</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.altoMinimo"></a><div id="EM.altoMinimo-def"><a name="L475"></a><tt class="py-lineno">475</tt> <a class="py-toggle" href="#" id="EM.altoMinimo-toggle" onclick="return toggle('EM.altoMinimo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#altoMinimo">altoMinimo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.altoMinimo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.altoMinimo-expanded"><a name="L476"></a><tt class="py-lineno">476</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L477"></a><tt class="py-lineno">477</tt>  <tt class="py-line"><tt class="py-docstring">        Alto m&#237;nimo del campo.</tt> </tt>
+<a name="L478"></a><tt class="py-lineno">478</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L479"></a><tt class="py-lineno">479</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMinimumHeight</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L480"></a><tt class="py-lineno">480</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L481"></a><tt class="py-lineno">481</tt>  <tt class="py-line"> </tt>
+<a name="L482"></a><tt class="py-lineno">482</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.anchoFijo"></a><div id="EM.anchoFijo-def"><a name="L483"></a><tt class="py-lineno">483</tt> <a class="py-toggle" href="#" id="EM.anchoFijo-toggle" onclick="return toggle('EM.anchoFijo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#anchoFijo">anchoFijo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.anchoFijo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.anchoFijo-expanded"><a name="L484"></a><tt class="py-lineno">484</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L485"></a><tt class="py-lineno">485</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho fijo del campo.</tt> </tt>
+<a name="L486"></a><tt class="py-lineno">486</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L487"></a><tt class="py-lineno">487</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFixedWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L488"></a><tt class="py-lineno">488</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L489"></a><tt class="py-lineno">489</tt>  <tt class="py-line"> </tt>
+<a name="L490"></a><tt class="py-lineno">490</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="EM.ponFuente"></a><div id="EM.ponFuente-def"><a name="L491"></a><tt class="py-lineno">491</tt> <a class="py-toggle" href="#" id="EM.ponFuente-toggle" onclick="return toggle('EM.ponFuente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.EM-class.html#ponFuente">ponFuente</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">f</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="EM.ponFuente-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="EM.ponFuente-expanded"><a name="L492"></a><tt class="py-lineno">492</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">f</tt> <tt class="py-op">)</tt> </tt>
+<a name="L493"></a><tt class="py-lineno">493</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div></div><a name="L494"></a><tt class="py-lineno">494</tt>  <tt class="py-line"> </tt>
+<a name="L495"></a><tt class="py-lineno">495</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="L496"></a><tt class="py-lineno">496</tt>  <tt class="py-line"> </tt>
+<a name="L497"></a><tt class="py-lineno">497</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="LMenu"></a><div id="LMenu-def"><a name="L498"></a><tt class="py-lineno">498</tt> <a class="py-toggle" href="#" id="LMenu-toggle" onclick="return toggle('LMenu');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html">LMenu</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QMenu</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="LMenu-expanded"><a name="L499"></a><tt class="py-lineno">499</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LMenu.__init__"></a><div id="LMenu.__init__-def"><a name="L500"></a><tt class="py-lineno">500</tt> <a class="py-toggle" href="#" id="LMenu.__init__-toggle" onclick="return toggle('LMenu.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html#__init__">__init__</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">titulo</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">icono</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">siDeshabilitado</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-param">owner</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LMenu.__init__-expanded"><a name="L501"></a><tt class="py-lineno">501</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QMenu</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-37', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt><tt class="py-name">owner</tt><tt class="py-op">)</tt> </tt>
+<a name="L502"></a><tt class="py-lineno">502</tt>  <tt class="py-line"> </tt>
+<a name="L503"></a><tt class="py-lineno">503</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">titulo</tt> <tt class="py-op">:</tt> </tt>
+<a name="L504"></a><tt class="py-lineno">504</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setTitle</tt><tt class="py-op">(</tt> <tt class="py-name">titulo</tt> <tt class="py-op">)</tt> </tt>
+<a name="L505"></a><tt class="py-lineno">505</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">icono</tt> <tt class="py-op">:</tt> </tt>
+<a name="L506"></a><tt class="py-lineno">506</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setIcon</tt><tt class="py-op">(</tt> <tt class="py-name">icono</tt> <tt class="py-op">)</tt> </tt>
+<a name="L507"></a><tt class="py-lineno">507</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">siDeshabilitado</tt> <tt class="py-op">:</tt> </tt>
+<a name="L508"></a><tt class="py-lineno">508</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setDisabled</tt><tt class="py-op">(</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L509"></a><tt class="py-lineno">509</tt>  <tt class="py-line"> </tt>
+<a name="L510"></a><tt class="py-lineno">510</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LMenu.ponFuente"></a><div id="LMenu.ponFuente-def"><a name="L511"></a><tt class="py-lineno">511</tt> <a class="py-toggle" href="#" id="LMenu.ponFuente-toggle" onclick="return toggle('LMenu.ponFuente');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html#ponFuente">ponFuente</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">f</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu.ponFuente-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LMenu.ponFuente-expanded"><a name="L512"></a><tt class="py-lineno">512</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">f</tt> <tt class="py-op">)</tt> </tt>
+<a name="L513"></a><tt class="py-lineno">513</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L514"></a><tt class="py-lineno">514</tt>  <tt class="py-line"> </tt>
+<a name="L515"></a><tt class="py-lineno">515</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LMenu.opcion"></a><div id="LMenu.opcion-def"><a name="L516"></a><tt class="py-lineno">516</tt> <a class="py-toggle" href="#" id="LMenu.opcion-toggle" onclick="return toggle('LMenu.opcion');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html#opcion">opcion</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">clave</tt><tt class="py-op">,</tt> <tt class="py-param">rotulo</tt><tt class="py-op">,</tt> <tt class="py-param">icono</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">siDeshabilitado</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-param">tipoLetra</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu.opcion-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LMenu.opcion-expanded"><a name="L517"></a><tt class="py-lineno">517</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">icono</tt> <tt class="py-op">:</tt> </tt>
+<a name="L518"></a><tt class="py-lineno">518</tt>  <tt class="py-line">            <tt class="py-name">accion</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAction</tt><tt class="py-op">(</tt> <tt class="py-name">icono</tt><tt class="py-op">,</tt> <tt id="link-38" class="py-name" targets="Method QT.QTUtil.MensEspera.rotulo()=QT.QTUtil.MensEspera-class.html#rotulo"><a title="QT.QTUtil.MensEspera.rotulo" class="py-name" href="#" onclick="return doclink('link-38', 'rotulo', 'link-38');">rotulo</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt> </tt>
+<a name="L519"></a><tt class="py-lineno">519</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L520"></a><tt class="py-lineno">520</tt>  <tt class="py-line">            <tt class="py-name">accion</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAction</tt><tt class="py-op">(</tt> <tt id="link-39" class="py-name"><a title="QT.QTUtil.MensEspera.rotulo" class="py-name" href="#" onclick="return doclink('link-39', 'rotulo', 'link-38');">rotulo</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt> </tt>
+<a name="L521"></a><tt class="py-lineno">521</tt>  <tt class="py-line">        <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-40', 'clave', 'link-10');">clave</a></tt> <tt class="py-op">=</tt> <tt id="link-41" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-41', 'clave', 'link-10');">clave</a></tt> </tt>
+<a name="L522"></a><tt class="py-lineno">522</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">siDeshabilitado</tt> <tt class="py-op">:</tt> </tt>
+<a name="L523"></a><tt class="py-lineno">523</tt>  <tt class="py-line">            <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt class="py-name">setDisabled</tt><tt class="py-op">(</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+<a name="L524"></a><tt class="py-lineno">524</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">tipoLetra</tt> <tt class="py-op">:</tt> </tt>
+<a name="L525"></a><tt class="py-lineno">525</tt>  <tt class="py-line">            <tt class="py-name">accion</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">tipoLetra</tt> <tt class="py-op">)</tt> </tt>
+<a name="L526"></a><tt class="py-lineno">526</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">addAction</tt><tt class="py-op">(</tt> <tt class="py-name">accion</tt> <tt class="py-op">)</tt> </tt>
+<a name="L527"></a><tt class="py-lineno">527</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">accion</tt> </tt>
+</div><a name="L528"></a><tt class="py-lineno">528</tt>  <tt class="py-line"> </tt>
+<a name="L529"></a><tt class="py-lineno">529</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LMenu.submenu"></a><div id="LMenu.submenu-def"><a name="L530"></a><tt class="py-lineno">530</tt> <a class="py-toggle" href="#" id="LMenu.submenu-toggle" onclick="return toggle('LMenu.submenu');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html#submenu">submenu</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">rotulo</tt><tt class="py-op">,</tt> <tt class="py-param">icono</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">siDeshabilitado</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu.submenu-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LMenu.submenu-expanded"><a name="L531"></a><tt class="py-lineno">531</tt>  <tt class="py-line">        <tt class="py-name">menu</tt> <tt class="py-op">=</tt> <tt id="link-42" class="py-name" targets="Class QT.Controles.LMenu=QT.Controles.LMenu-class.html"><a title="QT.Controles.LMenu" class="py-name" href="#" onclick="return doclink('link-42', 'LMenu', 'link-42');">LMenu</a></tt><tt class="py-op">(</tt> <tt id="link-43" class="py-name"><a title="QT.QTUtil.MensEspera.rotulo" class="py-name" href="#" onclick="return doclink('link-43', 'rotulo', 'link-38');">rotulo</a></tt><tt class="py-op">,</tt> <tt class="py-name">icono</tt><tt class="py-op">,</tt> <tt class="py-name">siDeshabilitado</tt><tt class="py-op">,</tt> <tt class="py-name">owner</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt> </tt>
+<a name="L532"></a><tt class="py-lineno">532</tt>  <tt class="py-line">        <tt class="py-name">menu</tt><tt class="py-op">.</tt><tt class="py-name">setFont</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">font</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L533"></a><tt class="py-lineno">533</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">addMenu</tt><tt class="py-op">(</tt> <tt class="py-name">menu</tt> <tt class="py-op">)</tt> </tt>
+<a name="L534"></a><tt class="py-lineno">534</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">menu</tt> </tt>
+</div><a name="L535"></a><tt class="py-lineno">535</tt>  <tt class="py-line"> </tt>
+<a name="L536"></a><tt class="py-lineno">536</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LMenu.mousePressEvent"></a><div id="LMenu.mousePressEvent-def"><a name="L537"></a><tt class="py-lineno">537</tt> <a class="py-toggle" href="#" id="LMenu.mousePressEvent-toggle" onclick="return toggle('LMenu.mousePressEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html#mousePressEvent">mousePressEvent</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu.mousePressEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LMenu.mousePressEvent-expanded"><a name="L538"></a><tt class="py-lineno">538</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siIzq</tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">button</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">LeftButton</tt> </tt>
+<a name="L539"></a><tt class="py-lineno">539</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siDer</tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">button</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">RightButton</tt> </tt>
+<a name="L540"></a><tt class="py-lineno">540</tt>  <tt class="py-line">        <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QMenu</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Method QT.Controles.LMenu.mousePressEvent()=QT.Controles.LMenu-class.html#mousePressEvent,Method QT.Grid.Grid.mousePressEvent()=QT.Grid.Grid-class.html#mousePressEvent"><a title="QT.Controles.LMenu.mousePressEvent
+QT.Grid.Grid.mousePressEvent" class="py-name" href="#" onclick="return doclink('link-44', 'mousePressEvent', 'link-44');">mousePressEvent</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L541"></a><tt class="py-lineno">541</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">resp</tt> </tt>
+</div><a name="L542"></a><tt class="py-lineno">542</tt>  <tt class="py-line"> </tt>
+<a name="L543"></a><tt class="py-lineno">543</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LMenu.separador"></a><div id="LMenu.separador-def"><a name="L544"></a><tt class="py-lineno">544</tt> <a class="py-toggle" href="#" id="LMenu.separador-toggle" onclick="return toggle('LMenu.separador');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html#separador">separador</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu.separador-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LMenu.separador-expanded"><a name="L545"></a><tt class="py-lineno">545</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">addSeparator</tt><tt class="py-op">(</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L546"></a><tt class="py-lineno">546</tt>  <tt class="py-line"> </tt>
+<a name="L547"></a><tt class="py-lineno">547</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="LMenu.lanza"></a><div id="LMenu.lanza-def"><a name="L548"></a><tt class="py-lineno">548</tt> <a class="py-toggle" href="#" id="LMenu.lanza-toggle" onclick="return toggle('LMenu.lanza');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.LMenu-class.html#lanza">lanza</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="LMenu.lanza-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="LMenu.lanza-expanded"><a name="L549"></a><tt class="py-lineno">549</tt>  <tt class="py-line">        <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exec_</tt><tt class="py-op">(</tt><tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QCursor</tt><tt class="py-op">.</tt><tt class="py-name">pos</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L550"></a><tt class="py-lineno">550</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">resp</tt> <tt class="py-op">:</tt> </tt>
+<a name="L551"></a><tt class="py-lineno">551</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">resp</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-45', 'clave', 'link-10');">clave</a></tt> </tt>
+<a name="L552"></a><tt class="py-lineno">552</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L553"></a><tt class="py-lineno">553</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div></div><a name="L554"></a><tt class="py-lineno">554</tt>  <tt class="py-line"> </tt>
+<a name="L555"></a><tt class="py-lineno">555</tt>  <tt class="py-line"><tt class="py-comment">#================================================================================================================================================</tt> </tt>
+<a name="L556"></a><tt class="py-lineno">556</tt>  <tt class="py-line"> </tt>
+<a name="L557"></a><tt class="py-lineno">557</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="PBAR"></a><div id="PBAR-def"><a name="L558"></a><tt class="py-lineno">558</tt> <a class="py-toggle" href="#" id="PBAR-toggle" onclick="return toggle('PBAR');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Controles.PBAR-class.html">PBAR</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QProgressBar</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="PBAR-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="PBAR-expanded"><a name="L559"></a><tt class="py-lineno">559</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L560"></a><tt class="py-lineno">560</tt>  <tt class="py-line"><tt class="py-docstring">    Barra de progreso.</tt> </tt>
+<a name="L561"></a><tt class="py-lineno">561</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L562"></a><tt class="py-lineno">562</tt>  <tt class="py-line"> </tt>
+<a name="L563"></a><tt class="py-lineno">563</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PBAR.__init__"></a><div id="PBAR.__init__-def"><a name="L564"></a><tt class="py-lineno">564</tt> <a class="py-toggle" href="#" id="PBAR.__init__-toggle" onclick="return toggle('PBAR.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PBAR-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="PBAR.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PBAR.__init__-expanded"><a name="L565"></a><tt class="py-lineno">565</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QProgressBar</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-46', '__init__', 'link-2');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L566"></a><tt class="py-lineno">566</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt> <tt class="py-op">=</tt> <tt class="py-name">parent</tt> </tt>
+</div><a name="L567"></a><tt class="py-lineno">567</tt>  <tt class="py-line">         </tt>
+<a name="PBAR.ponValor"></a><div id="PBAR.ponValor-def"><a name="L568"></a><tt class="py-lineno">568</tt> <a class="py-toggle" href="#" id="PBAR.ponValor-toggle" onclick="return toggle('PBAR.ponValor');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PBAR-class.html#ponValor">ponValor</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">valor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PBAR.ponValor-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PBAR.ponValor-expanded"><a name="L569"></a><tt class="py-lineno">569</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setValue</tt><tt class="py-op">(</tt> <tt class="py-name">valor</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L570"></a><tt class="py-lineno">570</tt>  <tt class="py-line"> </tt>
+<a name="PBAR.ponRango"></a><div id="PBAR.ponRango-def"><a name="L571"></a><tt class="py-lineno">571</tt> <a class="py-toggle" href="#" id="PBAR.ponRango-toggle" onclick="return toggle('PBAR.ponRango');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PBAR-class.html#ponRango">ponRango</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">desde</tt><tt class="py-op">,</tt> <tt class="py-param">hasta</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PBAR.ponRango-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PBAR.ponRango-expanded"><a name="L572"></a><tt class="py-lineno">572</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setRange</tt><tt class="py-op">(</tt> <tt class="py-name">desde</tt><tt class="py-op">,</tt> <tt class="py-name">hasta</tt> <tt class="py-op">)</tt> </tt>
+<a name="L573"></a><tt class="py-lineno">573</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L574"></a><tt class="py-lineno">574</tt>  <tt class="py-line"> </tt>
+<a name="L575"></a><tt class="py-lineno">575</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="PBAR.anchoMinimo"></a><div id="PBAR.anchoMinimo-def"><a name="L576"></a><tt class="py-lineno">576</tt> <a class="py-toggle" href="#" id="PBAR.anchoMinimo-toggle" onclick="return toggle('PBAR.anchoMinimo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Controles.PBAR-class.html#anchoMinimo">anchoMinimo</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tam</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="PBAR.anchoMinimo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="PBAR.anchoMinimo-expanded"><a name="L577"></a><tt class="py-lineno">577</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L578"></a><tt class="py-lineno">578</tt>  <tt class="py-line"><tt class="py-docstring">        Ancho m&#237;nimo del campo.</tt> </tt>
+<a name="L579"></a><tt class="py-lineno">579</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L580"></a><tt class="py-lineno">580</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMinimumWidth</tt><tt class="py-op">(</tt> <tt class="py-name">tam</tt> <tt class="py-op">)</tt> </tt>
+<a name="L581"></a><tt class="py-lineno">581</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div></div><a name="L582"></a><tt class="py-lineno">582</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Nov 04 09:36:31 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

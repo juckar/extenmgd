@@ -1,0 +1,6 @@
+Línea 66 : no existe un tipo de iva soportado con cta = 4720000 y 16.00%
+Línea 67 : no existe un tipo de iva soportado con cta = 4720000 y 16.00%
+Línea 71 : no existe un tipo de iva soportado con cta = 4720000 y 16.00%
+Línea 72 : no existe un tipo de iva soportado con cta = 4720000 y 16.00%
+Línea 76 : no existe un tipo de iva soportado con cta = 4720016 y 23.00%
+Línea 92 : no existe un tipo de iva soportado con cta = 4720016 y 18.00%

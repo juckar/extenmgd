@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>QT.Grid.ControlGrid</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;QT ::
+        <a href="QT.Grid-module.html">Module&nbsp;Grid</a> ::
+        Class&nbsp;ControlGrid
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="QT.Grid.ControlGrid-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class ControlGrid</h1><p class="nomargin-top"><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+              object --+                
+                       |                
+          ??.BaseWrapper --+            
+                           |            
+       PySide.QtCore.QObject --+        
+                               |        
+PySide.QtCore.QAbstractItemModel --+    
+                                   |    
+   PySide.QtCore.QAbstractTableModel --+
+                                       |
+                                      <strong class="uidshort">ControlGrid</strong>
+</pre>
+
+<hr />
+<p>Modelo de datos asociado al grid, y que realiza todo el trabajo 
+  asignado por PySide</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="QT.Grid.ControlGrid-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tableView</span>,
+        <span class="summary-sig-arg">wParent</span>,
+        <span class="summary-sig-arg">oColumnasR</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="QT.Grid.ControlGrid-class.html#rowCount" class="summary-sig-name">rowCount</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">parent</span>)</span><br />
+      Llamada interna, solicitando el n&#250;mero de registros.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.rowCount">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="refresh"></a><span class="summary-sig-name">refresh</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Si hay un cambio del n&#250;mero de registros, la llamada a esta rutina 
+      actualiza la visualizaci&#243;n.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.refresh">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="QT.Grid.ControlGrid-class.html#columnCount" class="summary-sig-name">columnCount</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">parent</span>)</span><br />
+      Llamada interna, solicitando el n&#250;mero de columnas.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.columnCount">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="QT.Grid.ControlGrid-class.html#data" class="summary-sig-name">data</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">role</span>)</span><br />
+      Llamada interna, solicitando informaci&#243;n que ha de tener/contener el 
+      campo actual.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.data">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="QT.Grid.ControlGrid-class.html#flags" class="summary-sig-name">flags</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Llamada interna, solicitando mas informaci&#243;n sobre las 
+      carcater&#237;sticas del campo actual.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.flags">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="QT.Grid.ControlGrid-class.html#setData" class="summary-sig-name">setData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">valor</span>,
+        <span class="summary-sig-arg">role</span>=<span class="summary-sig-default">&lt;enum-item ItemDataRole.EditRole (2)&gt;</span>)</span><br />
+      Tras producirse la edici&#243;n de un campo en un registro se llama a esta
+      rutina para cambiar el valor en el origen de los datos.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.setData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="QT.Grid.ControlGrid-class.html#headerData" class="summary-sig-name">headerData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">col</span>,
+        <span class="summary-sig-arg">orientation</span>,
+        <span class="summary-sig-arg">role</span>)</span><br />
+      Llamada interna, para determinar el texto de las cabeceras de las 
+      columnas.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.headerData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>PySide.QtCore.QAbstractTableModel</code></b>:
+      <code>__new__</code>,
+      <code>dropMimeData</code>,
+      <code>hasChildren</code>,
+      <code>index</code>,
+      <code>parent</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>PySide.QtCore.QAbstractItemModel</code></b>:
+      <code>beginInsertColumns</code>,
+      <code>beginInsertRows</code>,
+      <code>beginMoveColumns</code>,
+      <code>beginMoveRows</code>,
+      <code>beginRemoveColumns</code>,
+      <code>beginRemoveRows</code>,
+      <code>beginResetModel</code>,
+      <code>buddy</code>,
+      <code>canFetchMore</code>,
+      <code>changePersistentIndex</code>,
+      <code>changePersistentIndexList</code>,
+      <code>createIndex</code>,
+      <code>decodeData</code>,
+      <code>encodeData</code>,
+      <code>endInsertColumns</code>,
+      <code>endInsertRows</code>,
+      <code>endMoveColumns</code>,
+      <code>endMoveRows</code>,
+      <code>endRemoveColumns</code>,
+      <code>endRemoveRows</code>,
+      <code>endResetModel</code>,
+      <code>fetchMore</code>,
+      <code>hasIndex</code>,
+      <code>insertColumn</code>,
+      <code>insertColumns</code>,
+      <code>insertRow</code>,
+      <code>insertRows</code>,
+      <code>itemData</code>,
+      <code>match</code>,
+      <code>mimeData</code>,
+      <code>mimeTypes</code>,
+      <code>persistentIndexList</code>,
+      <code>removeColumn</code>,
+      <code>removeColumns</code>,
+      <code>removeRow</code>,
+      <code>removeRows</code>,
+      <code>reset</code>,
+      <code>revert</code>,
+      <code>roleNames</code>,
+      <code>setHeaderData</code>,
+      <code>setItemData</code>,
+      <code>setRoleNames</code>,
+      <code>setSupportedDragActions</code>,
+      <code>sibling</code>,
+      <code>sort</code>,
+      <code>span</code>,
+      <code>submit</code>,
+      <code>supportedDragActions</code>,
+      <code>supportedDropActions</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>PySide.QtCore.QObject</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__setattr__</code>,
+      <code>blockSignals</code>,
+      <code>childEvent</code>,
+      <code>children</code>,
+      <code>connectNotify</code>,
+      <code>customEvent</code>,
+      <code>deleteLater</code>,
+      <code>disconnectNotify</code>,
+      <code>dumpObjectInfo</code>,
+      <code>dumpObjectTree</code>,
+      <code>dynamicPropertyNames</code>,
+      <code>emit</code>,
+      <code>event</code>,
+      <code>eventFilter</code>,
+      <code>findChild</code>,
+      <code>findChildren</code>,
+      <code>inherits</code>,
+      <code>installEventFilter</code>,
+      <code>isWidgetType</code>,
+      <code>killTimer</code>,
+      <code>metaObject</code>,
+      <code>moveToThread</code>,
+      <code>objectName</code>,
+      <code>property</code>,
+      <code>receivers</code>,
+      <code>removeEventFilter</code>,
+      <code>sender</code>,
+      <code>setObjectName</code>,
+      <code>setParent</code>,
+      <code>setProperty</code>,
+      <code>signalsBlocked</code>,
+      <code>startTimer</code>,
+      <code>timerEvent</code>,
+      <code>tr</code>,
+      <code>trUtf8</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__format__</code>,
+      <code>__hash__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== STATIC METHODS ==================== -->
+<a name="section-StaticMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Static Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-StaticMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>PySide.QtCore.QObject</code></b>:
+      <code>connect</code>,
+      <code>disconnect</code>,
+      <code>registerUserData</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>PySide.QtCore.QAbstractItemModel</code></b>:
+      <code>columnsAboutToBeInserted</code>,
+      <code>columnsAboutToBeMoved</code>,
+      <code>columnsAboutToBeRemoved</code>,
+      <code>columnsInserted</code>,
+      <code>columnsMoved</code>,
+      <code>columnsRemoved</code>,
+      <code>dataChanged</code>,
+      <code>headerDataChanged</code>,
+      <code>layoutAboutToBeChanged</code>,
+      <code>layoutChanged</code>,
+      <code>modelAboutToBeReset</code>,
+      <code>modelReset</code>,
+      <code>rowsAboutToBeInserted</code>,
+      <code>rowsAboutToBeMoved</code>,
+      <code>rowsAboutToBeRemoved</code>,
+      <code>rowsInserted</code>,
+      <code>rowsMoved</code>,
+      <code>rowsRemoved</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>PySide.QtCore.QObject</code></b>:
+      <code>destroyed</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tableView</span>,
+        <span class="sig-arg">wParent</span>,
+        <span class="sig-arg">oColumnasR</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tableView</code></strong></li>
+        <li><strong class="pname"><code>oColumnasR</code></strong> - ListaColumnas con la configuraci&#243;n de todas las columnas 
+          visualizables.</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rowCount"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rowCount</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">parent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.rowCount">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Llamada interna, solicitando el n&#250;mero de registros.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        PySide.QtCore.QAbstractItemModel.rowCount
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="columnCount"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">columnCount</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">parent</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.columnCount">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Llamada interna, solicitando el n&#250;mero de columnas.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        PySide.QtCore.QAbstractItemModel.columnCount
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="data"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">data</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">role</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.data">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Llamada interna, solicitando informaci&#243;n que ha de tener/contener el 
+  campo actual.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        PySide.QtCore.QAbstractItemModel.data
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="flags"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">flags</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.flags">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Llamada interna, solicitando mas informaci&#243;n sobre las carcater&#237;sticas
+  del campo actual.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        PySide.QtCore.QAbstractItemModel.flags
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setData</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">valor</span>,
+        <span class="sig-arg">role</span>=<span class="sig-default">&lt;enum-item ItemDataRole.EditRole (2)&gt;</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.setData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Tras producirse la edici&#243;n de un campo en un registro se llama a esta 
+  rutina para cambiar el valor en el origen de los datos. Se lanza 
+  gridPonValor en la ventana propietaria.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        PySide.QtCore.QAbstractItemModel.setData
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="headerData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">headerData</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">col</span>,
+        <span class="sig-arg">orientation</span>,
+        <span class="sig-arg">role</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="QT.Grid-pysrc.html#ControlGrid.headerData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Llamada interna, para determinar el texto de las cabeceras de las 
+  columnas.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        PySide.QtCore.QAbstractItemModel.headerData
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Nov 04 09:36:27 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Version 1.16.0
+ - Removed resource DLL, resources are now in a Python source file which
+   simplifies distribution of apps with py2exe
+ - Spelling corrections
+ - File open/save dialogs did not display on Windows 98
+ - AskString edit boxes were too short on Windows 98
+ - Improved display of drop down lists on Windows 98 and NT
+ - Made minor changes to bring inline with CVS version 1.16 for Macintosh
+
+Version 1.14.0
+ - Initial public release

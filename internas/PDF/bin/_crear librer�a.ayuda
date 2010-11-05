@@ -1,0 +1,4 @@
+
+Ejecutar creaLibreria.bat
+
+Luego en dist, library : añadir a la carpeta reportlab, toda la carpeta de reportlab, borrando *.pyo y *.py

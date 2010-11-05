@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>QT.QTUtil</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;QT ::
+        Module&nbsp;QTUtil
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="QT.QTUtil-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="QT.QTUtil-module.html">Module QT.QTUtil</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: latin-1 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">gc</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">PySide</tt> <tt class="py-keyword">import</tt> <tt class="py-name">QtCore</tt><tt class="py-op">,</tt> <tt class="py-name">QtGui</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module QT.Colocacion=QT.Colocacion-module.html"><a title="QT.Colocacion" class="py-name" href="#" onclick="return doclink('link-0', 'Colocacion', 'link-0');">Colocacion</a></tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module QT.Iconos=QT.Iconos-module.html"><a title="QT.Iconos" class="py-name" href="#" onclick="return doclink('link-1', 'Iconos', 'link-1');">Iconos</a></tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Module QT.Controles=QT.Controles-module.html"><a title="QT.Controles" class="py-name" href="#" onclick="return doclink('link-2', 'Controles', 'link-2');">Controles</a></tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="leeFichero"></a><div id="leeFichero-def"><a name="L15"></a><tt class="py-lineno"> 15</tt> <a class="py-toggle" href="#" id="leeFichero-toggle" onclick="return toggle('leeFichero');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#leeFichero">leeFichero</a><tt class="py-op">(</tt> <tt class="py-param">owner</tt><tt class="py-op">,</tt> <tt class="py-param">carpeta</tt><tt class="py-op">,</tt> <tt class="py-param">extension</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="leeFichero-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="leeFichero-expanded"><a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">    <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QFileDialog</tt><tt class="py-op">.</tt><tt class="py-name">getOpenFileName</tt><tt class="py-op">(</tt> <tt class="py-name">owner</tt><tt class="py-op">,</tt> <tt class="py-string">"Fichero"</tt><tt class="py-op">,</tt> <tt class="py-name">carpeta</tt><tt class="py-op">,</tt> <tt class="py-string">"Fichero %s (*.%s)"</tt><tt class="py-op">%</tt><tt class="py-op">(</tt><tt class="py-name">extension</tt><tt class="py-op">,</tt><tt class="py-name">extension</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">resp</tt> <tt class="py-op">:</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">resp</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="beep"></a><div id="beep-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="beep-toggle" onclick="return toggle('beep');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#beep">beep</a><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="beep-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="beep-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QApplication</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Function QT.QTUtil.beep()=QT.QTUtil-module.html#beep"><a title="QT.QTUtil.beep" class="py-name" href="#" onclick="return doclink('link-3', 'beep', 'link-3');">beep</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="refreshGUI"></a><div id="refreshGUI-def"><a name="L27"></a><tt class="py-lineno"> 27</tt> <a class="py-toggle" href="#" id="refreshGUI-toggle" onclick="return toggle('refreshGUI');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#refreshGUI">refreshGUI</a><tt class="py-op">(</tt> <tt class="py-param">siMax</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="refreshGUI-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="refreshGUI-expanded"><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">    <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QCoreApplication</tt><tt class="py-op">.</tt><tt class="py-name">processEvents</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">    <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QApplication</tt><tt class="py-op">.</tt><tt class="py-name">processEvents</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">siMax</tt> <tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">gc</tt><tt class="py-op">.</tt><tt class="py-name">collect</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable QT.QTUtil.dAlineacion=QT.QTUtil-module.html#dAlineacion"><a title="QT.QTUtil.dAlineacion" class="py-name" href="#" onclick="return doclink('link-4', 'dAlineacion', 'link-4');">dAlineacion</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> <tt class="py-string">"i"</tt><tt class="py-op">:</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignLeft</tt><tt class="py-op">,</tt> <tt class="py-string">"d"</tt><tt class="py-op">:</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignRight</tt><tt class="py-op">,</tt> <tt class="py-string">"c"</tt><tt class="py-op">:</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AlignCenter</tt> <tt class="py-op">}</tt> </tt>
+<a name="qtAlineacion"></a><div id="qtAlineacion-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="qtAlineacion-toggle" onclick="return toggle('qtAlineacion');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#qtAlineacion">qtAlineacion</a><tt class="py-op">(</tt> <tt class="py-param">cAlin</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="qtAlineacion-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="qtAlineacion-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">cAlin</tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt id="link-5" class="py-name"><a title="QT.QTUtil.dAlineacion" class="py-name" href="#" onclick="return doclink('link-5', 'dAlineacion', 'link-4');">dAlineacion</a></tt> <tt class="py-op">:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">cAlin</tt> <tt class="py-op">=</tt> <tt class="py-string">"i"</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-6" class="py-name"><a title="QT.QTUtil.dAlineacion" class="py-name" href="#" onclick="return doclink('link-6', 'dAlineacion', 'link-4');">dAlineacion</a></tt><tt class="py-op">[</tt><tt class="py-name">cAlin</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="qtFuente"></a><div id="qtFuente-def"><a name="L41"></a><tt class="py-lineno"> 41</tt> <a class="py-toggle" href="#" id="qtFuente-toggle" onclick="return toggle('qtFuente');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#qtFuente">qtFuente</a><tt class="py-op">(</tt> <tt class="py-param">tipoLetra</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="qtFuente-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="qtFuente-expanded"><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">    Genera una fuente de un objeto bloqueTexto</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QFont</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">    <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">fromString</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">tipoLetra</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">f</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="qtColor"></a><div id="qtColor-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="qtColor-toggle" onclick="return toggle('qtColor');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#qtColor">qtColor</a><tt class="py-op">(</tt> <tt class="py-param">nColor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="qtColor-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="qtColor-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring">    Genera un color a partir de un dato num&#233;rico</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QColor</tt><tt class="py-op">(</tt><tt class="py-name">nColor</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="qtColorRGB"></a><div id="qtColorRGB-def"><a name="L57"></a><tt class="py-lineno"> 57</tt> <a class="py-toggle" href="#" id="qtColorRGB-toggle" onclick="return toggle('qtColorRGB');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#qtColorRGB">qtColorRGB</a><tt class="py-op">(</tt> <tt class="py-param">r</tt><tt class="py-op">,</tt> <tt class="py-param">g</tt><tt class="py-op">,</tt> <tt class="py-param">b</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="qtColorRGB-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="qtColorRGB-expanded"><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-docstring">    Genera un color a partir del rgb</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QColor</tt><tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">,</tt><tt class="py-name">g</tt><tt class="py-op">,</tt><tt class="py-name">b</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="qtBrush"></a><div id="qtBrush-def"><a name="L64"></a><tt class="py-lineno"> 64</tt> <a class="py-toggle" href="#" id="qtBrush-toggle" onclick="return toggle('qtBrush');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#qtBrush">qtBrush</a><tt class="py-op">(</tt> <tt class="py-param">nColor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="qtBrush-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="qtBrush-expanded"><a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    Genera un brush a partir de un dato num&#233;rico</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QBrush</tt><tt class="py-op">(</tt><tt id="link-7" class="py-name" targets="Function QT.QTUtil.qtColor()=QT.QTUtil-module.html#qtColor"><a title="QT.QTUtil.qtColor" class="py-name" href="#" onclick="return doclink('link-7', 'qtColor', 'link-7');">qtColor</a></tt><tt class="py-op">(</tt><tt class="py-name">nColor</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="centraWindow"></a><div id="centraWindow-def"><a name="L71"></a><tt class="py-lineno"> 71</tt> <a class="py-toggle" href="#" id="centraWindow-toggle" onclick="return toggle('centraWindow');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#centraWindow">centraWindow</a><tt class="py-op">(</tt> <tt class="py-param">window</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="centraWindow-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="centraWindow-expanded"><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">    <tt class="py-name">screen</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QDesktopWidget</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">screenGeometry</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">    <tt class="py-name">size</tt> <tt class="py-op">=</tt>  <tt class="py-name">window</tt><tt class="py-op">.</tt><tt class="py-name">geometry</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-name">window</tt><tt class="py-op">.</tt><tt class="py-name">move</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">screen</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Function ED.width()=ED-module.html#width"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-8', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-name">size</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-9', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-number">2</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">screen</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Function ED.height()=ED-module.html#height"><a title="ED.height" class="py-name" href="#" onclick="return doclink('link-10', 'height', 'link-10');">height</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-name">size</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="ED.height" class="py-name" href="#" onclick="return doclink('link-11', 'height', 'link-10');">height</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-number">2</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="tamEscritorio"></a><div id="tamEscritorio-def"><a name="L76"></a><tt class="py-lineno"> 76</tt> <a class="py-toggle" href="#" id="tamEscritorio-toggle" onclick="return toggle('tamEscritorio');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#tamEscritorio">tamEscritorio</a><tt class="py-op">(</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="tamEscritorio-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="tamEscritorio-expanded"><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">    <tt class="py-name">screen</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QDesktopWidget</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">screenGeometry</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">screen</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-12', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">screen</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="ED.height" class="py-name" href="#" onclick="return doclink('link-13', 'height', 'link-10');">height</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="anchoEscritorio"></a><div id="anchoEscritorio-def"><a name="L80"></a><tt class="py-lineno"> 80</tt> <a class="py-toggle" href="#" id="anchoEscritorio-toggle" onclick="return toggle('anchoEscritorio');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#anchoEscritorio">anchoEscritorio</a><tt class="py-op">(</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="anchoEscritorio-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="anchoEscritorio-expanded"><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">    <tt class="py-name">screen</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QDesktopWidget</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">screenGeometry</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">screen</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-14', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="MensEspera"></a><div id="MensEspera-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="MensEspera-toggle" onclick="return toggle('MensEspera');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html">MensEspera</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QDialog</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="MensEspera-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.__init__"></a><div id="MensEspera.__init__-def"><a name="L87"></a><tt class="py-lineno"> 87</tt> <a class="py-toggle" href="#" id="MensEspera.__init__-toggle" onclick="return toggle('MensEspera.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">mensaje</tt><tt class="py-op">,</tt> <tt class="py-param">siCancelar</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-comment">#siCancelar</tt> </tt>
+</div><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt> <tt id="link-15" class="py-name" targets="Function QT.Iconos.MensEspera()=QT.Iconos-module.html#MensEspera,Class QT.QTUtil.MensEspera=QT.QTUtil.MensEspera-class.html"><a title="QT.Iconos.MensEspera
+QT.QTUtil.MensEspera" class="py-name" href="#" onclick="return doclink('link-15', 'MensEspera', 'link-15');">MensEspera</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method ED.BarraProgreso.__init__()=ED.BarraProgreso-class.html#__init__,Method ED.OPENFILENAME.__init__()=ED.OPENFILENAME-class.html#__init__,Method ED.OSVERSIONINFO.__init__()=ED.OSVERSIONINFO-class.html#__init__,Method ED.ProgressBar.__init__()=ED.ProgressBar-class.html#__init__,Method Enlace.DBF.DBF.__init__()=Enlace.DBF.DBF-class.html#__init__,Method Enlace.DBFexten.DBFexten.__init__()=Enlace.DBFexten.DBFexten-class.html#__init__,Method Enlace.DBFmgdGen.ActividadBase.__init__()=Enlace.DBFmgdGen.ActividadBase-class.html#__init__,Method Enlace.DBFmgdGen.AjustesBase.__init__()=Enlace.DBFmgdGen.AjustesBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbEmiBase.__init__()=Enlace.DBFmgdGen.AlbEmiBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbInvBase.__init__()=Enlace.DBFmgdGen.AlbInvBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPedBase.__init__()=Enlace.DBFmgdGen.AlbPedBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPedEBase.__init__()=Enlace.DBFmgdGen.AlbPedEBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPreBase.__init__()=Enlace.DBFmgdGen.AlbPreBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbRecBase.__init__()=Enlace.DBFmgdGen.AlbRecBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbRepBase.__init__()=Enlace.DBFmgdGen.AlbRepBase-class.html#__init__,Method Enlace.DBFmgdGen.AnaliticaBase.__init__()=Enlace.DBFmgdGen.AnaliticaBase-class.html#__init__,Method Enlace.DBFmgdGen.ApuntesBase.__init__()=Enlace.DBFmgdGen.ApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ArticulosBase.__init__()=Enlace.DBFmgdGen.ArticulosBase-class.html#__init__,Method Enlace.DBFmgdGen.ArticulosCBase.__init__()=Enlace.DBFmgdGen.ArticulosCBase-class.html#__init__,Method Enlace.DBFmgdGen.BancosBase.__init__()=Enlace.DBFmgdGen.BancosBase-class.html#__init__,Method Enlace.DBFmgdGen.ClientesBase.__init__()=Enlace.DBFmgdGen.ClientesBase-class.html#__init__,Method Enlace.DBFmgdGen.CuentasBase.__init__()=Enlace.DBFmgdGen.CuentasBase-class.html#__init__,Method Enlace.DBFmgdGen.DiarioBase.__init__()=Enlace.DBFmgdGen.DiarioBase-class.html#__init__,Method Enlace.DBFmgdGen.DiarioTxtBase.__init__()=Enlace.DBFmgdGen.DiarioTxtBase-class.html#__init__,Method Enlace.DBFmgdGen.DirectosBase.__init__()=Enlace.DBFmgdGen.DirectosBase-class.html#__init__,Method Enlace.DBFmgdGen.EmitidasBase.__init__()=Enlace.DBFmgdGen.EmitidasBase-class.html#__init__,Method Enlace.DBFmgdGen.ErivaBase.__init__()=Enlace.DBFmgdGen.ErivaBase-class.html#__init__,Method Enlace.DBFmgdGen.EtiCodBase.__init__()=Enlace.DBFmgdGen.EtiCodBase-class.html#__init__,Method Enlace.DBFmgdGen.EtiDatBase.__init__()=Enlace.DBFmgdGen.EtiDatBase-class.html#__init__,Method Enlace.DBFmgdGen.ExApuntesBase.__init__()=Enlace.DBFmgdGen.ExApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ExPlantillasBase.__init__()=Enlace.DBFmgdGen.ExPlantillasBase-class.html#__init__,Method Enlace.DBFmgdGen.ExtrasBase.__init__()=Enlace.DBFmgdGen.ExtrasBase-class.html#__init__,Method Enlace.DBFmgdGen.FamiliasBase.__init__()=Enlace.DBFmgdGen.FamiliasBase-class.html#__init__,Method Enlace.DBFmgdGen.FamiliasCBase.__init__()=Enlace.DBFmgdGen.FamiliasCBase-class.html#__init__,Method Enlace.DBFmgdGen.FormdocBase.__init__()=Enlace.DBFmgdGen.FormdocBase-class.html#__init__,Method Enlace.DBFmgdGen.FormhojaBase.__init__()=Enlace.DBFmgdGen.FormhojaBase-class.html#__init__,Method Enlace.DBFmgdGen.FotosBase.__init__()=Enlace.DBFmgdGen.FotosBase-class.html#__init__,Method Enlace.DBFmgdGen.IVABase.__init__()=Enlace.DBFmgdGen.IVABase-class.html#__init__,Method Enlace.DBFmgdGen.InfapunBase.__init__()=Enlace.DBFmgdGen.InfapunBase-class.html#__init__,Method Enlace.DBFmgdGen.InformesBase.__init__()=Enlace.DBFmgdGen.InformesBase-class.html#__init__,Method Enlace.DBFmgdGen.LbiBase.__init__()=Enlace.DBFmgdGen.LbiBase-class.html#__init__,Method Enlace.DBFmgdGen.MovBancosBase.__init__()=Enlace.DBFmgdGen.MovBancosBase-class.html#__init__,Method Enlace.DBFmgdGen.OperacionesBase.__init__()=Enlace.DBFmgdGen.OperacionesBase-class.html#__init__,Method Enlace.DBFmgdGen.PagosBase.__init__()=Enlace.DBFmgdGen.PagosBase-class.html#__init__,Method Enlace.DBFmgdGen.ParametrosBase.__init__()=Enlace.DBFmgdGen.ParametrosBase-class.html#__init__,Method Enlace.DBFmgdGen.ProveedoresBase.__init__()=Enlace.DBFmgdGen.ProveedoresBase-class.html#__init__,Method Enlace.DBFmgdGen.RecibidasBase.__init__()=Enlace.DBFmgdGen.RecibidasBase-class.html#__init__,Method Enlace.DBFmgdGen.RecibosBase.__init__()=Enlace.DBFmgdGen.RecibosBase-class.html#__init__,Method Enlace.DBFmgdGen.RefApuntesBase.__init__()=Enlace.DBFmgdGen.RefApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ReferenciasBase.__init__()=Enlace.DBFmgdGen.ReferenciasBase-class.html#__init__,Method Enlace.DBFmgdGen.TipoVtosBase.__init__()=Enlace.DBFmgdGen.TipoVtosBase-class.html#__init__,Method Enlace.DBFmgdGen.VencimientosBase.__init__()=Enlace.DBFmgdGen.VencimientosBase-class.html#__init__,Method Enlace.Empresa.Empresa.__init__()=Enlace.Empresa.Empresa-class.html#__init__,Method Enlace.Enlace.Field.__init__()=Enlace.Enlace.Field-class.html#__init__,Method QT.Columnas.Columna.__init__()=QT.Columnas.Columna-class.html#__init__,Method QT.Columnas.ListaColumnas.__init__()=QT.Columnas.ListaColumnas-class.html#__init__,Method QT.Controles.ED.__init__()=QT.Controles.ED-class.html#__init__,Method QT.Controles.EM.__init__()=QT.Controles.EM-class.html#__init__,Method QT.Controles.GB.__init__()=QT.Controles.GB-class.html#__init__,Method QT.Controles.LB.__init__()=QT.Controles.LB-class.html#__init__,Method QT.Controles.LMenu.__init__()=QT.Controles.LMenu-class.html#__init__,Method QT.Controles.PB.__init__()=QT.Controles.PB-class.html#__init__,Method QT.Controles.PBAR.__init__()=QT.Controles.PBAR-class.html#__init__,Method QT.Controles.RB.__init__()=QT.Controles.RB-class.html#__init__,Method QT.Grid.Cabecera.__init__()=QT.Grid.Cabecera-class.html#__init__,Method QT.Grid.ControlGrid.__init__()=QT.Grid.ControlGrid-class.html#__init__,Method QT.Grid.Grid.__init__()=QT.Grid.Grid-class.html#__init__,Method QT.QTUtil.BarraProgreso.__init__()=QT.QTUtil.BarraProgreso-class.html#__init__,Method QT.QTUtil.MensEspera.__init__()=QT.QTUtil.MensEspera-class.html#__init__,Method QT.QTUtil.Mensaje.__init__()=QT.QTUtil.Mensaje-class.html#__init__,Method QT.QTUtil.Proceso.__init__()=QT.QTUtil.Proceso-class.html#__init__,Method Util.Config.ConfigI.__init__()=Util.Config.ConfigI-class.html#__init__,Method Util.Config.ConfigX.__init__()=Util.Config.ConfigX-class.html#__init__,Method VarExten.DicOrdenado.__init__()=VarExten.DicOrdenado-class.html#__init__,Method dbAccess.MotorDB.__init__()=dbAccess.MotorDB-class.html#__init__,Method jDBF.clDBF.__init__()=jDBF.clDBF-class.html#__init__,Method jFechas.clFecha.__init__()=jFechas.clFecha-class.html#__init__,Method jFusion.clFusion.__init__()=jFusion.clFusion-class.html#__init__,Method jFusion.clLog.__init__()=jFusion.clLog-class.html#__init__"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-16', '__init__', 'link-16');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">parent</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWindowFlags</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">SplashScreen</tt> <tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setStyleSheet</tt><tt class="py-op">(</tt><tt class="py-string">"QDialog, QLabel { background: #79b600 }"</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-name">lbi</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QLabel</tt><tt class="py-op">(</tt> <tt class="py-op">)</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-name">lbi</tt><tt class="py-op">.</tt><tt class="py-name">setPixmap</tt><tt class="py-op">(</tt><tt id="link-17" class="py-name"><a title="QT.Iconos" class="py-name" href="#" onclick="return doclink('link-17', 'Iconos', 'link-1');">Iconos</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Function QT.Iconos.pmMensEspera()=QT.Iconos-module.html#pmMensEspera"><a title="QT.Iconos.pmMensEspera" class="py-name" href="#" onclick="return doclink('link-18', 'pmMensEspera', 'link-18');">pmMensEspera</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">lb</tt> <tt class="py-op">=</tt> <tt class="py-name">lb</tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name"><a title="QT.Controles" class="py-name" href="#" onclick="return doclink('link-19', 'Controles', 'link-2');">Controles</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Class QT.Controles.LB=QT.Controles.LB-class.html"><a title="QT.Controles.LB" class="py-name" href="#" onclick="return doclink('link-20', 'LB', 'link-20');">LB</a></tt><tt class="py-op">(</tt> <tt id="link-21" class="py-name" targets="Function QT.QTUtil.resalta()=QT.QTUtil-module.html#resalta"><a title="QT.QTUtil.resalta" class="py-name" href="#" onclick="return doclink('link-21', 'resalta', 'link-21');">resalta</a></tt><tt class="py-op">(</tt><tt id="link-22" class="py-name" targets="Function ED.mensaje()=ED-module.html#mensaje,Method QT.QTUtil.BarraProgreso.mensaje()=QT.QTUtil.BarraProgreso-class.html#mensaje,Function QT.QTUtil.mensaje()=QT.QTUtil-module.html#mensaje"><a title="ED.mensaje
+QT.QTUtil.BarraProgreso.mensaje
+QT.QTUtil.mensaje" class="py-name" href="#" onclick="return doclink('link-22', 'mensaje', 'link-22');">mensaje</a></tt><tt class="py-op">)</tt> <tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method QT.Controles.ED.ponFuente()=QT.Controles.ED-class.html#ponFuente,Method QT.Controles.EM.ponFuente()=QT.Controles.EM-class.html#ponFuente,Method QT.Controles.GB.ponFuente()=QT.Controles.GB-class.html#ponFuente,Method QT.Controles.LB.ponFuente()=QT.Controles.LB-class.html#ponFuente,Method QT.Controles.LMenu.ponFuente()=QT.Controles.LMenu-class.html#ponFuente,Method QT.Controles.PB.ponFuente()=QT.Controles.PB-class.html#ponFuente"><a title="QT.Controles.ED.ponFuente
+QT.Controles.EM.ponFuente
+QT.Controles.GB.ponFuente
+QT.Controles.LB.ponFuente
+QT.Controles.LMenu.ponFuente
+QT.Controles.PB.ponFuente" class="py-name" href="#" onclick="return doclink('link-23', 'ponFuente', 'link-23');">ponFuente</a></tt><tt class="py-op">(</tt> <tt id="link-24" class="py-name" targets="Function QT.QTUtil.qtFuente()=QT.QTUtil-module.html#qtFuente"><a title="QT.QTUtil.qtFuente" class="py-name" href="#" onclick="return doclink('link-24', 'qtFuente', 'link-24');">qtFuente</a></tt><tt class="py-op">(</tt> <tt class="py-name">TabTipos</tt><tt class="py-op">.</tt><tt class="py-name">TipoLetra</tt><tt class="py-op">(</tt> <tt class="py-name">puntos</tt> <tt class="py-op">=</tt> <tt class="py-number">12</tt> <tt class="py-op">)</tt> <tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">siCancelar</tt> <tt class="py-op">:</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method QT.QTUtil.BarraProgreso.siCancelado()=QT.QTUtil.BarraProgreso-class.html#siCancelado"><a title="QT.QTUtil.BarraProgreso.siCancelado" class="py-name" href="#" onclick="return doclink('link-25', 'siCancelado', 'link-25');">siCancelado</a></tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">btCancelar</tt> <tt class="py-op">=</tt> <tt id="link-26" class="py-name"><a title="QT.Controles" class="py-name" href="#" onclick="return doclink('link-26', 'Controles', 'link-2');">Controles</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Class QT.Controles.PB=QT.Controles.PB-class.html"><a title="QT.Controles.PB" class="py-name" href="#" onclick="return doclink('link-27', 'PB', 'link-27');">PB</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-string">"Cancelar"</tt><tt class="py-op">,</tt> <tt class="py-name">rutina</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method QT.QTUtil.MensEspera.cancelar()=QT.QTUtil.MensEspera-class.html#cancelar"><a title="QT.QTUtil.MensEspera.cancelar" class="py-name" href="#" onclick="return doclink('link-28', 'cancelar', 'link-28');">cancelar</a></tt><tt class="py-op">,</tt> <tt class="py-name">plano</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Method QT.Controles.PB.ponIcono()=QT.Controles.PB-class.html#ponIcono"><a title="QT.Controles.PB.ponIcono" class="py-name" href="#" onclick="return doclink('link-29', 'ponIcono', 'link-29');">ponIcono</a></tt><tt class="py-op">(</tt> <tt id="link-30" class="py-name"><a title="QT.Iconos" class="py-name" href="#" onclick="return doclink('link-30', 'Iconos', 'link-1');">Iconos</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Function QT.Iconos.TB_Cancelar()=QT.Iconos-module.html#TB_Cancelar"><a title="QT.Iconos.TB_Cancelar" class="py-name" href="#" onclick="return doclink('link-31', 'TB_Cancelar', 'link-31');">TB_Cancelar</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method QT.Controles.ED.anchoFijo()=QT.Controles.ED-class.html#anchoFijo,Method QT.Controles.EM.anchoFijo()=QT.Controles.EM-class.html#anchoFijo,Method QT.Controles.LB.anchoFijo()=QT.Controles.LB-class.html#anchoFijo,Method QT.Controles.PB.anchoFijo()=QT.Controles.PB-class.html#anchoFijo"><a title="QT.Controles.ED.anchoFijo
+QT.Controles.EM.anchoFijo
+QT.Controles.LB.anchoFijo
+QT.Controles.PB.anchoFijo" class="py-name" href="#" onclick="return doclink('link-32', 'anchoFijo', 'link-32');">anchoFijo</a></tt><tt class="py-op">(</tt><tt class="py-number">100</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-name">ly</tt> <tt class="py-op">=</tt> <tt id="link-33" class="py-name"><a title="QT.Colocacion" class="py-name" href="#" onclick="return doclink('link-33', 'Colocacion', 'link-0');">Colocacion</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Class QT.Colocacion.G=QT.Colocacion.G-class.html"><a title="QT.Colocacion.G" class="py-name" href="#" onclick="return doclink('link-34', 'G', 'link-34');">G</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Method QT.Colocacion.G.control()=QT.Colocacion.G-class.html#control,Method QT.Colocacion.H.control()=QT.Colocacion.H-class.html#control,Method QT.Colocacion.V.control()=QT.Colocacion.V-class.html#control"><a title="QT.Colocacion.G.control
+QT.Colocacion.H.control
+QT.Colocacion.V.control" class="py-name" href="#" onclick="return doclink('link-35', 'control', 'link-35');">control</a></tt><tt class="py-op">(</tt> <tt class="py-name">lbi</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">3</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt> <tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="QT.Colocacion.G.control
+QT.Colocacion.H.control
+QT.Colocacion.V.control" class="py-name" href="#" onclick="return doclink('link-36', 'control', 'link-35');">control</a></tt><tt class="py-op">(</tt> <tt class="py-name">lb</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt> <tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">siCancelar</tt> <tt class="py-op">:</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">            <tt class="py-name">ly</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method QT.Colocacion.G.controlc()=QT.Colocacion.G-class.html#controlc"><a title="QT.Colocacion.G.controlc" class="py-name" href="#" onclick="return doclink('link-37', 'controlc', 'link-37');">controlc</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">btCancelar</tt><tt class="py-op">,</tt> <tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-number">1</tt> <tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-name">ly</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Method QT.Colocacion.G.margen()=QT.Colocacion.G-class.html#margen,Method QT.Colocacion.H.margen()=QT.Colocacion.H-class.html#margen,Method QT.Colocacion.V.margen()=QT.Colocacion.V-class.html#margen"><a title="QT.Colocacion.G.margen
+QT.Colocacion.H.margen
+QT.Colocacion.V.margen" class="py-name" href="#" onclick="return doclink('link-38', 'margen', 'link-38');">margen</a></tt><tt class="py-op">(</tt> <tt class="py-number">25</tt> <tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setLayout</tt><tt class="py-op">(</tt><tt class="py-name">ly</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">teclaPulsada</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.cancelar"></a><div id="MensEspera.cancelar-def"><a name="L109"></a><tt class="py-lineno">109</tt> <a class="py-toggle" href="#" id="MensEspera.cancelar-toggle" onclick="return toggle('MensEspera.cancelar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#cancelar">cancelar</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera.cancelar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MensEspera.cancelar-expanded"><a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="QT.QTUtil.BarraProgreso.siCancelado" class="py-name" href="#" onclick="return doclink('link-39', 'siCancelado', 'link-25');">siCancelado</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.cancelado"></a><div id="MensEspera.cancelado-def"><a name="L112"></a><tt class="py-lineno">112</tt> <a class="py-toggle" href="#" id="MensEspera.cancelado-toggle" onclick="return toggle('MensEspera.cancelado');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#cancelado">cancelado</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera.cancelado-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MensEspera.cancelado-expanded"><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt id="link-40" class="py-name" targets="Function QT.QTUtil.refreshGUI()=QT.QTUtil-module.html#refreshGUI"><a title="QT.QTUtil.refreshGUI" class="py-name" href="#" onclick="return doclink('link-40', 'refreshGUI', 'link-40');">refreshGUI</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="QT.QTUtil.BarraProgreso.siCancelado" class="py-name" href="#" onclick="return doclink('link-41', 'siCancelado', 'link-25');">siCancelado</a></tt> </tt>
+</div><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.activarCancelar"></a><div id="MensEspera.activarCancelar-def"><a name="L116"></a><tt class="py-lineno">116</tt> <a class="py-toggle" href="#" id="MensEspera.activarCancelar-toggle" onclick="return toggle('MensEspera.activarCancelar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#activarCancelar">activarCancelar</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">siActivar</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera.activarCancelar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MensEspera.activarCancelar-expanded"><a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">btCancelar</tt><tt class="py-op">.</tt><tt class="py-name">setVisible</tt><tt class="py-op">(</tt> <tt class="py-name">siActivar</tt> <tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt id="link-42" class="py-name"><a title="QT.QTUtil.refreshGUI" class="py-name" href="#" onclick="return doclink('link-42', 'refreshGUI', 'link-40');">refreshGUI</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.keyPressEvent"></a><div id="MensEspera.keyPressEvent-def"><a name="L121"></a><tt class="py-lineno">121</tt> <a class="py-toggle" href="#" id="MensEspera.keyPressEvent-toggle" onclick="return toggle('MensEspera.keyPressEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#keyPressEvent">keyPressEvent</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera.keyPressEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MensEspera.keyPressEvent-expanded"><a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QDialog</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name" targets="Method QT.Grid.Grid.keyPressEvent()=QT.Grid.Grid-class.html#keyPressEvent,Method QT.QTUtil.MensEspera.keyPressEvent()=QT.QTUtil.MensEspera-class.html#keyPressEvent"><a title="QT.Grid.Grid.keyPressEvent
+QT.QTUtil.MensEspera.keyPressEvent" class="py-name" href="#" onclick="return doclink('link-43', 'keyPressEvent', 'link-43');">keyPressEvent</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt> <tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">teclaPulsada</tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.rotulo"></a><div id="MensEspera.rotulo-def"><a name="L125"></a><tt class="py-lineno">125</tt> <a class="py-toggle" href="#" id="MensEspera.rotulo-toggle" onclick="return toggle('MensEspera.rotulo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#rotulo">rotulo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nuevo</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera.rotulo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MensEspera.rotulo-expanded"><a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">lb</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Method QT.Controles.ED.ponTexto()=QT.Controles.ED-class.html#ponTexto,Method QT.Controles.LB.ponTexto()=QT.Controles.LB-class.html#ponTexto,Method QT.Controles.PB.ponTexto()=QT.Controles.PB-class.html#ponTexto"><a title="QT.Controles.ED.ponTexto
+QT.Controles.LB.ponTexto
+QT.Controles.PB.ponTexto" class="py-name" href="#" onclick="return doclink('link-44', 'ponTexto', 'link-44');">ponTexto</a></tt><tt class="py-op">(</tt> <tt id="link-45" class="py-name"><a title="QT.QTUtil.resalta" class="py-name" href="#" onclick="return doclink('link-45', 'resalta', 'link-21');">resalta</a></tt><tt class="py-op">(</tt><tt id="link-46" class="py-name" targets="Method Enlace.DBFmgd.Eriva.nuevo()=Enlace.DBFmgd.Eriva-class.html#nuevo,Method Enlace.DBFmgd.ExApuntes.nuevo()=Enlace.DBFmgd.ExApuntes-class.html#nuevo,Method Enlace.DBFmgd.Extras.nuevo()=Enlace.DBFmgd.Extras-class.html#nuevo,Method Enlace.DBFmgd.MovBancos.nuevo()=Enlace.DBFmgd.MovBancos-class.html#nuevo,Method Enlace.DBFmgd.Vencimientos.nuevo()=Enlace.DBFmgd.Vencimientos-class.html#nuevo,Method VarExten.DicOrdenado.nuevo()=VarExten.DicOrdenado-class.html#nuevo"><a title="Enlace.DBFmgd.Eriva.nuevo
+Enlace.DBFmgd.ExApuntes.nuevo
+Enlace.DBFmgd.Extras.nuevo
+Enlace.DBFmgd.MovBancos.nuevo
+Enlace.DBFmgd.Vencimientos.nuevo
+VarExten.DicOrdenado.nuevo" class="py-name" href="#" onclick="return doclink('link-46', 'nuevo', 'link-46');">nuevo</a></tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt id="link-47" class="py-name"><a title="QT.QTUtil.refreshGUI" class="py-name" href="#" onclick="return doclink('link-47', 'refreshGUI', 'link-40');">refreshGUI</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.muestra"></a><div id="MensEspera.muestra-def"><a name="L129"></a><tt class="py-lineno">129</tt> <a class="py-toggle" href="#" id="MensEspera.muestra-toggle" onclick="return toggle('MensEspera.muestra');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#muestra">muestra</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera.muestra-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MensEspera.muestra-expanded"><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">show</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt id="link-48" class="py-name"><a title="QT.QTUtil.refreshGUI" class="py-name" href="#" onclick="return doclink('link-48', 'refreshGUI', 'link-40');">refreshGUI</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="MensEspera.final"></a><div id="MensEspera.final-def"><a name="L134"></a><tt class="py-lineno">134</tt> <a class="py-toggle" href="#" id="MensEspera.final-toggle" onclick="return toggle('MensEspera.final');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.MensEspera-class.html#final">final</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="MensEspera.final-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MensEspera.final-expanded"><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Method Enlace.DBF.DBF.close()=Enlace.DBF.DBF-class.html#close,Method Enlace.DBFexten.DBFexten.close()=Enlace.DBFexten.DBFexten-class.html#close"><a title="Enlace.DBF.DBF.close
+Enlace.DBFexten.DBFexten.close" class="py-name" href="#" onclick="return doclink('link-49', 'close', 'link-49');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt id="link-50" class="py-name"><a title="QT.QTUtil.refreshGUI" class="py-name" href="#" onclick="return doclink('link-50', 'refreshGUI', 'link-40');">refreshGUI</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="BarraProgreso"></a><div id="BarraProgreso-def"><a name="L139"></a><tt class="py-lineno">139</tt> <a class="py-toggle" href="#" id="BarraProgreso-toggle" onclick="return toggle('BarraProgreso');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html">BarraProgreso</a><tt class="py-op">(</tt> <tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QProgressDialog</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="BarraProgreso-expanded"><a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">    <tt class="py-comment">#~ bp = QTUtil.BarraProgreso( self, "me", 5 ).mostrar()</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt class="py-comment">#~ n = 0</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">    <tt class="py-comment">#~ for n in range(5) :</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">        <tt class="py-comment">#~ print n</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-comment">#~ bp.pon( n )</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-comment">#~ time.sleep(1)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt class="py-comment">#~ if bp.siCancelado() :</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">            <tt class="py-comment">#~ break</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">    <tt class="py-comment">#~ bp.cerrar()</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="BarraProgreso.__init__"></a><div id="BarraProgreso.__init__-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="BarraProgreso.__init__-toggle" onclick="return toggle('BarraProgreso.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html#__init__">__init__</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">owner</tt><tt class="py-op">,</tt> <tt class="py-param">titulo</tt><tt class="py-op">,</tt> <tt class="py-param">mensaje</tt><tt class="py-op">,</tt> <tt class="py-param">total</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BarraProgreso.__init__-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QProgressDialog</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-51', '__init__', 'link-16');">__init__</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-52" class="py-name"><a title="ED.mensaje
+QT.QTUtil.BarraProgreso.mensaje
+QT.QTUtil.mensaje" class="py-name" href="#" onclick="return doclink('link-52', 'mensaje', 'link-22');">mensaje</a></tt><tt class="py-op">,</tt> <tt class="py-string">"Cancelar"</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-name">total</tt><tt class="py-op">,</tt> <tt class="py-name">owner</tt><tt class="py-op">)</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">total</tt> <tt class="py-op">=</tt> <tt class="py-name">total</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWindowModality</tt><tt class="py-op">(</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">WindowModal</tt><tt class="py-op">)</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWindowFlags</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">Dialog</tt> <tt class="py-op">|</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">WindowTitleHint</tt> <tt class="py-op">)</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWindowTitle</tt><tt class="py-op">(</tt> <tt class="py-name">titulo</tt> <tt class="py-op">)</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">owner</tt> <tt class="py-op">=</tt> <tt class="py-name">owner</tt> </tt>
+</div><a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"> </tt>
+<a name="BarraProgreso.mostrar"></a><div id="BarraProgreso.mostrar-def"><a name="L158"></a><tt class="py-lineno">158</tt> <a class="py-toggle" href="#" id="BarraProgreso.mostrar-toggle" onclick="return toggle('BarraProgreso.mostrar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html#mostrar">mostrar</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso.mostrar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BarraProgreso.mostrar-expanded"><a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">show</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"> </tt>
+<a name="BarraProgreso.mostrarAD"></a><div id="BarraProgreso.mostrarAD-def"><a name="L162"></a><tt class="py-lineno">162</tt> <a class="py-toggle" href="#" id="BarraProgreso.mostrarAD-toggle" onclick="return toggle('BarraProgreso.mostrarAD');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html#mostrarAD">mostrarAD</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso.mostrarAD-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BarraProgreso.mostrarAD-expanded"><a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">move</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">owner</tt><tt class="py-op">.</tt><tt class="py-name">x</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">owner</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-53', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-54', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">owner</tt><tt class="py-op">.</tt><tt class="py-name">y</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">show</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"> </tt>
+<a name="BarraProgreso.cerrar"></a><div id="BarraProgreso.cerrar-def"><a name="L168"></a><tt class="py-lineno">168</tt> <a class="py-toggle" href="#" id="BarraProgreso.cerrar-toggle" onclick="return toggle('BarraProgreso.cerrar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html#cerrar">cerrar</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso.cerrar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BarraProgreso.cerrar-expanded"><a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setValue</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">total</tt><tt class="py-op">)</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-55" class="py-name"><a title="Enlace.DBF.DBF.close
+Enlace.DBFexten.DBFexten.close" class="py-name" href="#" onclick="return doclink('link-55', 'close', 'link-49');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"> </tt>
+<a name="BarraProgreso.mensaje"></a><div id="BarraProgreso.mensaje-def"><a name="L172"></a><tt class="py-lineno">172</tt> <a class="py-toggle" href="#" id="BarraProgreso.mensaje-toggle" onclick="return toggle('BarraProgreso.mensaje');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html#mensaje">mensaje</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">mens</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso.mensaje-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BarraProgreso.mensaje-expanded"><a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setLabelText</tt><tt class="py-op">(</tt> <tt class="py-name">mens</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"> </tt>
+<a name="BarraProgreso.siCancelado"></a><div id="BarraProgreso.siCancelado-def"><a name="L175"></a><tt class="py-lineno">175</tt> <a class="py-toggle" href="#" id="BarraProgreso.siCancelado-toggle" onclick="return toggle('BarraProgreso.siCancelado');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html#siCancelado">siCancelado</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso.siCancelado-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BarraProgreso.siCancelado-expanded"><a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wasCanceled</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"> </tt>
+<a name="BarraProgreso.pon"></a><div id="BarraProgreso.pon-def"><a name="L178"></a><tt class="py-lineno">178</tt> <a class="py-toggle" href="#" id="BarraProgreso.pon-toggle" onclick="return toggle('BarraProgreso.pon');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.BarraProgreso-class.html#pon">pon</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">valor</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="BarraProgreso.pon-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BarraProgreso.pon-expanded"><a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setValue</tt><tt class="py-op">(</tt> <tt class="py-name">valor</tt> <tt class="py-op">)</tt> </tt>
+</div></div><a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="resalta"></a><div id="resalta-def"><a name="L182"></a><tt class="py-lineno">182</tt> <a class="py-toggle" href="#" id="resalta-toggle" onclick="return toggle('resalta');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#resalta">resalta</a><tt class="py-op">(</tt> <tt class="py-param">mens</tt><tt class="py-op">,</tt> <tt class="py-param">tipo</tt> <tt class="py-op">=</tt> <tt class="py-number">4</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="resalta-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="resalta-expanded"><a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-string">"&lt;h%d&gt;%s&lt;/h%d&gt;"</tt><tt class="py-op">%</tt><tt class="py-op">(</tt> <tt class="py-name">tipo</tt><tt class="py-op">,</tt><tt class="py-name">mens</tt><tt class="py-op">,</tt><tt class="py-name">tipo</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt> <tt class="py-string">"\n"</tt><tt class="py-op">,</tt> <tt class="py-string">"&lt;br&gt;"</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="mensaje"></a><div id="mensaje-def"><a name="L186"></a><tt class="py-lineno">186</tt> <a class="py-toggle" href="#" id="mensaje-toggle" onclick="return toggle('mensaje');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#mensaje">mensaje</a><tt class="py-op">(</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">mens</tt><tt class="py-op">,</tt> <tt class="py-param">titulo</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">siResalta</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-param">siArribaDerecha</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="mensaje-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="mensaje-expanded"><a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">    <tt class="py-name">w</tt> <tt class="py-op">=</tt> <tt id="link-56" class="py-name" targets="Class QT.QTUtil.Mensaje=QT.QTUtil.Mensaje-class.html"><a title="QT.QTUtil.Mensaje" class="py-name" href="#" onclick="return doclink('link-56', 'Mensaje', 'link-56');">Mensaje</a></tt><tt class="py-op">(</tt> <tt class="py-name">parent</tt><tt class="py-op">,</tt> <tt class="py-name">mens</tt><tt class="py-op">,</tt> <tt class="py-name">titulo</tt><tt class="py-op">,</tt> <tt class="py-name">siResalta</tt> <tt class="py-op">)</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">siArribaDerecha</tt> <tt class="py-op">:</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">        <tt class="py-name">w</tt><tt class="py-op">.</tt><tt class="py-name">show</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">        <tt class="py-name">w</tt><tt class="py-op">.</tt><tt class="py-name">move</tt><tt class="py-op">(</tt> <tt class="py-name">parent</tt><tt class="py-op">.</tt><tt class="py-name">x</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">parent</tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-57', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-name">w</tt><tt class="py-op">.</tt><tt id="link-58" class="py-name"><a title="ED.width" class="py-name" href="#" onclick="return doclink('link-58', 'width', 'link-8');">width</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">parent</tt><tt class="py-op">.</tt><tt class="py-name">y</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">    <tt class="py-name">w</tt><tt class="py-op">.</tt><tt id="link-59" class="py-name" targets="Method QT.QTUtil.MensEspera.muestra()=QT.QTUtil.MensEspera-class.html#muestra,Method QT.QTUtil.Mensaje.muestra()=QT.QTUtil.Mensaje-class.html#muestra"><a title="QT.QTUtil.MensEspera.muestra
+QT.QTUtil.Mensaje.muestra" class="py-name" href="#" onclick="return doclink('link-59', 'muestra', 'link-59');">muestra</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line"> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="Mensaje"></a><div id="Mensaje-def"><a name="L194"></a><tt class="py-lineno">194</tt> <a class="py-toggle" href="#" id="Mensaje-toggle" onclick="return toggle('Mensaje');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.QTUtil.Mensaje-class.html">Mensaje</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QDialog</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mensaje-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Mensaje-expanded"><a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"> </tt>
+<a name="Mensaje.__init__"></a><div id="Mensaje.__init__-def"><a name="L196"></a><tt class="py-lineno">196</tt> <a class="py-toggle" href="#" id="Mensaje.__init__-toggle" onclick="return toggle('Mensaje.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.Mensaje-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">mens</tt><tt class="py-op">,</tt> <tt class="py-param">titulo</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">siResalta</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Mensaje.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mensaje.__init__-expanded"><a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt> <tt id="link-60" class="py-name"><a title="QT.QTUtil.Mensaje" class="py-name" href="#" onclick="return doclink('link-60', 'Mensaje', 'link-56');">Mensaje</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-61" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-61', '__init__', 'link-16');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">parent</tt><tt class="py-op">)</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line"> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">titulo</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt> <tt class="py-op">:</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">            <tt class="py-name">titulo</tt> <tt class="py-op">=</tt> <tt class="py-string">"Mensaje"</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">siResalta</tt> <tt class="py-op">:</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">            <tt class="py-name">mens</tt> <tt class="py-op">=</tt> <tt id="link-62" class="py-name"><a title="QT.QTUtil.resalta" class="py-name" href="#" onclick="return doclink('link-62', 'resalta', 'link-21');">resalta</a></tt><tt class="py-op">(</tt><tt class="py-name">mens</tt><tt class="py-op">)</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWindowTitle</tt><tt class="py-op">(</tt> <tt class="py-name">titulo</tt> <tt class="py-op">)</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWindowFlags</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">Dialog</tt> <tt class="py-op">|</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">WindowTitleHint</tt> <tt class="py-op">)</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-comment">#~ self.setStyleSheet("QDialog, QLabel { background: #79b600 }")</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line"> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt class="py-name">lbi</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QLabel</tt><tt class="py-op">(</tt> <tt class="py-op">)</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">        <tt class="py-name">lbi</tt><tt class="py-op">.</tt><tt class="py-name">setPixmap</tt><tt class="py-op">(</tt><tt id="link-63" class="py-name"><a title="QT.Iconos" class="py-name" href="#" onclick="return doclink('link-63', 'Iconos', 'link-1');">Iconos</a></tt><tt class="py-op">.</tt><tt id="link-64" class="py-name" targets="Function QT.Iconos.pmTB_Informacion()=QT.Iconos-module.html#pmTB_Informacion"><a title="QT.Iconos.pmTB_Informacion" class="py-name" href="#" onclick="return doclink('link-64', 'pmTB_Informacion', 'link-64');">pmTB_Informacion</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line"> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt class="py-name">lbm</tt> <tt class="py-op">=</tt> <tt id="link-65" class="py-name"><a title="QT.Controles" class="py-name" href="#" onclick="return doclink('link-65', 'Controles', 'link-2');">Controles</a></tt><tt class="py-op">.</tt><tt id="link-66" class="py-name"><a title="QT.Controles.LB" class="py-name" href="#" onclick="return doclink('link-66', 'LB', 'link-20');">LB</a></tt><tt class="py-op">(</tt> <tt class="py-name">mens</tt> <tt class="py-op">)</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">        <tt class="py-name">bt</tt> <tt class="py-op">=</tt> <tt id="link-67" class="py-name"><a title="QT.Controles" class="py-name" href="#" onclick="return doclink('link-67', 'Controles', 'link-2');">Controles</a></tt><tt class="py-op">.</tt><tt id="link-68" class="py-name"><a title="QT.Controles.PB" class="py-name" href="#" onclick="return doclink('link-68', 'PB', 'link-27');">PB</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-string">"Seguir"</tt><tt class="py-op">,</tt> <tt class="py-name">rutina</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">accept</tt><tt class="py-op">,</tt> <tt class="py-name">plano</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line"> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">        <tt class="py-name">ly</tt> <tt class="py-op">=</tt> <tt id="link-69" class="py-name"><a title="QT.Colocacion" class="py-name" href="#" onclick="return doclink('link-69', 'Colocacion', 'link-0');">Colocacion</a></tt><tt class="py-op">.</tt><tt id="link-70" class="py-name"><a title="QT.Colocacion.G" class="py-name" href="#" onclick="return doclink('link-70', 'G', 'link-34');">G</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-71" class="py-name"><a title="QT.Colocacion.G.control
+QT.Colocacion.H.control
+QT.Colocacion.V.control" class="py-name" href="#" onclick="return doclink('link-71', 'control', 'link-35');">control</a></tt><tt class="py-op">(</tt> <tt class="py-name">lbi</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt> <tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-72" class="py-name"><a title="QT.Colocacion.G.control
+QT.Colocacion.H.control
+QT.Colocacion.V.control" class="py-name" href="#" onclick="return doclink('link-72', 'control', 'link-35');">control</a></tt><tt class="py-op">(</tt> <tt class="py-name">lbm</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt> <tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-73" class="py-name" targets="Method QT.Colocacion.G.controld()=QT.Colocacion.G-class.html#controld"><a title="QT.Colocacion.G.controld" class="py-name" href="#" onclick="return doclink('link-73', 'controld', 'link-73');">controld</a></tt><tt class="py-op">(</tt> <tt class="py-name">bt</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">1</tt> <tt class="py-op">)</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line"> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">        <tt class="py-name">ly</tt><tt class="py-op">.</tt><tt id="link-74" class="py-name"><a title="QT.Colocacion.G.margen
+QT.Colocacion.H.margen
+QT.Colocacion.V.margen" class="py-name" href="#" onclick="return doclink('link-74', 'margen', 'link-38');">margen</a></tt><tt class="py-op">(</tt> <tt class="py-number">10</tt> <tt class="py-op">)</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setLayout</tt><tt class="py-op">(</tt><tt class="py-name">ly</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line"> </tt>
+<a name="Mensaje.muestra"></a><div id="Mensaje.muestra-def"><a name="L219"></a><tt class="py-lineno">219</tt> <a class="py-toggle" href="#" id="Mensaje.muestra-toggle" onclick="return toggle('Mensaje.muestra');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.Mensaje-class.html#muestra">muestra</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Mensaje.muestra-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mensaje.muestra-expanded"><a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exec_</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">        <tt id="link-75" class="py-name"><a title="QT.QTUtil.refreshGUI" class="py-name" href="#" onclick="return doclink('link-75', 'refreshGUI', 'link-40');">refreshGUI</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line"> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="mensError"></a><div id="mensError-def"><a name="L224"></a><tt class="py-lineno">224</tt> <a class="py-toggle" href="#" id="mensError-toggle" onclick="return toggle('mensError');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#mensError">mensError</a><tt class="py-op">(</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">mens</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="mensError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="mensError-expanded"><a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">    <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QMessageBox</tt><tt class="py-op">.</tt><tt class="py-name">warning</tt><tt class="py-op">(</tt> <tt class="py-name">parent</tt><tt class="py-op">,</tt> <tt class="py-string">"Error"</tt><tt class="py-op">,</tt> <tt id="link-76" class="py-name"><a title="QT.QTUtil.resalta" class="py-name" href="#" onclick="return doclink('link-76', 'resalta', 'link-21');">resalta</a></tt><tt class="py-op">(</tt><tt class="py-name">mens</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="pregunta"></a><div id="pregunta-def"><a name="L227"></a><tt class="py-lineno">227</tt> <a class="py-toggle" href="#" id="pregunta-toggle" onclick="return toggle('pregunta');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#pregunta">pregunta</a><tt class="py-op">(</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">mens</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="pregunta-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="pregunta-expanded"><a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QMessageBox</tt><tt class="py-op">.</tt><tt class="py-name">question</tt><tt class="py-op">(</tt> <tt class="py-name">parent</tt><tt class="py-op">,</tt> <tt class="py-string">"Pregunta"</tt><tt class="py-op">,</tt> <tt id="link-77" class="py-name"><a title="QT.QTUtil.resalta" class="py-name" href="#" onclick="return doclink('link-77', 'resalta', 'link-21');">resalta</a></tt><tt class="py-op">(</tt><tt class="py-name">mens</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">"S&#237;"</tt><tt class="py-op">,</tt> <tt class="py-string">"No"</tt> <tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt> </tt>
+</div><a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="creaTBAceptarCancelar"></a><div id="creaTBAceptarCancelar-def"><a name="L232"></a><tt class="py-lineno">232</tt> <a class="py-toggle" href="#" id="creaTBAceptarCancelar-toggle" onclick="return toggle('creaTBAceptarCancelar');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#creaTBAceptarCancelar">creaTBAceptarCancelar</a><tt class="py-op">(</tt> <tt class="py-param">parent</tt><tt class="py-op">,</tt> <tt class="py-param">siDefecto</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="creaTBAceptarCancelar-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="creaTBAceptarCancelar-expanded"><a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">    <tt class="py-name">liAcciones</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt class="py-op">(</tt> <tt class="py-string">"Aceptar"</tt><tt class="py-op">,</tt> <tt class="py-string">"TB_Aceptar"</tt><tt class="py-op">,</tt> <tt class="py-string">"aceptar"</tt> <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">                    <tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line">                    <tt class="py-op">(</tt> <tt class="py-string">"Cancelar"</tt><tt class="py-op">,</tt> <tt class="py-string">"TB_Cancelar"</tt><tt class="py-op">,</tt> <tt class="py-string">"cancelar"</tt> <tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">                    <tt class="py-op">]</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">siDefecto</tt> <tt class="py-op">:</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">        <tt class="py-name">liAcciones</tt><tt class="py-op">.</tt><tt id="link-78" class="py-name" targets="Method Enlace.DBF.DBF.append()=Enlace.DBF.DBF-class.html#append,Method Enlace.DBFexten.DBFexten.append()=Enlace.DBFexten.DBFexten-class.html#append"><a title="Enlace.DBF.DBF.append
+Enlace.DBFexten.DBFexten.append" class="py-name" href="#" onclick="return doclink('link-78', 'append', 'link-78');">append</a></tt><tt class="py-op">(</tt> <tt class="py-op">(</tt> <tt class="py-string">"Defecto"</tt><tt class="py-op">,</tt> <tt class="py-string">"TB_Defecto"</tt><tt class="py-op">,</tt> <tt class="py-string">"defecto"</tt> <tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">    <tt class="py-name">liAcciones</tt><tt class="py-op">.</tt><tt id="link-79" class="py-name"><a title="Enlace.DBF.DBF.append
+Enlace.DBFexten.DBFexten.append" class="py-name" href="#" onclick="return doclink('link-79', 'append', 'link-78');">append</a></tt><tt class="py-op">(</tt> <tt class="py-name">None</tt> <tt class="py-op">)</tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line"> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-80" class="py-name"><a title="QT.Controles" class="py-name" href="#" onclick="return doclink('link-80', 'Controles', 'link-2');">Controles</a></tt><tt class="py-op">.</tt><tt id="link-81" class="py-name" targets="Function QT.Controles.creaTB()=QT.Controles-module.html#creaTB"><a title="QT.Controles.creaTB" class="py-name" href="#" onclick="return doclink('link-81', 'creaTB', 'link-81');">creaTB</a></tt><tt class="py-op">(</tt> <tt class="py-name">parent</tt><tt class="py-op">,</tt> <tt class="py-name">liAcciones</tt><tt class="py-op">,</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line"> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="Proceso"></a><div id="Proceso-def"><a name="L244"></a><tt class="py-lineno">244</tt> <a class="py-toggle" href="#" id="Proceso-toggle" onclick="return toggle('Proceso');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.QTUtil.Proceso-class.html">Proceso</a><tt class="py-op">(</tt><tt class="py-base-class">QtCore</tt><tt class="py-op">.</tt><tt class="py-base-class">QProcess</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Proceso-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Proceso-expanded"><a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line"> </tt>
+<a name="Proceso.__init__"></a><div id="Proceso.__init__-def"><a name="L246"></a><tt class="py-lineno">246</tt> <a class="py-toggle" href="#" id="Proceso.__init__-toggle" onclick="return toggle('Proceso.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.Proceso-class.html#__init__">__init__</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">exe</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Proceso.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Proceso.__init__-expanded"><a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line">        <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QProcess</tt><tt class="py-op">.</tt><tt id="link-82" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-82', '__init__', 'link-16');">__init__</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setWorkingDirectory</tt> <tt class="py-op">(</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">abspath</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">exe</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">start</tt><tt class="py-op">(</tt> <tt class="py-name">exe</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QStringList</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line"> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">waitForStarted</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line"> </tt>
+<a name="Proceso.escribeLinea"></a><div id="Proceso.escribeLinea-def"><a name="L253"></a><tt class="py-lineno">253</tt> <a class="py-toggle" href="#" id="Proceso.escribeLinea-toggle" onclick="return toggle('Proceso.escribeLinea');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.Proceso-class.html#escribeLinea">escribeLinea</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">linea</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Proceso.escribeLinea-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Proceso.escribeLinea-expanded"><a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">writeData</tt><tt class="py-op">(</tt> <tt id="link-83" class="py-name" targets="Method jFusion.clLog.linea()=jFusion.clLog-class.html#linea"><a title="jFusion.clLog.linea" class="py-name" href="#" onclick="return doclink('link-83', 'linea', 'link-83');">linea</a></tt> <tt class="py-op">+</tt> <tt class="py-string">"\n"</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line"> </tt>
+<a name="Proceso.esperaRespuesta"></a><div id="Proceso.esperaRespuesta-def"><a name="L256"></a><tt class="py-lineno">256</tt> <a class="py-toggle" href="#" id="Proceso.esperaRespuesta-toggle" onclick="return toggle('Proceso.esperaRespuesta');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.Proceso-class.html#esperaRespuesta">esperaRespuesta</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">segundos</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Proceso.esperaRespuesta-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Proceso.esperaRespuesta-expanded"><a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">segundos</tt> <tt class="py-op">:</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">            <tt class="py-name">total</tt> <tt class="py-op">=</tt> <tt class="py-name">segundos</tt><tt class="py-op">*</tt><tt class="py-number">1000</tt> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">waitForReadyRead</tt><tt class="py-op">(</tt><tt class="py-name">total</tt><tt class="py-op">)</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line"> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">waitForReadyRead</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">readAllStandardOutput</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line"> </tt>
+<a name="Proceso.terminar"></a><div id="Proceso.terminar-def"><a name="L265"></a><tt class="py-lineno">265</tt> <a class="py-toggle" href="#" id="Proceso.terminar-toggle" onclick="return toggle('Proceso.terminar');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil.Proceso-class.html#terminar">terminar</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Proceso.terminar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Proceso.terminar-expanded"><a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt> <tt class="py-op">:</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-84" class="py-name"><a title="Enlace.DBF.DBF.close
+Enlace.DBFexten.DBFexten.close" class="py-name" href="#" onclick="return doclink('link-84', 'close', 'link-49');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt> <tt class="py-op">:</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">            <tt class="py-keyword">pass</tt> </tt>
+</div></div><a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line"> </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="salirAplicacion"></a><div id="salirAplicacion-def"><a name="L272"></a><tt class="py-lineno">272</tt> <a class="py-toggle" href="#" id="salirAplicacion-toggle" onclick="return toggle('salirAplicacion');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#salirAplicacion">salirAplicacion</a><tt class="py-op">(</tt> <tt class="py-param">id</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="salirAplicacion-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="salirAplicacion-expanded"><a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line">    <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QApplication</tt><tt class="py-op">.</tt><tt class="py-name">exit</tt><tt class="py-op">(</tt><tt class="py-name">id</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line"> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="salvaFichero"></a><div id="salvaFichero-def"><a name="L276"></a><tt class="py-lineno">276</tt> <a class="py-toggle" href="#" id="salvaFichero-toggle" onclick="return toggle('salvaFichero');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#salvaFichero">salvaFichero</a><tt class="py-op">(</tt> <tt class="py-param">pantalla</tt><tt class="py-op">,</tt> <tt class="py-param">titulo</tt><tt class="py-op">,</tt> <tt class="py-param">carpeta</tt><tt class="py-op">,</tt> <tt class="py-param">filtro</tt><tt class="py-op">,</tt> <tt class="py-param">siConfirmarSobreescritura</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="salvaFichero-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="salvaFichero-expanded"><a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line">    <tt class="py-name">opciones</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> <tt class="py-keyword">if</tt> <tt class="py-name">siConfirmarSobreescritura</tt> <tt class="py-keyword">else</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QFileDialog</tt><tt class="py-op">.</tt><tt class="py-name">DontConfirmOverwrite</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QFileDialog</tt><tt class="py-op">.</tt><tt class="py-name">getSaveFileName</tt><tt class="py-op">(</tt> <tt class="py-name">pantalla</tt><tt class="py-op">,</tt> <tt class="py-name">titulo</tt><tt class="py-op">,</tt> <tt class="py-name">carpeta</tt><tt class="py-op">,</tt> <tt class="py-name">filtro</tt><tt class="py-op">,</tt> <tt class="py-name">options</tt> <tt class="py-op">=</tt> <tt class="py-name">opciones</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line"> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="ponPortapapeles"></a><div id="ponPortapapeles-def"><a name="L281"></a><tt class="py-lineno">281</tt> <a class="py-toggle" href="#" id="ponPortapapeles-toggle" onclick="return toggle('ponPortapapeles');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#ponPortapapeles">ponPortapapeles</a><tt class="py-op">(</tt> <tt class="py-param">texto</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ponPortapapeles-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ponPortapapeles-expanded"><a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line">    <tt class="py-name">cb</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QApplication</tt><tt class="py-op">.</tt><tt class="py-name">clipboard</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">    <tt class="py-name">cb</tt><tt class="py-op">.</tt><tt class="py-name">setText</tt><tt class="py-op">(</tt> <tt id="link-85" class="py-name" targets="Method QT.Controles.ED.texto()=QT.Controles.ED-class.html#texto,Method QT.Controles.EM.texto()=QT.Controles.EM-class.html#texto,Method QT.Controles.LB.texto()=QT.Controles.LB-class.html#texto"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-85', 'texto', 'link-85');">texto</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line"> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line"><tt class="py-comment"># ------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="traePortapapeles"></a><div id="traePortapapeles-def"><a name="L286"></a><tt class="py-lineno">286</tt> <a class="py-toggle" href="#" id="traePortapapeles-toggle" onclick="return toggle('traePortapapeles');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.QTUtil-module.html#traePortapapeles">traePortapapeles</a><tt class="py-op">(</tt>  <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="traePortapapeles-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="traePortapapeles-expanded"><a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line">    <tt class="py-name">cb</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QApplication</tt><tt class="py-op">.</tt><tt class="py-name">clipboard</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line">    <tt id="link-86" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-86', 'texto', 'link-85');">texto</a></tt> <tt class="py-op">=</tt> <tt class="py-name">cb</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">(</tt> <tt class="py-op">)</tt> </tt>
+<a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-87" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-87', 'texto', 'link-85');">texto</a></tt><tt class="py-op">)</tt> <tt class="py-keyword">if</tt> <tt id="link-88" class="py-name"><a title="QT.Controles.ED.texto
+QT.Controles.EM.texto
+QT.Controles.LB.texto" class="py-name" href="#" onclick="return doclink('link-88', 'texto', 'link-85');">texto</a></tt> <tt class="py-keyword">else</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Nov 04 09:36:30 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

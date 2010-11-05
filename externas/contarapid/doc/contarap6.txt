@@ -1,0 +1,102 @@
+                                   Linea : 67
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : B11111111
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 1606
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100603
+                   07_Factura_FechaAsien : 20100603
+                   08_Factura_FechaValor : 20100603
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : 171600
+      12_ImpuestoIndirecto_BaseImponible : 150000
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : 24000
+     15_ImpuestoIndirecto_%Deducibilidad : 10.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 174000
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : 174000
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100000000
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000000
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 6
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B11111111_EMPRESA P, SL\FACT_RECIB\B11111111_20100603_1606.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2421
+              43_Expedidor_Alias_Empresa : EMPRESA P, SL
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA IVA PARCIAL DEDUCIBLE\R08_01 EMPRESA P R1_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 68
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : B11111111
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 1607
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100603
+                   07_Factura_FechaAsien : 20100603
+                   08_Factura_FechaValor : 20100603
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : 181760
+      12_ImpuestoIndirecto_BaseImponible : 160000
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : 25600
+     15_ImpuestoIndirecto_%Deducibilidad : 15.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 185600
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 10159
+              24_Posicion_LiquidoFactura : 195759
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100000000
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000000
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 455
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 6
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B11111111_EMPRESA P, SL\FACT_RECIB\B11111111_20100603_1607.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2429
+              43_Expedidor_Alias_Empresa : EMPRESA P, SL
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA IVA PARCIAL DEDUCIBLE\R08_02_EMPRESA P R2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : 
+

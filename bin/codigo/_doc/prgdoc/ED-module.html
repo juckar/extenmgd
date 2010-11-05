@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ED</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;ED
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ED-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<h1 class="epydoc">Package ED</h1><p class="nomargin-top"><span class="codelink"><a href="ED-pysrc.html">source&nbsp;code</a></span></p>
+<p>Easy to use dialogs.</p>
+  <p>Adaptaci&#243;n del original que en su p&#225;gina web 
+  (http://www.averdevelopment.com/python/html) indica :</p>
+  <p>This page is a collection of various Python goodies I've created. 
+  Everything here is covered by the MIT License. Please let me know if you 
+  have any questions or feedback by sending email to 
+  jimmy@retzlaff.com.</p>
+  <p>EasyDialogs for Windows 46691.0 - a lightweight port of the Macintosh 
+  EasyDialogs module pyUnRAR 1.0 - a module that wraps the free 
+  UnRAR.dll.</p>
+  <p>Message(msg) -- display a message and an OK button. AskString(prompt, 
+  default) -- ask for a string, display OK and Cancel buttons. 
+  AskPassword(prompt, default) -- like AskString(), but shows text as 
+  bullets. AskYesNoCancel(question, default) -- display a question and Yes,
+  No and Cancel buttons. GetArgv(optionlist, commandlist) -- fill a 
+  sys.argv-like list using a dialog AskFileForOpen(...) -- Ask the user for
+  an existing file AskFileForSave(...) -- Ask the user for an output file 
+  AskFolder(...) -- Ask the user to select a folder bar = Progress(label, 
+  maxvalue) -- Display a progress bar bar.set(value) -- Set value bar.inc( 
+  *amount ) -- increment value by amount (default=1) bar.label( *newlabel )
+  -- get or set text label.</p>
+  <p>More documentation in each function. This module uses DLOG resources 
+  260 and on. Based upon STDWIN dialogs with the same names and 
+  functions.</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ED.OSVERSIONINFO-class.html" class="summary-name" onclick="show_private();">OSVERSIONINFO</a>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ED.OPENFILENAME-class.html" class="summary-name" onclick="show_private();">OPENFILENAME</a>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ED.BROWSEINFO-class.html" class="summary-name" onclick="show_private();">BROWSEINFO</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ED.ProgressBar-class.html" class="summary-name">ProgressBar</a>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ED.BarraProgreso-class.html" class="summary-name" onclick="show_private();">BarraProgreso</a>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="HIWORD"></a><span class="summary-sig-name">HIWORD</span>(<span class="summary-sig-arg">x</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#HIWORD">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="LOWORD"></a><span class="summary-sig-name">LOWORD</span>(<span class="summary-sig-arg">x</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#LOWORD">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="MAKELONG"></a><span class="summary-sig-name">MAKELONG</span>(<span class="summary-sig-arg">a</span>,
+        <span class="summary-sig-arg">b</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#MAKELONG">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="MAKELPARAM"></a><span class="summary-sig-name">MAKELPARAM</span>(<span class="summary-sig-arg">a</span>,
+        <span class="summary-sig-arg">b</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#MAKELONG">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="CenterWindow"></a><span class="summary-sig-name">CenterWindow</span>(<span class="summary-sig-arg">hwnd</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#CenterWindow">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="EnumChildWindows"></a><span class="summary-sig-name">EnumChildWindows</span>(<span class="summary-sig-arg">hwnd</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#EnumChildWindows">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetText"></a><span class="summary-sig-name">GetText</span>(<span class="summary-sig-arg">hwnd</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#GetText">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetWindowRect"></a><span class="summary-sig-name">GetWindowRect</span>(<span class="summary-sig-arg">hwnd</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#GetWindowRect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="width"></a><span class="summary-sig-name">width</span>(<span class="summary-sig-arg">rect</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#width">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="height"></a><span class="summary-sig-name">height</span>(<span class="summary-sig-arg">rect</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#height">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="AutoSizeDialog"></a><span class="summary-sig-name">AutoSizeDialog</span>(<span class="summary-sig-arg">dialog</span>,
+        <span class="summary-sig-arg">center</span>=<span class="summary-sig-default">True</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#AutoSizeDialog">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="crlf2lf"></a><span class="summary-sig-name">crlf2lf</span>(<span class="summary-sig-arg">text</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#crlf2lf">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="lf2crlf"></a><span class="summary-sig-name">lf2crlf</span>(<span class="summary-sig-arg">text</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#lf2crlf">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ED-module.html#Message" class="summary-sig-name">Message</a>(<span class="summary-sig-arg">msg</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default">260</span>,
+        <span class="summary-sig-arg">ok</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">titulo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Display a MESSAGE string.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#Message">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ED-module.html#AskString" class="summary-sig-name">AskString</a>(<span class="summary-sig-arg">prompt</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default">261</span>,
+        <span class="summary-sig-arg">ok</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cancel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">titulo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Display a PROMPT string and a text entry field with a DEFAULT string.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#AskString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ED-module.html#AskPassword" class="summary-sig-name">AskPassword</a>(<span class="summary-sig-arg">prompt</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default">264</span>,
+        <span class="summary-sig-arg">ok</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cancel</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Display a PROMPT string and a text entry field with a DEFAULT string.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#AskPassword">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ED-module.html#AskYesNoCancel" class="summary-sig-name">AskYesNoCancel</a>(<span class="summary-sig-arg">question</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">yes</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">no</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cancel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default">262</span>,
+        <span class="summary-sig-arg">titulo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Display a QUESTION string which can be answered with Yes or No.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#AskYesNoCancel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ED-module.html#AskFileForOpen" class="summary-sig-name">AskFileForOpen</a>(<span class="summary-sig-arg">message</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">typeList</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">defaultLocation</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dialogOptionFlags</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">location</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">clientName</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">windowTitle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">actionButtonLabel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cancelButtonLabel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">preferenceKey</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">popupExtension</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">eventProc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">previewProc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">filterProc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">wanted</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">multiple</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">titulo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">defaultfn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">defaultext</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">comdlg32.GetOpenFileNameA</span>)</span><br />
+      Display a dialog asking the user for a file to open.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#AskFileForOpen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ED-module.html#AskFileForSave" class="summary-sig-name">AskFileForSave</a>(<span class="summary-sig-arg">message</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">savedFileName</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">defaultLocation</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dialogOptionFlags</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">location</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">clientName</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">windowTitle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">actionButtonLabel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cancelButtonLabel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">preferenceKey</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">popupExtension</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">eventProc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">fileType</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">fileCreator</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">wanted</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">multiple</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Display a dialog asking the user for a filename to save to.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#AskFileForSave">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ED-module.html#AskFolder" class="summary-sig-name">AskFolder</a>(<span class="summary-sig-arg">message</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">defaultLocation</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dialogOptionFlags</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">location</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">clientName</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">windowTitle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">actionButtonLabel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cancelButtonLabel</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">preferenceKey</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">popupExtension</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">eventProc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">filterProc</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">wanted</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">multiple</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Display a dialog asking the user for select a folder.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#AskFolder">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_setmenu"></a><span class="summary-sig-name">_setmenu</span>(<span class="summary-sig-arg">control</span>,
+        <span class="summary-sig-arg">items</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#_setmenu">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_selectoption"></a><span class="summary-sig-name">_selectoption</span>(<span class="summary-sig-arg">d</span>,
+        <span class="summary-sig-arg">optionlist</span>,
+        <span class="summary-sig-arg">idx</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#_selectoption">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="GetArgv"></a><span class="summary-sig-name">GetArgv</span>(<span class="summary-sig-arg">optionlist</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">commandlist</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">addoldfile</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">addnewfile</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">addfolder</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default">265</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#GetArgv">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="test"></a><span class="summary-sig-name">test</span>()</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#test">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="mensaje"></a><span class="summary-sig-name">mensaje</span>(<span class="summary-sig-arg">texto</span>,
+        <span class="summary-sig-arg">aceptar</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Aceptar</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">titulo</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Mensaje</code><code class="variable-quote">'</code></span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#mensaje">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="pregunta"></a><span class="summary-sig-name">pregunta</span>(<span class="summary-sig-arg">texto</span>,
+        <span class="summary-sig-arg">titulo</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Pregunta</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">0</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#pregunta">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="buscaFichero"></a><span class="summary-sig-name">buscaFichero</span>(<span class="summary-sig-arg">titulo</span>,
+        <span class="summary-sig-arg">fichero</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">dirInicial</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">listaExtensiones</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">Todos los ficheros (*.*)</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">*.*</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">mensaje</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#buscaFichero">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="buscaCarpeta"></a><span class="summary-sig-name">buscaCarpeta</span>(<span class="summary-sig-arg">titulo</span>,
+        <span class="summary-sig-arg">dirInicial</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#buscaCarpeta">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="leeTexto"></a><span class="summary-sig-name">leeTexto</span>(<span class="summary-sig-arg">titulo</span>,
+        <span class="summary-sig-arg">mensaje</span>,
+        <span class="summary-sig-arg">texto</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ED-pysrc.html#leeTexto">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="comdlg32"></a><span class="summary-name">comdlg32</span> = <code title="&lt;WinDLL 'comdlg32', handle 76360000 at 2c4ed10&gt;">&lt;WinDLL 'comdlg32', handle 76360000 at 2c4ed10&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="kernel32"></a><span class="summary-name">kernel32</span> = <code title="&lt;WinDLL 'kernel32', handle 7c800000 at f2ca70&gt;">&lt;WinDLL 'kernel32', handle 7c800000 at f2ca70&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ole32"></a><span class="summary-name">ole32</span> = <code title="&lt;WinDLL 'ole32', handle 774b0000 at 2c4ed90&gt;">&lt;WinDLL 'ole32', handle 774b0000 at 2c4ed90&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="shell32"></a><span class="summary-name">shell32</span> = <code title="&lt;WinDLL 'shell32', handle 7e6a0000 at 2c4ed50&gt;">&lt;WinDLL 'shell32', handle 7e6a0000 at 2c4ed50&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="user32"></a><span class="summary-name">user32</span> = <code title="&lt;WinDLL 'user32', handle 7e390000 at 2abae70&gt;">&lt;WinDLL 'user32', handle 7e390000 at 2abae70&gt;</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BFFM_INITIALIZED"></a><span class="summary-name">BFFM_INITIALIZED</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BFFM_SETOKTEXT"></a><span class="summary-name">BFFM_SETOKTEXT</span> = <code title="1129">1129</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BFFM_SETSELECTIONA"></a><span class="summary-name">BFFM_SETSELECTIONA</span> = <code title="1126">1126</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BIF_EDITBOX"></a><span class="summary-name">BIF_EDITBOX</span> = <code title="16">16</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="BS_DEFPUSHBUTTON"></a><span class="summary-name">BS_DEFPUSHBUTTON</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CB_ADDSTRING"></a><span class="summary-name">CB_ADDSTRING</span> = <code title="323">323</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CB_GETCURSEL"></a><span class="summary-name">CB_GETCURSEL</span> = <code title="327">327</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CB_SETCURSEL"></a><span class="summary-name">CB_SETCURSEL</span> = <code title="334">334</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="CDM_SETCONTROLTEXT"></a><span class="summary-name">CDM_SETCONTROLTEXT</span> = <code title="1128">1128</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="EM_GETLINECOUNT"></a><span class="summary-name">EM_GETLINECOUNT</span> = <code title="186">186</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="EM_GETMARGINS"></a><span class="summary-name">EM_GETMARGINS</span> = <code title="212">212</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="EM_POSFROMCHAR"></a><span class="summary-name">EM_POSFROMCHAR</span> = <code title="214">214</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="EM_SETSEL"></a><span class="summary-name">EM_SETSEL</span> = <code title="177">177</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="GWL_STYLE"></a><span class="summary-name">GWL_STYLE</span> = <code title="-16">-16</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="IDC_STATIC"></a><span class="summary-name">IDC_STATIC</span> = <code title="-1">-1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="IDCANCEL"></a><span class="summary-name">IDCANCEL</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="IDNO"></a><span class="summary-name">IDNO</span> = <code title="7">7</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="IDOK"></a><span class="summary-name">IDOK</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="IDYES"></a><span class="summary-name">IDYES</span> = <code title="6">6</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="MAX_PATH"></a><span class="summary-name">MAX_PATH</span> = <code title="260">260</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OFN_ALLOWMULTISELECT"></a><span class="summary-name">OFN_ALLOWMULTISELECT</span> = <code title="512">512</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OFN_ENABLEHOOK"></a><span class="summary-name">OFN_ENABLEHOOK</span> = <code title="32">32</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OFN_ENABLESIZING"></a><span class="summary-name">OFN_ENABLESIZING</span> = <code title="8388608">8388608</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OFN_ENABLETEMPLATEHANDLE"></a><span class="summary-name">OFN_ENABLETEMPLATEHANDLE</span> = <code title="128">128</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OFN_EXPLORER"></a><span class="summary-name">OFN_EXPLORER</span> = <code title="524288">524288</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OFN_OVERWRITEPROMPT"></a><span class="summary-name">OFN_OVERWRITEPROMPT</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="OPENFILENAME_SIZE_VERSION_400"></a><span class="summary-name">OPENFILENAME_SIZE_VERSION_400</span> = <code title="76">76</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PBM_GETPOS"></a><span class="summary-name">PBM_GETPOS</span> = <code title="1032">1032</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PBM_SETMARQUEE"></a><span class="summary-name">PBM_SETMARQUEE</span> = <code title="1034">1034</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PBM_SETPOS"></a><span class="summary-name">PBM_SETPOS</span> = <code title="1026">1026</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PBM_SETRANGE"></a><span class="summary-name">PBM_SETRANGE</span> = <code title="1025">1025</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PBM_SETRANGE32"></a><span class="summary-name">PBM_SETRANGE32</span> = <code title="1030">1030</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PBS_MARQUEE"></a><span class="summary-name">PBS_MARQUEE</span> = <code title="8">8</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PM_REMOVE"></a><span class="summary-name">PM_REMOVE</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SW_HIDE"></a><span class="summary-name">SW_HIDE</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SW_SHOW"></a><span class="summary-name">SW_SHOW</span> = <code title="5">5</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SW_SHOWNORMAL"></a><span class="summary-name">SW_SHOWNORMAL</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SWP_NOACTIVATE"></a><span class="summary-name">SWP_NOACTIVATE</span> = <code title="16">16</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SWP_NOMOVE"></a><span class="summary-name">SWP_NOMOVE</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SWP_NOSIZE"></a><span class="summary-name">SWP_NOSIZE</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="SWP_NOZORDER"></a><span class="summary-name">SWP_NOZORDER</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="VER_PLATFORM_WIN32_NT"></a><span class="summary-name">VER_PLATFORM_WIN32_NT</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="WM_COMMAND"></a><span class="summary-name">WM_COMMAND</span> = <code title="273">273</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="WM_GETTEXT"></a><span class="summary-name">WM_GETTEXT</span> = <code title="13">13</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="WM_GETTEXTLENGTH"></a><span class="summary-name">WM_GETTEXTLENGTH</span> = <code title="14">14</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="WM_INITDIALOG"></a><span class="summary-name">WM_INITDIALOG</span> = <code title="272">272</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="WM_NOTIFY"></a><span class="summary-name">WM_NOTIFY</span> = <code title="78">78</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_ID"></a><span class="summary-name">ARGV_ID</span> = <code title="265">265</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_ITEM_OK"></a><span class="summary-name">ARGV_ITEM_OK</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_ITEM_CANCEL"></a><span class="summary-name">ARGV_ITEM_CANCEL</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_OPTION_GROUP"></a><span class="summary-name">ARGV_OPTION_GROUP</span> = <code title="3">3</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_OPTION_EXPLAIN"></a><span class="summary-name">ARGV_OPTION_EXPLAIN</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_OPTION_VALUE"></a><span class="summary-name">ARGV_OPTION_VALUE</span> = <code title="5">5</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_OPTION_ADD"></a><span class="summary-name">ARGV_OPTION_ADD</span> = <code title="6">6</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_COMMAND_GROUP"></a><span class="summary-name">ARGV_COMMAND_GROUP</span> = <code title="7">7</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_COMMAND_EXPLAIN"></a><span class="summary-name">ARGV_COMMAND_EXPLAIN</span> = <code title="8">8</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_COMMAND_ADD"></a><span class="summary-name">ARGV_COMMAND_ADD</span> = <code title="9">9</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_ADD_OLDFILE"></a><span class="summary-name">ARGV_ADD_OLDFILE</span> = <code title="10">10</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_ADD_NEWFILE"></a><span class="summary-name">ARGV_ADD_NEWFILE</span> = <code title="11">11</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_ADD_FOLDER"></a><span class="summary-name">ARGV_ADD_FOLDER</span> = <code title="12">12</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_CMDLINE_GROUP"></a><span class="summary-name">ARGV_CMDLINE_GROUP</span> = <code title="13">13</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ARGV_CMDLINE_DATA"></a><span class="summary-name">ARGV_CMDLINE_DATA</span> = <code title="14">14</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ED'"><code class="variable-quote">'</code><code class="variable-string">ED</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="Message"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Message</span>(<span class="sig-arg">msg</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default">260</span>,
+        <span class="sig-arg">ok</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">titulo</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ED-pysrc.html#Message">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Display a MESSAGE string.</p>
+  <p>Return when the user clicks the OK button or presses Return.</p>
+  <p>The MESSAGE string can be at most 255 characters long.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AskString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AskString</span>(<span class="sig-arg">prompt</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">id</span>=<span class="sig-default">261</span>,
+        <span class="sig-arg">ok</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cancel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">titulo</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ED-pysrc.html#AskString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Display a PROMPT string and a text entry field with a DEFAULT 
+  string.</p>
+  <p>Return the contents of the text entry field when the user clicks the 
+  OK button or presses Return. Return None when the user clicks the Cancel 
+  button.</p>
+  <p>If omitted, DEFAULT is empty.</p>
+  <p>The PROMPT and DEFAULT strings, as well as the return value, can be at
+  most 255 characters long.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AskPassword"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AskPassword</span>(<span class="sig-arg">prompt</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">id</span>=<span class="sig-default">264</span>,
+        <span class="sig-arg">ok</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cancel</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ED-pysrc.html#AskPassword">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Display a PROMPT string and a text entry field with a DEFAULT string. 
+  The string is displayed as bullets only.</p>
+  <p>Return the contents of the text entry field when the user clicks the 
+  OK button or presses Return. Return None when the user clicks the Cancel 
+  button.</p>
+  <p>If omitted, DEFAULT is empty.</p>
+  <p>The PROMPT and DEFAULT strings, as well as the return value, can be at
+  most 255 characters long.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AskYesNoCancel"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AskYesNoCancel</span>(<span class="sig-arg">question</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">yes</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">no</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cancel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default">262</span>,
+        <span class="sig-arg">titulo</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ED-pysrc.html#AskYesNoCancel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Display a QUESTION string which can be answered with Yes or No.</p>
+  <p>Return 1 when the user clicks the Yes button. Return 0 when the user 
+  clicks the No button. Return -1 when the user clicks the Cancel 
+  button.</p>
+  <p>When the user presses Return, the DEFAULT value is returned. If 
+  omitted, this is 0 (No).</p>
+  <p>The QUESTION string can be at most 255 characters.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AskFileForOpen"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AskFileForOpen</span>(<span class="sig-arg">message</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">typeList</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">defaultLocation</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dialogOptionFlags</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">location</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">clientName</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">windowTitle</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">actionButtonLabel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cancelButtonLabel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">preferenceKey</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">popupExtension</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">eventProc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">previewProc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">filterProc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">wanted</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">multiple</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">titulo</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">defaultfn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">defaultext</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">fn</span>=<span class="sig-default">comdlg32.GetOpenFileNameA</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ED-pysrc.html#AskFileForOpen">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Display a dialog asking the user for a file to open.</p>
+  <p>wanted is the return type wanted: FSSpec, FSRef, unicode or string 
+  (default) the other arguments can be looked up in Apple's Navigation 
+  Services documentation</p>
+  <p>Windows differences:</p>
+  <p>typeList is used for the same purpose, but file type handling is 
+  different between Windows and Mac, so the form of this argument is 
+  different. In an attempt to remain as similar as possible, a list of 
+  extensions can be supplied (e.g., ['*', 'txt', 'bat']). A more complete 
+  form is also allowed: [('All Files (*.*)', '*.*'), ('C Files (*.c, *.h)',
+  '*.c;*.h')]. The first item in each tuple is the text description 
+  presented to the user. The second item in each tuple is a semi-colon 
+  seperated list of standard Windows wildcard patterns that will match 
+  files described in the text description.</p>
+  <p>The folowing parameters are ignored on Windows: clientName, 
+  dialogOptionFlags, eventProc, filterProc, popupExtension, preferenceKey, 
+  previewProc, version, wanted</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AskFileForSave"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AskFileForSave</span>(<span class="sig-arg">message</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">savedFileName</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">defaultLocation</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dialogOptionFlags</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">location</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">clientName</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">windowTitle</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">actionButtonLabel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cancelButtonLabel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">preferenceKey</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">popupExtension</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">eventProc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">fileType</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">fileCreator</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">wanted</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">multiple</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ED-pysrc.html#AskFileForSave">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Display a dialog asking the user for a filename to save to.</p>
+  <p>wanted is the return type wanted: FSSpec, FSRef, unicode or string 
+  (default) the other arguments can be looked up in Apple's Navigation 
+  Services documentation</p>
+  <p>Windows differences:</p>
+  <p>fileType is used for the same purpose, but file type handling is 
+  different between Windows and Mac, so the form of this argument is 
+  different. In an attempt to remain as similar as possible, an extensions 
+  can be supplied (e.g., 'txt'). A more complete form is also allowed: 
+  ('Text Files (*.txt)', '*.txt'). The first item in the tuple is the text 
+  description presented to the user. The second item in the tuple is a 
+  standard Windows wildcard pattern that will match files described in the 
+  text description.</p>
+  <p>The folowing parameters are ignored on Windows: clientName, 
+  dialogOptionFlags, eventProc, fileCreator, filterProc, multiple, 
+  popupExtension, preferenceKey, previewProc, version, wanted</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="AskFolder"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AskFolder</span>(<span class="sig-arg">message</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">version</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">defaultLocation</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dialogOptionFlags</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">location</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">clientName</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">windowTitle</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">actionButtonLabel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cancelButtonLabel</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">preferenceKey</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">popupExtension</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">eventProc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">filterProc</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">wanted</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">multiple</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ED-pysrc.html#AskFolder">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Display a dialog asking the user for select a folder.</p>
+  <p>wanted is the return type wanted: FSSpec, FSRef, unicode or string 
+  (default) the other arguments can be looked up in Apple's Navigation 
+  Services documentation</p>
+  <p>Windows differences:</p>
+  <p>The folowing parameters are ignored on Windows: clientName, 
+  dialogOptionFlags, eventProc, filterProc, multiple, popupExtension, 
+  preferenceKey, version, wanted</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Nov 04 09:36:11 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

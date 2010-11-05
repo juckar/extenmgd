@@ -1,0 +1,561 @@
+                                   Linea : 2
+                         01_TipoRegistro : 1
+                        02_Expedidor_CIF : B97777619
+                        03_Factura_Serie : 
+                       04_Factura_Numero : FA268737
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100101
+                   07_Factura_FechaAsien : 20100101
+                   08_Factura_FechaValor : 20100101
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 1
+                   11_ImporteTransaccion : 12424
+      12_ImpuestoIndirecto_BaseImponible : 12424
+                  13_ImpuestoIndirecto_% : 
+              14_ImpuestoIndirecto_Cuota : 1531
+     15_ImpuestoIndirecto_%Deducibilidad : 
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 13955
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : 13955
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100007619
+                   28_Contab_Transaccion : 
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B97777619_CANNON HYGIENE\FACT_RECIB\B97777619_20100101_FA268737.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2431
+              43_Expedidor_Alias_Empresa : CANNON HYGIENE
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\CANNON2_Page_0001.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : 
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 3
+                         01_TipoRegistro : I
+                        02_Expedidor_CIF : B97777619
+                        03_Factura_Serie : 
+                       04_Factura_Numero : FA268737
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100101
+                   07_Factura_FechaAsien : 20100101
+                   08_Factura_FechaValor : 20100101
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 1
+                   11_ImporteTransaccion : 7344
+      12_ImpuestoIndirecto_BaseImponible : 7344
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : 1175
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 8519
+              20_Retencion_BaseImponible : 
+                          21_Retencion_% : 
+                      22_Retencion_Cuota : 
+                        23_OtrosImportes : 
+              24_Posicion_LiquidoFactura : 
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : 
+                       27_Contab_Tercero : 
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000016
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B97777619_CANNON HYGIENE\FACT_RECIB\B97777619_20100101_FA268737.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2431
+              43_Expedidor_Alias_Empresa : CANNON HYGIENE
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\CANNON2_Page_0001.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 4
+                         01_TipoRegistro : I
+                        02_Expedidor_CIF : B97777619
+                        03_Factura_Serie : 
+                       04_Factura_Numero : FA268737
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100101
+                   07_Factura_FechaAsien : 20100101
+                   08_Factura_FechaValor : 20100101
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 2
+                   11_ImporteTransaccion : 5080
+      12_ImpuestoIndirecto_BaseImponible : 5080
+                  13_ImpuestoIndirecto_% : 07.00
+              14_ImpuestoIndirecto_Cuota : 356
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 5436
+              20_Retencion_BaseImponible : 
+                          21_Retencion_% : 
+                      22_Retencion_Cuota : 
+                        23_OtrosImportes : 
+              24_Posicion_LiquidoFactura : 
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : 
+                       27_Contab_Tercero : 
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000007
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B97777619_CANNON HYGIENE\FACT_RECIB\B97777619_20100101_FA268737.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2431
+              43_Expedidor_Alias_Empresa : CANNON HYGIENE
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\CANNON2_Page_0001.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Reducido
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 6
+                         01_TipoRegistro : 1
+                        02_Expedidor_CIF : B97777619
+                        03_Factura_Serie : 
+                       04_Factura_Numero : FA276362
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100301
+                   07_Factura_FechaAsien : 20100301
+                   08_Factura_FechaValor : 20100301
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 1
+                   11_ImporteTransaccion : 12424
+      12_ImpuestoIndirecto_BaseImponible : 12424
+                  13_ImpuestoIndirecto_% : 
+              14_ImpuestoIndirecto_Cuota : 1531
+     15_ImpuestoIndirecto_%Deducibilidad : 
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 13955
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : 13955
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100007619
+                   28_Contab_Transaccion : 
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B97777619_CANNON HYGIENE\FACT_RECIB\B97777619_20100301_FA276362.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2431
+              43_Expedidor_Alias_Empresa : CANNON HYGIENE
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\CANNON2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : 
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 7
+                         01_TipoRegistro : I
+                        02_Expedidor_CIF : B97777619
+                        03_Factura_Serie : 
+                       04_Factura_Numero : FA276362
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100301
+                   07_Factura_FechaAsien : 20100301
+                   08_Factura_FechaValor : 20100301
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 1
+                   11_ImporteTransaccion : 7344
+      12_ImpuestoIndirecto_BaseImponible : 7344
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : 1175
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 8519
+              20_Retencion_BaseImponible : 
+                          21_Retencion_% : 
+                      22_Retencion_Cuota : 
+                        23_OtrosImportes : 
+              24_Posicion_LiquidoFactura : 
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : 
+                       27_Contab_Tercero : 
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000016
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B97777619_CANNON HYGIENE\FACT_RECIB\B97777619_20100301_FA276362.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2431
+              43_Expedidor_Alias_Empresa : CANNON HYGIENE
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\CANNON2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 8
+                         01_TipoRegistro : I
+                        02_Expedidor_CIF : B97777619
+                        03_Factura_Serie : 
+                       04_Factura_Numero : FA276362
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100301
+                   07_Factura_FechaAsien : 20100301
+                   08_Factura_FechaValor : 20100301
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 2
+                   11_ImporteTransaccion : 5080
+      12_ImpuestoIndirecto_BaseImponible : 5080
+                  13_ImpuestoIndirecto_% : 07.00
+              14_ImpuestoIndirecto_Cuota : 356
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 5436
+              20_Retencion_BaseImponible : 
+                          21_Retencion_% : 
+                      22_Retencion_Cuota : 
+                        23_OtrosImportes : 
+              24_Posicion_LiquidoFactura : 
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : 
+                       27_Contab_Tercero : 
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000007
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B97777619_CANNON HYGIENE\FACT_RECIB\B97777619_20100301_FA276362.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2431
+              43_Expedidor_Alias_Empresa : CANNON HYGIENE
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\CANNON2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Reducido
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 57
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : 33333333P
+                        03_Factura_Serie : R
+                       04_Factura_Numero : 590
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100628
+                   07_Factura_FechaAsien : 20100601
+                   08_Factura_FechaValor : 20100628
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : -45327
+      12_ImpuestoIndirecto_BaseImponible : -45327
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : -7252
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : -52579
+              20_Retencion_BaseImponible : -45327
+                          21_Retencion_% : 15.00
+                      22_Retencion_Cuota : -6799
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : -45780
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100000333
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000016
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 4750000333
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\33333333P_PROFESIONAL P\FACT_RECIB\33333333P_20100628_590.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2426
+              43_Expedidor_Alias_Empresa : PROFESIONAL P
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\R01_03_EMPRESAP_R2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : Profesional
+
+                                   Linea : 59
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : 33333333P
+                        03_Factura_Serie : R
+                       04_Factura_Numero : 419
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100602
+                   07_Factura_FechaAsien : 20100601
+                   08_Factura_FechaValor : 20100602
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : -56298
+      12_ImpuestoIndirecto_BaseImponible : -56298
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : -9008
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : -65306
+              20_Retencion_BaseImponible : -56298
+                          21_Retencion_% : 15.00
+                      22_Retencion_Cuota : -8445
+                        23_OtrosImportes : -5671
+              24_Posicion_LiquidoFactura : -62532
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100000333
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000016
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 4750000333
+         36_ContabReceptor_OtrosImportes : 5660000000
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\33333333P_PROFESIONAL P\FACT_RECIB\33333333P_20100602_419.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2426
+              43_Expedidor_Alias_Empresa : PROFESIONAL P
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\R01_04_EMPRESAP_R2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : Profesional
+
+                                   Linea : 66
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : 33333333P
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 419
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100602
+                   07_Factura_FechaAsien : 20100602
+                   08_Factura_FechaValor : 20100602
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : 56298
+      12_ImpuestoIndirecto_BaseImponible : 56298
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : 9008
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 65306
+              20_Retencion_BaseImponible : 56298
+                          21_Retencion_% : 15.00
+                      22_Retencion_Cuota : 8445
+                        23_OtrosImportes : 5671
+              24_Posicion_LiquidoFactura : 62532
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100000333
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000016
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 4750000333
+         36_ContabReceptor_OtrosImportes : 5660000000
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\33333333P_PROFESIONAL P\FACT_RECIB\33333333P_20100602_419.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2426
+              43_Expedidor_Alias_Empresa : PROFESIONAL P
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\R01_04_EMPRESAP_R2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : Profesional
+
+                                   Linea : 73
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : B11111111
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 1
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100627
+                   07_Factura_FechaAsien : 20100627
+                   08_Factura_FechaValor : 20100627
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : 14589
+      12_ImpuestoIndirecto_BaseImponible : 14589
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : 2334
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 16923
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : 16923
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100000338
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000000
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B11111111_EMPRESA P, SL\FACT_RECIB\B11111111_20100627_1.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2416
+              43_Expedidor_Alias_Empresa : EMPRESA P, SL
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\R01_01_EMPRESAP_R1_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 74
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : 33333333P
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 590
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100628
+                   07_Factura_FechaAsien : 20100628
+                   08_Factura_FechaValor : 20100628
+                         09_Receptor_CIF : B12345678
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : 45327
+      12_ImpuestoIndirecto_BaseImponible : 45327
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : 7252
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 52579
+              20_Retencion_BaseImponible : 45327
+                          21_Retencion_% : 15.00
+                      22_Retencion_Cuota : 6799
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : 45780
+          25_Expedidor_SistemaImpositivo : 
+           26_Receptor_SistemaImpositivo : España_IVA_Tipos Estándar
+                       27_Contab_Tercero : 4100000333
+                   28_Contab_Transaccion : 6000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 4720000016
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 4750000333
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 
+             38_Factura_Tipo_CR_Receptor : 0
+                39_RutaFactura_Expedidor : 
+                 40_RutaFactura_Receptor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\33333333P_PROFESIONAL P\FACT_RECIB\33333333P_20100628_590.jpg
+              41_Factura_ModeloExpedidor : 
+               42_Factura_ModeloReceptor : 2426
+              43_Expedidor_Alias_Empresa : PROFESIONAL P
+               44_Receptor_Alias_Empresa : PRUEBAS CONTARAPID
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\RECIBIDA ESTANDAR\R01_03_EMPRESAP_R2_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : Profesional
+

@@ -1,0 +1,102 @@
+                                   Linea : 60
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : B12345678
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 2001
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100601
+                   07_Factura_FechaAsien : 20100601
+                   08_Factura_FechaValor : 20100601
+                         09_Receptor_CIF : B44444444
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : -10000
+      12_ImpuestoIndirecto_BaseImponible : -10000
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : -1600
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : -11600
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : -11600
+          25_Expedidor_SistemaImpositivo : España_IVA_Tipos Estándar
+           26_Receptor_SistemaImpositivo : 
+                       27_Contab_Tercero : 4300000444
+                   28_Contab_Transaccion : 7000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 4770000016
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 10
+             38_Factura_Tipo_CR_Receptor : 
+                39_RutaFactura_Expedidor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\B44444444_MANDARINA, SL\FACT_EMIT\B44444444_20100601_2001.jpg
+                 40_RutaFactura_Receptor : 
+              41_Factura_ModeloExpedidor : 2412
+               42_Factura_ModeloReceptor : 
+              43_Expedidor_Alias_Empresa : PRUEBAS CONTARAPID
+               44_Receptor_Alias_Empresa : MANDARINA, SL
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\EXPEDIDA ABONO\E02_01_MANDARINA_E1_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario
+                49_IdTipoImpuestoDirecto : 
+
+                                   Linea : 70
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : B12345678
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 2005
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100605
+                   07_Factura_FechaAsien : 20100605
+                   08_Factura_FechaValor : 20100605
+                         09_Receptor_CIF : 55555555M
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : -10000
+      12_ImpuestoIndirecto_BaseImponible : -10000
+                  13_ImpuestoIndirecto_% : 16.00
+              14_ImpuestoIndirecto_Cuota : -1600
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : -10000
+                            17_Recargo_% : 04.00
+                        18_Recargo_Cuota : -400
+                19_Posicion_TotalFactura : -12000
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : -12000
+          25_Expedidor_SistemaImpositivo : España_IVA_Tipos Estándar
+           26_Receptor_SistemaImpositivo : 
+                       27_Contab_Tercero : 4300000555
+                   28_Contab_Transaccion : 7000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 4770000555
+        30_ContabExpedidor_Recargo_Cuota : 4750000000
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 10
+             38_Factura_Tipo_CR_Receptor : 
+                39_RutaFactura_Expedidor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\55555555M_MANZANA\FACT_EMIT\55555555M_20100605_2005.jpg
+                 40_RutaFactura_Receptor : 
+              41_Factura_ModeloExpedidor : 2412
+               42_Factura_ModeloReceptor : 
+              43_Expedidor_Alias_Empresa : PRUEBAS CONTARAPID
+               44_Receptor_Alias_Empresa : MANZANA
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\EXPEDIDA ABONO\E02_05_MANZANA_E1_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Ordinario_RecargoEquivalencia
+                49_IdTipoImpuestoDirecto : 
+

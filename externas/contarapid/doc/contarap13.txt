@@ -1,0 +1,51 @@
+                                   Linea : 76
+                         01_TipoRegistro : 0
+                        02_Expedidor_CIF : B12345678
+                        03_Factura_Serie : 
+                       04_Factura_Numero : 901
+           05_Factura_Rectif_NumOriginal : 
+                     06_Factura_FechaDoc : 20100628
+                   07_Factura_FechaAsien : 20100628
+                   08_Factura_FechaValor : 20100628
+                         09_Receptor_CIF : 87654321
+                      10_Posicion_Numero : 0
+                   11_ImporteTransaccion : 100000
+      12_ImpuestoIndirecto_BaseImponible : 0
+                  13_ImpuestoIndirecto_% : 00.00
+              14_ImpuestoIndirecto_Cuota : 0
+     15_ImpuestoIndirecto_%Deducibilidad : 100.00
+                16_Recargo_BaseImponible : 0
+                            17_Recargo_% : 00.00
+                        18_Recargo_Cuota : 0
+                19_Posicion_TotalFactura : 100000
+              20_Retencion_BaseImponible : 0
+                          21_Retencion_% : 00.00
+                      22_Retencion_Cuota : 0
+                        23_OtrosImportes : 0
+              24_Posicion_LiquidoFactura : 100000
+          25_Expedidor_SistemaImpositivo : España_IVA_Tipos Estándar
+           26_Receptor_SistemaImpositivo : 
+                       27_Contab_Tercero : 4300000321
+                   28_Contab_Transaccion : 7000000000
+   29_ContabExpedidor_ImpIndirecto_Cuota : 
+        30_ContabExpedidor_Recargo_Cuota : 
+      31_ContabExpedidor_Retencion_Cuota : 
+        32_ContabExpedidor_OtrosImportes : 
+    33_ContabReceptor_ImpIndirecto_Cuota : 
+         34_ContabReceptor_Recargo_Cuota : 
+       35_ContabReceptor_Retencion_Cuota : 
+         36_ContabReceptor_OtrosImportes : 
+            37_Factura_Tipo_CR_Expedidor : 13
+             38_Factura_Tipo_CR_Receptor : 
+                39_RutaFactura_Expedidor : C:\Contarapid\DATOS\FACT_CONTAB\B12345678_PRUEBAS CONTARAPID\2010-01-01 --- 2010-12-31\87654321_CEREZA COMPANY\FACT_EMIT\87654321_20100628_901.jpg
+                 40_RutaFactura_Receptor : 
+              41_Factura_ModeloExpedidor : 2415
+               42_Factura_ModeloReceptor : 
+              43_Expedidor_Alias_Empresa : PRUEBAS CONTARAPID
+               44_Receptor_Alias_Empresa : CEREZA COMPANY
+                45_Ruta_Factura_Original : C:\CR_PROCESADO\PRUEBAS CONTARAPID\EXPEDIDA INTRACOMUNITARIA\E06_01_CEREZA_E11_Page_0000.CRI
+                       46_Campo_Opcional : 
+         47_Factura_Rectif_FechaOriginal : 
+              48_IdTipoImpuestoIndirecto : Tipo Exento
+                49_IdTipoImpuestoDirecto : 
+

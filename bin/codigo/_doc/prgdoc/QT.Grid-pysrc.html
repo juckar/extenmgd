@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>QT.Grid</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;QT ::
+        Module&nbsp;Grid
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="QT.Grid-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="QT.Grid-module.html">Module QT.Grid</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: latin-1 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">El grid es un TableView de PySide.</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">Realiza llamadas a rutinas de la ventana donde est&#225; ante determinados eventos, o en determinadas situaciones,</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">siempre que la rutina se haya definido en la ventana :</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">    - gridDobleClickCabecera : ante un doble click en la cabecera, normalmente se usa para la reordenaci&#243;n de la tabla por la columna pulsada.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">    - gridTeclaPulsada : al pulsarse una tecla, llama a esta rutina, para que pueda usarse por ejemplo en b&#250;squedas.</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">    - gridTeclaControl : al pulsarse una tecla de control, llama a esta rutina, para que pueda usarse por ejemplo en b&#250;squedas.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    - gridDobleClick : en el caso de un doble click en un registro, se hace la llamad a esta rutina</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    - gridBotonDerecho : si se ha pulsado el bot&#243;n derecho del rat&#243;n.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">    - gridPonValor : si hay un campo editable, la llamada se produce cuando se ha cambiado el valor tras la edici&#243;n.</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">    - gridColorTexto : si est&#225; definida se la llama al mostrar el texto de un campo, para determinar el color del mismo.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">    - gridColorFondo : si est&#225; definida se la llama al mostrar el texto de un campo, para determinar el color del fondo del mismo.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">PySide</tt> <tt class="py-keyword">import</tt> <tt class="py-name">QtCore</tt><tt class="py-op">,</tt> <tt class="py-name">QtGui</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"># ##############################################################################################################</tt> </tt>
+<a name="ControlGrid"></a><div id="ControlGrid-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="ControlGrid-toggle" onclick="return toggle('ControlGrid');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html">ControlGrid</a><tt class="py-op">(</tt><tt class="py-base-class">QtCore</tt><tt class="py-op">.</tt><tt class="py-base-class">QAbstractTableModel</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ControlGrid-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">    Modelo de datos asociado al grid, y que realiza todo el trabajo asignado por PySide</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="ControlGrid.__init__"></a><div id="ControlGrid.__init__-def"><a name="L27"></a><tt class="py-lineno"> 27</tt> <a class="py-toggle" href="#" id="ControlGrid.__init__-toggle" onclick="return toggle('ControlGrid.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tableView</tt><tt class="py-op">,</tt> <tt class="py-param">wParent</tt><tt class="py-op">,</tt> <tt class="py-param">oColumnasR</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.__init__-expanded"><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">        @param tableView:</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">        @param oColumnasR: ListaColumnas con la configuraci&#243;n de todas las columnas visualizables.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QAbstractTableModel</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Method ED.BarraProgreso.__init__()=ED.BarraProgreso-class.html#__init__,Method ED.OPENFILENAME.__init__()=ED.OPENFILENAME-class.html#__init__,Method ED.OSVERSIONINFO.__init__()=ED.OSVERSIONINFO-class.html#__init__,Method ED.ProgressBar.__init__()=ED.ProgressBar-class.html#__init__,Method Enlace.DBF.DBF.__init__()=Enlace.DBF.DBF-class.html#__init__,Method Enlace.DBFexten.DBFexten.__init__()=Enlace.DBFexten.DBFexten-class.html#__init__,Method Enlace.DBFmgdGen.ActividadBase.__init__()=Enlace.DBFmgdGen.ActividadBase-class.html#__init__,Method Enlace.DBFmgdGen.AjustesBase.__init__()=Enlace.DBFmgdGen.AjustesBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbEmiBase.__init__()=Enlace.DBFmgdGen.AlbEmiBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbInvBase.__init__()=Enlace.DBFmgdGen.AlbInvBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPedBase.__init__()=Enlace.DBFmgdGen.AlbPedBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPedEBase.__init__()=Enlace.DBFmgdGen.AlbPedEBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbPreBase.__init__()=Enlace.DBFmgdGen.AlbPreBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbRecBase.__init__()=Enlace.DBFmgdGen.AlbRecBase-class.html#__init__,Method Enlace.DBFmgdGen.AlbRepBase.__init__()=Enlace.DBFmgdGen.AlbRepBase-class.html#__init__,Method Enlace.DBFmgdGen.AnaliticaBase.__init__()=Enlace.DBFmgdGen.AnaliticaBase-class.html#__init__,Method Enlace.DBFmgdGen.ApuntesBase.__init__()=Enlace.DBFmgdGen.ApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ArticulosBase.__init__()=Enlace.DBFmgdGen.ArticulosBase-class.html#__init__,Method Enlace.DBFmgdGen.ArticulosCBase.__init__()=Enlace.DBFmgdGen.ArticulosCBase-class.html#__init__,Method Enlace.DBFmgdGen.BancosBase.__init__()=Enlace.DBFmgdGen.BancosBase-class.html#__init__,Method Enlace.DBFmgdGen.ClientesBase.__init__()=Enlace.DBFmgdGen.ClientesBase-class.html#__init__,Method Enlace.DBFmgdGen.CuentasBase.__init__()=Enlace.DBFmgdGen.CuentasBase-class.html#__init__,Method Enlace.DBFmgdGen.DiarioBase.__init__()=Enlace.DBFmgdGen.DiarioBase-class.html#__init__,Method Enlace.DBFmgdGen.DiarioTxtBase.__init__()=Enlace.DBFmgdGen.DiarioTxtBase-class.html#__init__,Method Enlace.DBFmgdGen.DirectosBase.__init__()=Enlace.DBFmgdGen.DirectosBase-class.html#__init__,Method Enlace.DBFmgdGen.EmitidasBase.__init__()=Enlace.DBFmgdGen.EmitidasBase-class.html#__init__,Method Enlace.DBFmgdGen.ErivaBase.__init__()=Enlace.DBFmgdGen.ErivaBase-class.html#__init__,Method Enlace.DBFmgdGen.EtiCodBase.__init__()=Enlace.DBFmgdGen.EtiCodBase-class.html#__init__,Method Enlace.DBFmgdGen.EtiDatBase.__init__()=Enlace.DBFmgdGen.EtiDatBase-class.html#__init__,Method Enlace.DBFmgdGen.ExApuntesBase.__init__()=Enlace.DBFmgdGen.ExApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ExPlantillasBase.__init__()=Enlace.DBFmgdGen.ExPlantillasBase-class.html#__init__,Method Enlace.DBFmgdGen.ExtrasBase.__init__()=Enlace.DBFmgdGen.ExtrasBase-class.html#__init__,Method Enlace.DBFmgdGen.FamiliasBase.__init__()=Enlace.DBFmgdGen.FamiliasBase-class.html#__init__,Method Enlace.DBFmgdGen.FamiliasCBase.__init__()=Enlace.DBFmgdGen.FamiliasCBase-class.html#__init__,Method Enlace.DBFmgdGen.FormdocBase.__init__()=Enlace.DBFmgdGen.FormdocBase-class.html#__init__,Method Enlace.DBFmgdGen.FormhojaBase.__init__()=Enlace.DBFmgdGen.FormhojaBase-class.html#__init__,Method Enlace.DBFmgdGen.FotosBase.__init__()=Enlace.DBFmgdGen.FotosBase-class.html#__init__,Method Enlace.DBFmgdGen.IVABase.__init__()=Enlace.DBFmgdGen.IVABase-class.html#__init__,Method Enlace.DBFmgdGen.InfapunBase.__init__()=Enlace.DBFmgdGen.InfapunBase-class.html#__init__,Method Enlace.DBFmgdGen.InformesBase.__init__()=Enlace.DBFmgdGen.InformesBase-class.html#__init__,Method Enlace.DBFmgdGen.LbiBase.__init__()=Enlace.DBFmgdGen.LbiBase-class.html#__init__,Method Enlace.DBFmgdGen.MovBancosBase.__init__()=Enlace.DBFmgdGen.MovBancosBase-class.html#__init__,Method Enlace.DBFmgdGen.OperacionesBase.__init__()=Enlace.DBFmgdGen.OperacionesBase-class.html#__init__,Method Enlace.DBFmgdGen.PagosBase.__init__()=Enlace.DBFmgdGen.PagosBase-class.html#__init__,Method Enlace.DBFmgdGen.ParametrosBase.__init__()=Enlace.DBFmgdGen.ParametrosBase-class.html#__init__,Method Enlace.DBFmgdGen.ProveedoresBase.__init__()=Enlace.DBFmgdGen.ProveedoresBase-class.html#__init__,Method Enlace.DBFmgdGen.RecibidasBase.__init__()=Enlace.DBFmgdGen.RecibidasBase-class.html#__init__,Method Enlace.DBFmgdGen.RecibosBase.__init__()=Enlace.DBFmgdGen.RecibosBase-class.html#__init__,Method Enlace.DBFmgdGen.RefApuntesBase.__init__()=Enlace.DBFmgdGen.RefApuntesBase-class.html#__init__,Method Enlace.DBFmgdGen.ReferenciasBase.__init__()=Enlace.DBFmgdGen.ReferenciasBase-class.html#__init__,Method Enlace.DBFmgdGen.TipoVtosBase.__init__()=Enlace.DBFmgdGen.TipoVtosBase-class.html#__init__,Method Enlace.DBFmgdGen.VencimientosBase.__init__()=Enlace.DBFmgdGen.VencimientosBase-class.html#__init__,Method Enlace.Empresa.Empresa.__init__()=Enlace.Empresa.Empresa-class.html#__init__,Method Enlace.Enlace.Field.__init__()=Enlace.Enlace.Field-class.html#__init__,Method QT.Columnas.Columna.__init__()=QT.Columnas.Columna-class.html#__init__,Method QT.Columnas.ListaColumnas.__init__()=QT.Columnas.ListaColumnas-class.html#__init__,Method QT.Controles.ED.__init__()=QT.Controles.ED-class.html#__init__,Method QT.Controles.EM.__init__()=QT.Controles.EM-class.html#__init__,Method QT.Controles.GB.__init__()=QT.Controles.GB-class.html#__init__,Method QT.Controles.LB.__init__()=QT.Controles.LB-class.html#__init__,Method QT.Controles.LMenu.__init__()=QT.Controles.LMenu-class.html#__init__,Method QT.Controles.PB.__init__()=QT.Controles.PB-class.html#__init__,Method QT.Controles.PBAR.__init__()=QT.Controles.PBAR-class.html#__init__,Method QT.Controles.RB.__init__()=QT.Controles.RB-class.html#__init__,Method QT.Grid.Cabecera.__init__()=QT.Grid.Cabecera-class.html#__init__,Method QT.Grid.ControlGrid.__init__()=QT.Grid.ControlGrid-class.html#__init__,Method QT.Grid.Grid.__init__()=QT.Grid.Grid-class.html#__init__,Method QT.QTUtil.BarraProgreso.__init__()=QT.QTUtil.BarraProgreso-class.html#__init__,Method QT.QTUtil.MensEspera.__init__()=QT.QTUtil.MensEspera-class.html#__init__,Method QT.QTUtil.Mensaje.__init__()=QT.QTUtil.Mensaje-class.html#__init__,Method QT.QTUtil.Proceso.__init__()=QT.QTUtil.Proceso-class.html#__init__,Method Util.Config.ConfigI.__init__()=Util.Config.ConfigI-class.html#__init__,Method Util.Config.ConfigX.__init__()=Util.Config.ConfigX-class.html#__init__,Method VarExten.DicOrdenado.__init__()=VarExten.DicOrdenado-class.html#__init__,Method dbAccess.MotorDB.__init__()=dbAccess.MotorDB-class.html#__init__,Method jDBF.clDBF.__init__()=jDBF.clDBF-class.html#__init__,Method jFechas.clFecha.__init__()=jFechas.clFecha-class.html#__init__,Method jFusion.clFusion.__init__()=jFusion.clFusion-class.html#__init__,Method jFusion.clLog.__init__()=jFusion.clLog-class.html#__init__"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-0', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">wParent</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt> <tt class="py-op">=</tt> <tt class="py-name">wParent</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siOrden</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">hh</tt> <tt class="py-op">=</tt> <tt class="py-name">tableView</tt><tt class="py-op">.</tt><tt class="py-name">horizontalHeader</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siColorTexto</tt> <tt class="py-op">=</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridColorTexto"</tt> <tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siColorFondo</tt> <tt class="py-op">=</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridColorFondo"</tt> <tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">font</tt> <tt class="py-op">=</tt> <tt class="py-name">tableView</tt><tt class="py-op">.</tt><tt class="py-name">font</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siBold</tt> <tt class="py-op">=</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridBold"</tt> <tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siBold</tt> <tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">bfont</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QFont</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">font</tt> <tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">bfont</tt><tt class="py-op">.</tt><tt class="py-name">setWeight</tt><tt class="py-op">(</tt> <tt class="py-number">75</tt> <tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt> <tt class="py-op">=</tt> <tt class="py-name">oColumnasR</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="ControlGrid.rowCount"></a><div id="ControlGrid.rowCount-def"><a name="L46"></a><tt class="py-lineno"> 46</tt> <a class="py-toggle" href="#" id="ControlGrid.rowCount-toggle" onclick="return toggle('ControlGrid.rowCount');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#rowCount">rowCount</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.rowCount-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.rowCount-expanded"><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">        Llamada interna, solicitando el n&#250;mero de registros.</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">numDatos</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridNumDatos</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">numDatos</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="ControlGrid.refresh"></a><div id="ControlGrid.refresh-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="ControlGrid.refresh-toggle" onclick="return toggle('ControlGrid.refresh');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#refresh">refresh</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.refresh-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.refresh-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-docstring">        Si hay un cambio del n&#250;mero de registros, la llamada a esta rutina actualiza la visualizaci&#243;n.</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">emit</tt><tt class="py-op">(</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt><tt class="py-string">"layoutAboutToBeChanged()"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">ant_ndatos</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">numDatos</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">nue_ndatos</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridNumDatos</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">ant_ndatos</tt> <tt class="py-op">!=</tt> <tt class="py-name">nue_ndatos</tt> <tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">ant_ndatos</tt> <tt class="py-op">&lt;</tt> <tt class="py-name">nue_ndatos</tt> <tt class="py-op">:</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">insertRows</tt><tt class="py-op">(</tt> <tt class="py-name">ant_ndatos</tt><tt class="py-op">,</tt> <tt class="py-name">nue_ndatos</tt><tt class="py-op">-</tt><tt class="py-name">ant_ndatos</tt> <tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">removeRows</tt><tt class="py-op">(</tt> <tt class="py-name">nue_ndatos</tt><tt class="py-op">,</tt> <tt class="py-name">ant_ndatos</tt><tt class="py-op">-</tt><tt class="py-name">nue_ndatos</tt> <tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">ant_ncols</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">numCols</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-name">nue_ncols</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method QT.Columnas.ListaColumnas.numColumnas()=QT.Columnas.ListaColumnas-class.html#numColumnas"><a title="QT.Columnas.ListaColumnas.numColumnas" class="py-name" href="#" onclick="return doclink('link-1', 'numColumnas', 'link-1');">numColumnas</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">ant_ncols</tt> <tt class="py-op">!=</tt> <tt class="py-name">nue_ncols</tt> <tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">ant_ncols</tt> <tt class="py-op">&lt;</tt> <tt class="py-name">nue_ncols</tt> <tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">insertColumns</tt><tt class="py-op">(</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-name">nue_ncols</tt><tt class="py-op">-</tt><tt class="py-name">ant_ncols</tt> <tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt> <tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">removeColumns</tt><tt class="py-op">(</tt> <tt class="py-name">nue_ncols</tt><tt class="py-op">,</tt> <tt class="py-name">ant_ncols</tt><tt class="py-op">-</tt><tt class="py-name">nue_ncols</tt> <tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">emit</tt><tt class="py-op">(</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt><tt class="py-string">"layoutChanged()"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="ControlGrid.columnCount"></a><div id="ControlGrid.columnCount-def"><a name="L76"></a><tt class="py-lineno"> 76</tt> <a class="py-toggle" href="#" id="ControlGrid.columnCount-toggle" onclick="return toggle('ControlGrid.columnCount');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#columnCount">columnCount</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">parent</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.columnCount-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.columnCount-expanded"><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-docstring">        Llamada interna, solicitando el n&#250;mero de columnas.</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">numCols</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name"><a title="QT.Columnas.ListaColumnas.numColumnas" class="py-name" href="#" onclick="return doclink('link-2', 'numColumnas', 'link-1');">numColumnas</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">numCols</tt> </tt>
+</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="ControlGrid.data"></a><div id="ControlGrid.data-def"><a name="L83"></a><tt class="py-lineno"> 83</tt> <a class="py-toggle" href="#" id="ControlGrid.data-toggle" onclick="return toggle('ControlGrid.data');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#data">data</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">index</tt><tt class="py-op">,</tt> <tt class="py-param">role</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.data-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.data-expanded"><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">        Llamada interna, solicitando informaci&#243;n que ha de tener/contener el campo actual.</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">isValid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt id="link-3" class="py-name" targets="Method QT.Columnas.ListaColumnas.columna()=QT.Columnas.ListaColumnas-class.html#columna"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-3', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-4', 'columna', 'link-3');">columna</a></tt><tt class="py-op">(</tt><tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">column</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">TextAlignmentRole</tt> <tt class="py-op">:</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-5" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-5', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Function QT.QTUtil.qtAlineacion()=QT.QTUtil-module.html#qtAlineacion"><a title="QT.QTUtil.qtAlineacion" class="py-name" href="#" onclick="return doclink('link-6', 'qtAlineacion', 'link-6');">qtAlineacion</a></tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">BackgroundRole</tt> <tt class="py-op">:</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siColorFondo</tt> <tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridColorFondo</tt><tt class="py-op">(</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-7', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">resp</tt> <tt class="py-op">:</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                    <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-name">resp</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-8" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-8', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">qtColorFondo</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">TextColorRole</tt> <tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siColorTexto</tt> <tt class="py-op">:</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridColorTexto</tt><tt class="py-op">(</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-9', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">resp</tt> <tt class="py-op">:</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                    <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-name">resp</tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-10" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-10', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">qtColorTexto</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">siBold</tt> <tt class="py-keyword">and</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">FontRole</tt> <tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridBold</tt><tt class="py-op">(</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-11" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-11', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">bfont</tt><tt class="py-op">)</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-12" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-12', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">siChecked</tt> <tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">CheckStateRole</tt> <tt class="py-op">:</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                <tt class="py-name">valor</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridDato</tt><tt class="py-op">(</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-13" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-13', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">Checked</tt> <tt class="py-keyword">if</tt> <tt class="py-name">valor</tt> <tt class="py-keyword">else</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">Unchecked</tt> <tt class="py-op">)</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">DisplayRole</tt> <tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridDato</tt><tt class="py-op">(</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-14" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-14', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="ControlGrid.flags"></a><div id="ControlGrid.flags-def"><a name="L120"></a><tt class="py-lineno">120</tt> <a class="py-toggle" href="#" id="ControlGrid.flags-toggle" onclick="return toggle('ControlGrid.flags');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#flags">flags</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">index</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.flags-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.flags-expanded"><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">        Llamada interna, solicitando mas informaci&#243;n sobre las carcater&#237;sticas del campo actual.</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">isValid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ItemIsEnabled</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-name">flag</tt> <tt class="py-op">=</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ItemIsEnabled</tt> <tt class="py-op">|</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ItemIsSelectable</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt id="link-15" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-15', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-16', 'columna', 'link-3');">columna</a></tt><tt class="py-op">(</tt><tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">column</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-17" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-17', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">siEditable</tt> <tt class="py-op">:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">            <tt class="py-name">flag</tt> <tt class="py-op">|=</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ItemIsEditable</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-18" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-18', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">siChecked</tt> <tt class="py-op">:</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">            <tt class="py-name">flag</tt> <tt class="py-op">|=</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ItemIsUserCheckable</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">flag</tt> </tt>
+</div><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"> </tt>
+<a name="ControlGrid.setData"></a><div id="ControlGrid.setData-def"><a name="L136"></a><tt class="py-lineno">136</tt> <a class="py-toggle" href="#" id="ControlGrid.setData-toggle" onclick="return toggle('ControlGrid.setData');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#setData">setData</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">index</tt><tt class="py-op">,</tt> <tt class="py-param">valor</tt><tt class="py-op">,</tt> <tt class="py-param">role</tt> <tt class="py-op">=</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">EditRole</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.setData-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.setData-expanded"><a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-docstring">        Tras producirse la edici&#243;n de un campo en un registro se llama a esta rutina para cambiar el valor en el origen de los datos.</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-docstring">        Se lanza gridPonValor en la ventana propietaria.</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">isValid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">EditRole</tt> <tt class="py-keyword">or</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">CheckStateRole</tt> <tt class="py-op">:</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">            <tt id="link-19" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-19', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-20', 'columna', 'link-3');">columna</a></tt><tt class="py-op">(</tt><tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">column</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">            <tt class="py-name">nfila</tt> <tt class="py-op">=</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridPonValor</tt><tt class="py-op">(</tt> <tt class="py-name">nfila</tt><tt class="py-op">,</tt> <tt id="link-21" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-21', 'columna', 'link-3');">columna</a></tt><tt class="py-op">,</tt> <tt class="py-name">valor</tt> <tt class="py-op">)</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">            <tt class="py-name">index2</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">createIndex</tt><tt class="py-op">(</tt><tt class="py-name">nfila</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">emit</tt><tt class="py-op">(</tt><tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">SIGNAL</tt><tt class="py-op">(</tt><tt class="py-string">'dataChanged(const QModelIndex &amp;,const QModelIndex &amp;)'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">index2</tt><tt class="py-op">,</tt> <tt class="py-name">index2</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="ControlGrid.headerData"></a><div id="ControlGrid.headerData-def"><a name="L152"></a><tt class="py-lineno">152</tt> <a class="py-toggle" href="#" id="ControlGrid.headerData-toggle" onclick="return toggle('ControlGrid.headerData');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.ControlGrid-class.html#headerData">headerData</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">col</tt><tt class="py-op">,</tt> <tt class="py-param">orientation</tt><tt class="py-op">,</tt> <tt class="py-param">role</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ControlGrid.headerData-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ControlGrid.headerData-expanded"><a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-docstring">        Llamada interna, para determinar el texto de las cabeceras de las columnas.</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">orientation</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">Horizontal</tt> <tt class="py-keyword">and</tt> <tt class="py-name">role</tt> <tt class="py-op">==</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">DisplayRole</tt><tt class="py-op">:</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">            <tt id="link-22" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-22', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-23', 'columna', 'link-3');">columna</a></tt><tt class="py-op">(</tt><tt class="py-name">col</tt><tt class="py-op">)</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt id="link-24" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-24', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">cabecera</tt><tt class="py-op">)</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">QVariant</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt class="py-comment"># ##############################################################################################################</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"> </tt>
+<a name="Cabecera"></a><div id="Cabecera-def"><a name="L163"></a><tt class="py-lineno">163</tt> <a class="py-toggle" href="#" id="Cabecera-toggle" onclick="return toggle('Cabecera');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Grid.Cabecera-class.html">Cabecera</a><tt class="py-op">(</tt> <tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QHeaderView</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Cabecera-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Cabecera-expanded"><a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"><tt class="py-docstring">    Se crea esta clase para poder implementar el doble click en la cabecera.</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="Cabecera.__init__"></a><div id="Cabecera.__init__-def"><a name="L167"></a><tt class="py-lineno">167</tt> <a class="py-toggle" href="#" id="Cabecera.__init__-toggle" onclick="return toggle('Cabecera.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Cabecera-class.html#__init__">__init__</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">tvParent</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Cabecera.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Cabecera.__init__-expanded"><a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QHeaderView</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-25', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">Horizontal</tt> <tt class="py-op">)</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setMovable</tt><tt class="py-op">(</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setClickable</tt><tt class="py-op">(</tt> <tt class="py-name">True</tt> <tt class="py-op">)</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tvParent</tt> <tt class="py-op">=</tt> <tt class="py-name">tvParent</tt> </tt>
+</div><a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"> </tt>
+<a name="Cabecera.mouseDoubleClickEvent"></a><div id="Cabecera.mouseDoubleClickEvent-def"><a name="L173"></a><tt class="py-lineno">173</tt> <a class="py-toggle" href="#" id="Cabecera.mouseDoubleClickEvent-toggle" onclick="return toggle('Cabecera.mouseDoubleClickEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Cabecera-class.html#mouseDoubleClickEvent">mouseDoubleClickEvent</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Cabecera.mouseDoubleClickEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Cabecera.mouseDoubleClickEvent-expanded"><a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">        <tt class="py-name">numColumna</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">logicalIndexAt</tt><tt class="py-op">(</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">x</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">y</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">tvParent</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method QT.Grid.Grid.dobleClickCabecera()=QT.Grid.Grid-class.html#dobleClickCabecera"><a title="QT.Grid.Grid.dobleClickCabecera" class="py-name" href="#" onclick="return doclink('link-26', 'dobleClickCabecera', 'link-26');">dobleClickCabecera</a></tt><tt class="py-op">(</tt> <tt class="py-name">numColumna</tt> <tt class="py-op">)</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QHeaderView</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method QT.Grid.Cabecera.mouseDoubleClickEvent()=QT.Grid.Cabecera-class.html#mouseDoubleClickEvent,Method QT.Grid.Grid.mouseDoubleClickEvent()=QT.Grid.Grid-class.html#mouseDoubleClickEvent"><a title="QT.Grid.Cabecera.mouseDoubleClickEvent
+QT.Grid.Grid.mouseDoubleClickEvent" class="py-name" href="#" onclick="return doclink('link-27', 'mouseDoubleClickEvent', 'link-27');">mouseDoubleClickEvent</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-comment"># ##############################################################################################################</tt> </tt>
+<a name="Grid"></a><div id="Grid-def"><a name="L179"></a><tt class="py-lineno">179</tt> <a class="py-toggle" href="#" id="Grid-toggle" onclick="return toggle('Grid');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html">Grid</a><tt class="py-op">(</tt><tt class="py-base-class">QtGui</tt><tt class="py-op">.</tt><tt class="py-base-class">QTableView</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Grid-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Grid-expanded"><a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-docstring">    Implementa un TableView, en base a la configuraci&#243;n de una lista de columnas.</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.__init__"></a><div id="Grid.__init__-def"><a name="L185"></a><tt class="py-lineno">185</tt> <a class="py-toggle" href="#" id="Grid.__init__-toggle" onclick="return toggle('Grid.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">wParent</tt><tt class="py-op">,</tt> <tt class="py-param">oColumnas</tt><tt class="py-op">,</tt> <tt class="py-param">dicVideo</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">altoFila</tt> <tt class="py-op">=</tt> <tt class="py-number">20</tt><tt class="py-op">,</tt> <tt class="py-param">siSelecFilas</tt><tt class="py-op">=</tt><tt class="py-name">False</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Grid.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.__init__-expanded"><a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line"><tt class="py-docstring">        @param wParent: ventana propietaria</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line"><tt class="py-docstring">        @param oColumnas: configuraci&#243;n de las columnas.</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line"><tt class="py-docstring">        @param altoFila: altura de todas las filas.</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line"> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">        <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QTableView</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="ED.BarraProgreso.__init__
+ED.OPENFILENAME.__init__
+ED.OSVERSIONINFO.__init__
+ED.ProgressBar.__init__
+Enlace.DBF.DBF.__init__
+Enlace.DBFexten.DBFexten.__init__
+Enlace.DBFmgdGen.ActividadBase.__init__
+Enlace.DBFmgdGen.AjustesBase.__init__
+Enlace.DBFmgdGen.AlbEmiBase.__init__
+Enlace.DBFmgdGen.AlbInvBase.__init__
+Enlace.DBFmgdGen.AlbPedBase.__init__
+Enlace.DBFmgdGen.AlbPedEBase.__init__
+Enlace.DBFmgdGen.AlbPreBase.__init__
+Enlace.DBFmgdGen.AlbRecBase.__init__
+Enlace.DBFmgdGen.AlbRepBase.__init__
+Enlace.DBFmgdGen.AnaliticaBase.__init__
+Enlace.DBFmgdGen.ApuntesBase.__init__
+Enlace.DBFmgdGen.ArticulosBase.__init__
+Enlace.DBFmgdGen.ArticulosCBase.__init__
+Enlace.DBFmgdGen.BancosBase.__init__
+Enlace.DBFmgdGen.ClientesBase.__init__
+Enlace.DBFmgdGen.CuentasBase.__init__
+Enlace.DBFmgdGen.DiarioBase.__init__
+Enlace.DBFmgdGen.DiarioTxtBase.__init__
+Enlace.DBFmgdGen.DirectosBase.__init__
+Enlace.DBFmgdGen.EmitidasBase.__init__
+Enlace.DBFmgdGen.ErivaBase.__init__
+Enlace.DBFmgdGen.EtiCodBase.__init__
+Enlace.DBFmgdGen.EtiDatBase.__init__
+Enlace.DBFmgdGen.ExApuntesBase.__init__
+Enlace.DBFmgdGen.ExPlantillasBase.__init__
+Enlace.DBFmgdGen.ExtrasBase.__init__
+Enlace.DBFmgdGen.FamiliasBase.__init__
+Enlace.DBFmgdGen.FamiliasCBase.__init__
+Enlace.DBFmgdGen.FormdocBase.__init__
+Enlace.DBFmgdGen.FormhojaBase.__init__
+Enlace.DBFmgdGen.FotosBase.__init__
+Enlace.DBFmgdGen.IVABase.__init__
+Enlace.DBFmgdGen.InfapunBase.__init__
+Enlace.DBFmgdGen.InformesBase.__init__
+Enlace.DBFmgdGen.LbiBase.__init__
+Enlace.DBFmgdGen.MovBancosBase.__init__
+Enlace.DBFmgdGen.OperacionesBase.__init__
+Enlace.DBFmgdGen.PagosBase.__init__
+Enlace.DBFmgdGen.ParametrosBase.__init__
+Enlace.DBFmgdGen.ProveedoresBase.__init__
+Enlace.DBFmgdGen.RecibidasBase.__init__
+Enlace.DBFmgdGen.RecibosBase.__init__
+Enlace.DBFmgdGen.RefApuntesBase.__init__
+Enlace.DBFmgdGen.ReferenciasBase.__init__
+Enlace.DBFmgdGen.TipoVtosBase.__init__
+Enlace.DBFmgdGen.VencimientosBase.__init__
+Enlace.Empresa.Empresa.__init__
+Enlace.Enlace.Field.__init__
+QT.Columnas.Columna.__init__
+QT.Columnas.ListaColumnas.__init__
+QT.Controles.ED.__init__
+QT.Controles.EM.__init__
+QT.Controles.GB.__init__
+QT.Controles.LB.__init__
+QT.Controles.LMenu.__init__
+QT.Controles.PB.__init__
+QT.Controles.PBAR.__init__
+QT.Controles.RB.__init__
+QT.Grid.Cabecera.__init__
+QT.Grid.ControlGrid.__init__
+QT.Grid.Grid.__init__
+QT.QTUtil.BarraProgreso.__init__
+QT.QTUtil.MensEspera.__init__
+QT.QTUtil.Mensaje.__init__
+QT.QTUtil.Proceso.__init__
+Util.Config.ConfigI.__init__
+Util.Config.ConfigX.__init__
+VarExten.DicOrdenado.__init__
+dbAccess.MotorDB.__init__
+jDBF.clDBF.__init__
+jFechas.clFecha.__init__
+jFusion.clFusion.__init__
+jFusion.clLog.__init__" class="py-name" href="#" onclick="return doclink('link-28', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt> <tt class="py-op">)</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt> <tt class="py-op">=</tt> <tt class="py-name">wParent</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnas</tt> <tt class="py-op">=</tt> <tt class="py-name">oColumnas</tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">dicVideo</tt> <tt class="py-op">:</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Method QT.Grid.Grid.recuperarVideo()=QT.Grid.Grid-class.html#recuperarVideo"><a title="QT.Grid.Grid.recuperarVideo" class="py-name" href="#" onclick="return doclink('link-29', 'recuperarVideo', 'link-29');">recuperarVideo</a></tt><tt class="py-op">(</tt> <tt class="py-name">dicVideo</tt> <tt class="py-op">)</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnas</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method QT.Columnas.ListaColumnas.columnasMostrables()=QT.Columnas.ListaColumnas-class.html#columnasMostrables"><a title="QT.Columnas.ListaColumnas.columnasMostrables" class="py-name" href="#" onclick="return doclink('link-30', 'columnasMostrables', 'link-30');">columnasMostrables</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-comment"># Necesario tras recuperar video</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line"> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name" targets="Class QT.Grid.ControlGrid=QT.Grid.ControlGrid-class.html"><a title="QT.Grid.ControlGrid" class="py-name" href="#" onclick="return doclink('link-31', 'ControlGrid', 'link-31');">ControlGrid</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt> <tt class="py-op">)</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line"> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setModel</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">)</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setShowGrid</tt><tt class="py-op">(</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setHorizontalHeader</tt><tt class="py-op">(</tt> <tt id="link-32" class="py-name" targets="Class QT.Grid.Cabecera=QT.Grid.Cabecera-class.html"><a title="QT.Grid.Cabecera" class="py-name" href="#" onclick="return doclink('link-32', 'Cabecera', 'link-32');">Cabecera</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line"> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt class="py-name">vh</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">verticalHeader</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">        <tt class="py-name">vh</tt><tt class="py-op">.</tt><tt class="py-name">setResizeMode</tt><tt class="py-op">(</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QHeaderView</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Variable PySide.QtGui.QHeaderView.ResizeMode.Fixed=PySide.QtGui.QHeaderView.ResizeMode-class.html#Fixed"><a title="PySide.QtGui.QHeaderView.ResizeMode.Fixed" class="py-name" href="#" onclick="return doclink('link-33', 'Fixed', 'link-33');">Fixed</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">        <tt class="py-name">vh</tt><tt class="py-op">.</tt><tt class="py-name">setDefaultSectionSize</tt><tt class="py-op">(</tt> <tt class="py-name">altoFila</tt> <tt class="py-op">)</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt class="py-name">vh</tt><tt class="py-op">.</tt><tt class="py-name">setVisible</tt><tt class="py-op">(</tt><tt class="py-name">False</tt><tt class="py-op">)</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line"> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">        <tt class="py-name">sel</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAbstractItemView</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Variable PySide.QtGui.QAbstractItemView.SelectionBehavior.SelectRows=PySide.QtGui.QAbstractItemView.SelectionBehavior-class.html#SelectRows"><a title="PySide.QtGui.QAbstractItemView.SelectionBehavior.SelectRows" class="py-name" href="#" onclick="return doclink('link-34', 'SelectRows', 'link-34');">SelectRows</a></tt> <tt class="py-keyword">if</tt> <tt class="py-name">siSelecFilas</tt> <tt class="py-keyword">else</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAbstractItemView</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Variable PySide.QtGui.QAbstractItemView.SelectionBehavior.SelectItems=PySide.QtGui.QAbstractItemView.SelectionBehavior-class.html#SelectItems"><a title="PySide.QtGui.QAbstractItemView.SelectionBehavior.SelectItems" class="py-name" href="#" onclick="return doclink('link-35', 'SelectItems', 'link-35');">SelectItems</a></tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line"> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setSelectionBehavior</tt><tt class="py-op">(</tt><tt class="py-name">sel</tt><tt class="py-op">)</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setSelectionMode</tt><tt class="py-op">(</tt><tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAbstractItemView</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name" targets="Variable PySide.QtGui.QAbstractItemView.SelectionMode.SingleSelection=PySide.QtGui.QAbstractItemView.SelectionMode-class.html#SingleSelection"><a title="PySide.QtGui.QAbstractItemView.SelectionMode.SingleSelection" class="py-name" href="#" onclick="return doclink('link-36', 'SingleSelection', 'link-36');">SingleSelection</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line"> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method QT.Grid.Grid.ponAnchosColumnas()=QT.Grid.Grid-class.html#ponAnchosColumnas"><a title="QT.Grid.Grid.ponAnchosColumnas" class="py-name" href="#" onclick="return doclink('link-37', 'ponAnchosColumnas', 'link-37');">ponAnchosColumnas</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-comment"># es necesario llamarlo desde aqu&#237;</tt> </tt>
+</div><a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line"> </tt>
+<a name="Grid.releerColumnas"></a><div id="Grid.releerColumnas-def"><a name="L220"></a><tt class="py-lineno">220</tt> <a class="py-toggle" href="#" id="Grid.releerColumnas-toggle" onclick="return toggle('Grid.releerColumnas');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#releerColumnas">releerColumnas</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.releerColumnas-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.releerColumnas-expanded"><a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line"><tt class="py-docstring">        Cuando se cambia la configuraci&#243;n de las columnas, se vuelven a releer y se indican al control de datos.</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnas</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="QT.Columnas.ListaColumnas.columnasMostrables" class="py-name" href="#" onclick="return doclink('link-38', 'columnasMostrables', 'link-30');">columnasMostrables</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Method QT.Grid.ControlGrid.refresh()=QT.Grid.ControlGrid-class.html#refresh,Method QT.Grid.Grid.refresh()=QT.Grid.Grid-class.html#refresh"><a title="QT.Grid.ControlGrid.refresh
+QT.Grid.Grid.refresh" class="py-name" href="#" onclick="return doclink('link-39', 'refresh', 'link-39');">refresh</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="QT.Grid.Grid.ponAnchosColumnas" class="py-name" href="#" onclick="return doclink('link-40', 'ponAnchosColumnas', 'link-37');">ponAnchosColumnas</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line"> </tt>
+<a name="Grid.ponAnchosColumnas"></a><div id="Grid.ponAnchosColumnas-def"><a name="L229"></a><tt class="py-lineno">229</tt> <a class="py-toggle" href="#" id="Grid.ponAnchosColumnas-toggle" onclick="return toggle('Grid.ponAnchosColumnas');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#ponAnchosColumnas">ponAnchosColumnas</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.ponAnchosColumnas-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.ponAnchosColumnas-expanded"><a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">numCol</tt><tt class="py-op">,</tt> <tt id="link-41" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-41', 'columna', 'link-3');">columna</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt class="py-name">liColumnas</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setColumnWidth</tt><tt class="py-op">(</tt> <tt class="py-name">numCol</tt><tt class="py-op">,</tt> <tt id="link-42" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-42', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">ancho</tt> <tt class="py-op">)</tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt id="link-43" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-43', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">edicion</tt> <tt class="py-keyword">and</tt> <tt id="link-44" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-44', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">siMostrar</tt> <tt class="py-op">:</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setItemDelegateForColumn</tt><tt class="py-op">(</tt> <tt class="py-name">numCol</tt><tt class="py-op">,</tt> <tt id="link-45" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-45', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">edicion</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line"> </tt>
+<a name="Grid.keyPressEvent"></a><div id="Grid.keyPressEvent-def"><a name="L235"></a><tt class="py-lineno">235</tt> <a class="py-toggle" href="#" id="Grid.keyPressEvent-toggle" onclick="return toggle('Grid.keyPressEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#keyPressEvent">keyPressEvent</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.keyPressEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.keyPressEvent-expanded"><a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line"><tt class="py-docstring">        Se gestiona este evento, ante la posibilidad de que la ventana quiera controlar,</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line"><tt class="py-docstring">        cada tecla pulsada, llamando a la rutina correspondiente si existe (gridTeclaPulsada/gridTeclaControl)</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">        <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QTableView</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name" targets="Method QT.Grid.Grid.keyPressEvent()=QT.Grid.Grid-class.html#keyPressEvent,Method QT.QTUtil.MensEspera.keyPressEvent()=QT.QTUtil.MensEspera-class.html#keyPressEvent"><a title="QT.Grid.Grid.keyPressEvent
+QT.QTUtil.MensEspera.keyPressEvent" class="py-name" href="#" onclick="return doclink('link-46', 'keyPressEvent', 'link-46');">keyPressEvent</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt> <tt class="py-op">)</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">        <tt class="py-name">k</tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">key</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">        <tt class="py-name">m</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">modifiers</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line">        <tt class="py-name">siShift</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">m</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ShiftModifier</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line">        <tt class="py-name">siControl</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">m</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">ControlModifier</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">        <tt class="py-name">siAlt</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">m</tt> <tt class="py-op">&amp;</tt> <tt class="py-name">QtCore</tt><tt class="py-op">.</tt><tt class="py-name">Qt</tt><tt class="py-op">.</tt><tt class="py-name">AltModifier</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridTeclaPulsada"</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-op">(</tt><tt class="py-name">siControl</tt> <tt class="py-keyword">or</tt> <tt class="py-name">siAlt</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-name">k</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">256</tt> <tt class="py-op">:</tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridTeclaPulsada</tt><tt class="py-op">(</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridTeclaControl"</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridTeclaControl</tt><tt class="py-op">(</tt> <tt class="py-name">k</tt><tt class="py-op">,</tt> <tt class="py-name">siShift</tt><tt class="py-op">,</tt> <tt class="py-name">siControl</tt><tt class="py-op">,</tt> <tt class="py-name">siAlt</tt> <tt class="py-op">)</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">resp</tt> </tt>
+</div><a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line"> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.wheelEvent"></a><div id="Grid.wheelEvent-def"><a name="L254"></a><tt class="py-lineno">254</tt> <a class="py-toggle" href="#" id="Grid.wheelEvent-toggle" onclick="return toggle('Grid.wheelEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#wheelEvent">wheelEvent</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.wheelEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.wheelEvent-expanded"><a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridWheelEvent"</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridWheelEvent</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">delta</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line"> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.mouseDoubleClickEvent"></a><div id="Grid.mouseDoubleClickEvent-def"><a name="L259"></a><tt class="py-lineno">259</tt> <a class="py-toggle" href="#" id="Grid.mouseDoubleClickEvent-toggle" onclick="return toggle('Grid.mouseDoubleClickEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#mouseDoubleClickEvent">mouseDoubleClickEvent</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.mouseDoubleClickEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.mouseDoubleClickEvent-expanded"><a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line"><tt class="py-docstring">        Se gestiona este evento, ante la posibilidad de que la ventana quiera controlar,</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line"><tt class="py-docstring">        cada doble click, llamando a la rutina correspondiente si existe (gridDobleClick)</tt> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line"><tt class="py-docstring">        con el n&#250;mero de fila y el objeto columna como argumentos</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">        <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QTableView</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="QT.Grid.Cabecera.mouseDoubleClickEvent
+QT.Grid.Grid.mouseDoubleClickEvent" class="py-name" href="#" onclick="return doclink('link-47', 'mouseDoubleClickEvent', 'link-27');">mouseDoubleClickEvent</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridDobleClick"</tt> <tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">button</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">            <tt class="py-name">fil</tt><tt class="py-op">,</tt> <tt id="link-48" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-48', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Method QT.Grid.Grid.posActual()=QT.Grid.Grid-class.html#posActual"><a title="QT.Grid.Grid.posActual" class="py-name" href="#" onclick="return doclink('link-49', 'posActual', 'link-49');">posActual</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridDobleClick</tt><tt class="py-op">(</tt> <tt class="py-name">fil</tt><tt class="py-op">,</tt> <tt id="link-50" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-50', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">resp</tt> </tt>
+</div><a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line"> </tt>
+<a name="Grid.mousePressEvent"></a><div id="Grid.mousePressEvent-def"><a name="L271"></a><tt class="py-lineno">271</tt> <a class="py-toggle" href="#" id="Grid.mousePressEvent-toggle" onclick="return toggle('Grid.mousePressEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#mousePressEvent">mousePressEvent</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Grid.mousePressEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.mousePressEvent-expanded"><a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line"><tt class="py-docstring">        Se gestiona este evento, ante la posibilidad de que la ventana quiera controlar,</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line"><tt class="py-docstring">        cada pulsaci&#243;n del bot&#243;n derecho, llamando a la rutina correspondiente si existe (gridBotonDerecho)</tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line">        <tt class="py-name">resp</tt> <tt class="py-op">=</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QTableView</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name" targets="Method QT.Controles.LMenu.mousePressEvent()=QT.Controles.LMenu-class.html#mousePressEvent,Method QT.Grid.Grid.mousePressEvent()=QT.Grid.Grid-class.html#mousePressEvent"><a title="QT.Controles.LMenu.mousePressEvent
+QT.Grid.Grid.mousePressEvent" class="py-name" href="#" onclick="return doclink('link-51', 'mousePressEvent', 'link-51');">mousePressEvent</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line">        <tt class="py-name">button</tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt class="py-name">button</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">button</tt> <tt class="py-op">==</tt> <tt class="py-number">2</tt><tt class="py-op">:</tt> </tt>
+<a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridBotonDerecho"</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line">                <tt class="py-name">fil</tt><tt class="py-op">,</tt> <tt class="py-name">col</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="QT.Grid.Grid.posActual" class="py-name" href="#" onclick="return doclink('link-52', 'posActual', 'link-49');">posActual</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridBotonDerecho</tt><tt class="py-op">(</tt> <tt class="py-name">fil</tt><tt class="py-op">,</tt> <tt class="py-name">col</tt> <tt class="py-op">)</tt> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">button</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridBotonIzquierdo"</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line">                <tt class="py-name">fil</tt><tt class="py-op">,</tt> <tt class="py-name">col</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="QT.Grid.Grid.posActual" class="py-name" href="#" onclick="return doclink('link-53', 'posActual', 'link-49');">posActual</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridBotonIzquierdo</tt><tt class="py-op">(</tt> <tt class="py-name">fil</tt><tt class="py-op">,</tt> <tt class="py-name">col</tt> <tt class="py-op">)</tt> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line"> </tt>
+<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">resp</tt> </tt>
+</div><a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line"> </tt>
+<a name="Grid.dobleClickCabecera"></a><div id="Grid.dobleClickCabecera-def"><a name="L289"></a><tt class="py-lineno">289</tt> <a class="py-toggle" href="#" id="Grid.dobleClickCabecera-toggle" onclick="return toggle('Grid.dobleClickCabecera');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#dobleClickCabecera">dobleClickCabecera</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">numColumna</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.dobleClickCabecera-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.dobleClickCabecera-expanded"><a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line"><tt class="py-docstring">        Se gestiona este evento, ante la posibilidad de que la ventana quiera controlar,</tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line"><tt class="py-docstring">        los doble clicks sobre la cabecera , normalmente para cambiar el orden de la columna,</tt> </tt>
+<a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line"><tt class="py-docstring">        llamando a la rutina correspondiente si existe (gridDobleClickCabecera) y con el</tt> </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line"><tt class="py-docstring">        argumento del objeto columna</tt> </tt>
+<a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">,</tt> <tt class="py-string">"gridDobleClickCabecera"</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L297"></a><tt class="py-lineno">297</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">wParent</tt><tt class="py-op">.</tt><tt class="py-name">gridDobleClickCabecera</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-54', 'columna', 'link-3');">columna</a></tt><tt class="py-op">(</tt> <tt class="py-name">numColumna</tt> <tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L298"></a><tt class="py-lineno">298</tt>  <tt class="py-line"> </tt>
+<a name="L299"></a><tt class="py-lineno">299</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.guardarVideo"></a><div id="Grid.guardarVideo-def"><a name="L300"></a><tt class="py-lineno">300</tt> <a class="py-toggle" href="#" id="Grid.guardarVideo-toggle" onclick="return toggle('Grid.guardarVideo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#guardarVideo">guardarVideo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">dic</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Grid.guardarVideo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.guardarVideo-expanded"><a name="L301"></a><tt class="py-lineno">301</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L302"></a><tt class="py-lineno">302</tt>  <tt class="py-line"><tt class="py-docstring">        Guarda en el diccionario de video la configuraci&#243;n actual de todas las columnas</tt> </tt>
+<a name="L303"></a><tt class="py-lineno">303</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L304"></a><tt class="py-lineno">304</tt>  <tt class="py-line"><tt class="py-docstring">        @param dic: diccionario de video donde se guarda la configuraci&#243;n de las columnas</tt> </tt>
+<a name="L305"></a><tt class="py-lineno">305</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L306"></a><tt class="py-lineno">306</tt>  <tt class="py-line">        <tt class="py-name">liClaves</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L307"></a><tt class="py-lineno">307</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">n</tt><tt class="py-op">,</tt> <tt id="link-55" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-55', 'columna', 'link-3');">columna</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt class="py-name">liColumnas</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L308"></a><tt class="py-lineno">308</tt>  <tt class="py-line">            <tt id="link-56" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-56', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">ancho</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">columnWidth</tt><tt class="py-op">(</tt> <tt class="py-name">n</tt> <tt class="py-op">)</tt> </tt>
+<a name="L309"></a><tt class="py-lineno">309</tt>  <tt class="py-line">            <tt id="link-57" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-57', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">posicion</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">columnViewportPosition</tt><tt class="py-op">(</tt> <tt class="py-name">n</tt> <tt class="py-op">)</tt> </tt>
+<a name="L310"></a><tt class="py-lineno">310</tt>  <tt class="py-line">            <tt id="link-58" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-58', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt id="link-59" class="py-name" targets="Method QT.Columnas.Columna.guardarConf()=QT.Columnas.Columna-class.html#guardarConf"><a title="QT.Columnas.Columna.guardarConf" class="py-name" href="#" onclick="return doclink('link-59', 'guardarConf', 'link-59');">guardarConf</a></tt><tt class="py-op">(</tt> <tt class="py-name">dic</tt> <tt class="py-op">)</tt> </tt>
+<a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line">            <tt class="py-name">liClaves</tt><tt class="py-op">.</tt><tt id="link-60" class="py-name" targets="Method Enlace.DBF.DBF.append()=Enlace.DBF.DBF-class.html#append,Method Enlace.DBFexten.DBFexten.append()=Enlace.DBFexten.DBFexten-class.html#append"><a title="Enlace.DBF.DBF.append
+Enlace.DBFexten.DBFexten.append" class="py-name" href="#" onclick="return doclink('link-60', 'append', 'link-60');">append</a></tt><tt class="py-op">(</tt> <tt id="link-61" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-61', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Method jFusion.clFusion.clave()=jFusion.clFusion-class.html#clave"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-62', 'clave', 'link-62');">clave</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L312"></a><tt class="py-lineno">312</tt>  <tt class="py-line"> </tt>
+<a name="L313"></a><tt class="py-lineno">313</tt>  <tt class="py-line">        <tt class="py-comment"># Las que no se muestran</tt> </tt>
+<a name="L314"></a><tt class="py-lineno">314</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-63" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-63', 'columna', 'link-3');">columna</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnas</tt><tt class="py-op">.</tt><tt class="py-name">liColumnas</tt> <tt class="py-op">:</tt> </tt>
+<a name="L315"></a><tt class="py-lineno">315</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt id="link-64" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-64', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt id="link-65" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-65', 'clave', 'link-62');">clave</a></tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt class="py-name">liClaves</tt> <tt class="py-op">:</tt> </tt>
+<a name="L316"></a><tt class="py-lineno">316</tt>  <tt class="py-line">                <tt id="link-66" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-66', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt id="link-67" class="py-name"><a title="QT.Columnas.Columna.guardarConf" class="py-name" href="#" onclick="return doclink('link-67', 'guardarConf', 'link-59');">guardarConf</a></tt><tt class="py-op">(</tt> <tt class="py-name">dic</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L317"></a><tt class="py-lineno">317</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.recuperarVideo"></a><div id="Grid.recuperarVideo-def"><a name="L318"></a><tt class="py-lineno">318</tt> <a class="py-toggle" href="#" id="Grid.recuperarVideo-toggle" onclick="return toggle('Grid.recuperarVideo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#recuperarVideo">recuperarVideo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">dic</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Grid.recuperarVideo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.recuperarVideo-expanded"><a name="L319"></a><tt class="py-lineno">319</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L320"></a><tt class="py-lineno">320</tt>  <tt class="py-line"><tt class="py-docstring">        Recupera del diccionario de video la configuraci&#243;n actual de todas las columnas</tt> </tt>
+<a name="L321"></a><tt class="py-lineno">321</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L322"></a><tt class="py-lineno">322</tt>  <tt class="py-line"> </tt>
+<a name="L323"></a><tt class="py-lineno">323</tt>  <tt class="py-line">        <tt class="py-comment"># Miramos en dic, si hay columnas calculadas y las a&#241;adimos</tt> </tt>
+<a name="L324"></a><tt class="py-lineno">324</tt>  <tt class="py-line">        <tt class="py-name">liCalc</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt class="py-name">k</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"."</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-keyword">for</tt> <tt class="py-name">k</tt> <tt class="py-keyword">in</tt> <tt class="py-name">dic</tt><tt class="py-op">.</tt><tt id="link-68" class="py-name" targets="Method VarExten.DicOrdenado.keys()=VarExten.DicOrdenado-class.html#keys"><a title="VarExten.DicOrdenado.keys" class="py-name" href="#" onclick="return doclink('link-68', 'keys', 'link-68');">keys</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">if</tt> <tt class="py-name">k</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt> <tt class="py-string">"CALC_"</tt> <tt class="py-op">)</tt> <tt class="py-op">]</tt> </tt>
+<a name="L325"></a><tt class="py-lineno">325</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">liCalc</tt> <tt class="py-op">:</tt> </tt>
+<a name="L326"></a><tt class="py-lineno">326</tt>  <tt class="py-line">            <tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt id="link-69" class="py-name" targets="Method ED.ProgressBar.set()=ED.ProgressBar-class.html#set"><a title="ED.ProgressBar.set" class="py-name" href="#" onclick="return doclink('link-69', 'set', 'link-69');">set</a></tt><tt class="py-op">(</tt><tt class="py-name">liCalc</tt><tt class="py-op">)</tt> </tt>
+<a name="L327"></a><tt class="py-lineno">327</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt id="link-70" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-70', 'clave', 'link-62');">clave</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">s</tt> <tt class="py-op">:</tt> </tt>
+<a name="L328"></a><tt class="py-lineno">328</tt>  <tt class="py-line">                <tt id="link-71" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-71', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnas</tt><tt class="py-op">.</tt><tt id="link-72" class="py-name" targets="Method Enlace.DBFmgd.Emitidas.nueva()=Enlace.DBFmgd.Emitidas-class.html#nueva,Method Enlace.DBFmgd.Recibidas.nueva()=Enlace.DBFmgd.Recibidas-class.html#nueva,Method QT.Columnas.ListaColumnas.nueva()=QT.Columnas.ListaColumnas-class.html#nueva,Method QT.Controles.Fichas.nueva()=QT.Controles.Fichas-class.html#nueva"><a title="Enlace.DBFmgd.Emitidas.nueva
+Enlace.DBFmgd.Recibidas.nueva
+QT.Columnas.ListaColumnas.nueva
+QT.Controles.Fichas.nueva" class="py-name" href="#" onclick="return doclink('link-72', 'nueva', 'link-72');">nueva</a></tt><tt class="py-op">(</tt> <tt id="link-73" class="py-name"><a title="jFusion.clFusion.clave" class="py-name" href="#" onclick="return doclink('link-73', 'clave', 'link-62');">clave</a></tt><tt class="py-op">,</tt> <tt class="py-name">siOrden</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> <tt class="py-op">)</tt> </tt>
+<a name="L329"></a><tt class="py-lineno">329</tt>  <tt class="py-line"> </tt>
+<a name="L330"></a><tt class="py-lineno">330</tt>  <tt class="py-line">        <tt class="py-comment"># Leemos todas las columnas</tt> </tt>
+<a name="L331"></a><tt class="py-lineno">331</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-74" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-74', 'columna', 'link-3');">columna</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnas</tt><tt class="py-op">.</tt><tt class="py-name">liColumnas</tt> <tt class="py-op">:</tt> </tt>
+<a name="L332"></a><tt class="py-lineno">332</tt>  <tt class="py-line">            <tt id="link-75" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-75', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt id="link-76" class="py-name" targets="Method QT.Columnas.Columna.recuperarConf()=QT.Columnas.Columna-class.html#recuperarConf"><a title="QT.Columnas.Columna.recuperarConf" class="py-name" href="#" onclick="return doclink('link-76', 'recuperarConf', 'link-76');">recuperarConf</a></tt><tt class="py-op">(</tt> <tt class="py-name">dic</tt> <tt class="py-op">)</tt> </tt>
+<a name="L333"></a><tt class="py-lineno">333</tt>  <tt class="py-line"> </tt>
+<a name="L334"></a><tt class="py-lineno">334</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnas</tt><tt class="py-op">.</tt><tt class="py-name">liColumnas</tt><tt class="py-op">.</tt><tt class="py-name">sort</tt><tt class="py-op">(</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">:</tt> <tt class="py-name">cmp</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">posicion</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">.</tt><tt class="py-name">posicion</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line"> </tt>
+<a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.anchoColumnas"></a><div id="Grid.anchoColumnas-def"><a name="L337"></a><tt class="py-lineno">337</tt> <a class="py-toggle" href="#" id="Grid.anchoColumnas-toggle" onclick="return toggle('Grid.anchoColumnas');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#anchoColumnas">anchoColumnas</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Grid.anchoColumnas-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.anchoColumnas-expanded"><a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L339"></a><tt class="py-lineno">339</tt>  <tt class="py-line"><tt class="py-docstring">        Calcula el ancho que corresponde a todas las columnas mostradas.</tt> </tt>
+<a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L341"></a><tt class="py-lineno">341</tt>  <tt class="py-line">        <tt class="py-name">ancho</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L342"></a><tt class="py-lineno">342</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">n</tt><tt class="py-op">,</tt> <tt id="link-77" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-77', 'columna', 'link-3');">columna</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt class="py-name">liColumnas</tt><tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+<a name="L343"></a><tt class="py-lineno">343</tt>  <tt class="py-line">            <tt class="py-name">ancho</tt> <tt class="py-op">+=</tt> <tt id="link-78" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-78', 'columna', 'link-3');">columna</a></tt><tt class="py-op">.</tt><tt class="py-name">ancho</tt> </tt>
+<a name="L344"></a><tt class="py-lineno">344</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">ancho</tt> </tt>
+</div><a name="L345"></a><tt class="py-lineno">345</tt>  <tt class="py-line"> </tt>
+<a name="L346"></a><tt class="py-lineno">346</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.recno"></a><div id="Grid.recno-def"><a name="L347"></a><tt class="py-lineno">347</tt> <a class="py-toggle" href="#" id="Grid.recno-toggle" onclick="return toggle('Grid.recno');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#recno">recno</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.recno-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.recno-expanded"><a name="L348"></a><tt class="py-lineno">348</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L349"></a><tt class="py-lineno">349</tt>  <tt class="py-line"><tt class="py-docstring">        Devuelve la fila actual.</tt> </tt>
+<a name="L350"></a><tt class="py-lineno">350</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L351"></a><tt class="py-lineno">351</tt>  <tt class="py-line">        <tt class="py-name">n</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">currentIndex</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L352"></a><tt class="py-lineno">352</tt>  <tt class="py-line">        <tt class="py-name">nX</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt class="py-name">numDatos</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt> </tt>
+<a name="L353"></a><tt class="py-lineno">353</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">n</tt> <tt class="py-keyword">if</tt> <tt class="py-name">n</tt> <tt class="py-op">&lt;=</tt> <tt class="py-name">nX</tt> <tt class="py-keyword">else</tt> <tt class="py-name">nX</tt> </tt>
+</div><a name="L354"></a><tt class="py-lineno">354</tt>  <tt class="py-line"> </tt>
+<a name="L355"></a><tt class="py-lineno">355</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.goto"></a><div id="Grid.goto-def"><a name="L356"></a><tt class="py-lineno">356</tt> <a class="py-toggle" href="#" id="Grid.goto-toggle" onclick="return toggle('Grid.goto');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#goto">goto</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fila</tt><tt class="py-op">,</tt> <tt class="py-param">col</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.goto-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.goto-expanded"><a name="L357"></a><tt class="py-lineno">357</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L358"></a><tt class="py-lineno">358</tt>  <tt class="py-line"><tt class="py-docstring">        Se sit&#250;a en una posici&#243;n determinada.</tt> </tt>
+<a name="L359"></a><tt class="py-lineno">359</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L360"></a><tt class="py-lineno">360</tt>  <tt class="py-line">        <tt class="py-name">elem</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt class="py-name">createIndex</tt><tt class="py-op">(</tt> <tt class="py-name">fila</tt><tt class="py-op">,</tt> <tt class="py-name">col</tt> <tt class="py-op">)</tt> </tt>
+<a name="L361"></a><tt class="py-lineno">361</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">setCurrentIndex</tt><tt class="py-op">(</tt> <tt class="py-name">elem</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L362"></a><tt class="py-lineno">362</tt>  <tt class="py-line"> </tt>
+<a name="L363"></a><tt class="py-lineno">363</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.gotop"></a><div id="Grid.gotop-def"><a name="L364"></a><tt class="py-lineno">364</tt> <a class="py-toggle" href="#" id="Grid.gotop-toggle" onclick="return toggle('Grid.gotop');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#gotop">gotop</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.gotop-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.gotop-expanded"><a name="L365"></a><tt class="py-lineno">365</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L366"></a><tt class="py-lineno">366</tt>  <tt class="py-line"><tt class="py-docstring">        Se sit&#250;a al principio del grid.</tt> </tt>
+<a name="L367"></a><tt class="py-lineno">367</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L368"></a><tt class="py-lineno">368</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt class="py-name">numDatos</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt> <tt class="py-op">:</tt> </tt>
+<a name="L369"></a><tt class="py-lineno">369</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-79" class="py-name" targets="Method Enlace.DBF.DBF.goto()=Enlace.DBF.DBF-class.html#goto,Method Enlace.DBFexten.DBFexten.goto()=Enlace.DBFexten.DBFexten-class.html#goto,Method QT.Grid.Grid.goto()=QT.Grid.Grid-class.html#goto,Method jDBF.clDBF.goto()=jDBF.clDBF-class.html#goto"><a title="Enlace.DBF.DBF.goto
+Enlace.DBFexten.DBFexten.goto
+QT.Grid.Grid.goto
+jDBF.clDBF.goto" class="py-name" href="#" onclick="return doclink('link-79', 'goto', 'link-79');">goto</a></tt><tt class="py-op">(</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L370"></a><tt class="py-lineno">370</tt>  <tt class="py-line"> </tt>
+<a name="L371"></a><tt class="py-lineno">371</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.gobottom"></a><div id="Grid.gobottom-def"><a name="L372"></a><tt class="py-lineno">372</tt> <a class="py-toggle" href="#" id="Grid.gobottom-toggle" onclick="return toggle('Grid.gobottom');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#gobottom">gobottom</a><tt class="py-op">(</tt> <tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">col</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.gobottom-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.gobottom-expanded"><a name="L373"></a><tt class="py-lineno">373</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L374"></a><tt class="py-lineno">374</tt>  <tt class="py-line"><tt class="py-docstring">        Se sit&#250;a en el &#250;ltimo registro del frid.</tt> </tt>
+<a name="L375"></a><tt class="py-lineno">375</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L376"></a><tt class="py-lineno">376</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt class="py-name">numDatos</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt> <tt class="py-op">:</tt> </tt>
+<a name="L377"></a><tt class="py-lineno">377</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-80" class="py-name"><a title="Enlace.DBF.DBF.goto
+Enlace.DBFexten.DBFexten.goto
+QT.Grid.Grid.goto
+jDBF.clDBF.goto" class="py-name" href="#" onclick="return doclink('link-80', 'goto', 'link-79');">goto</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt class="py-name">numDatos</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-name">col</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L378"></a><tt class="py-lineno">378</tt>  <tt class="py-line"> </tt>
+<a name="L379"></a><tt class="py-lineno">379</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.refresh"></a><div id="Grid.refresh-def"><a name="L380"></a><tt class="py-lineno">380</tt> <a class="py-toggle" href="#" id="Grid.refresh-toggle" onclick="return toggle('Grid.refresh');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#refresh">refresh</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.refresh-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.refresh-expanded"><a name="L381"></a><tt class="py-lineno">381</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L382"></a><tt class="py-lineno">382</tt>  <tt class="py-line"><tt class="py-docstring">        Hace un refresco de la visualizaci&#243;n del grid, ante alg&#250;n cambio en el contenido.</tt> </tt>
+<a name="L383"></a><tt class="py-lineno">383</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L384"></a><tt class="py-lineno">384</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cg</tt><tt class="py-op">.</tt><tt id="link-81" class="py-name"><a title="QT.Grid.ControlGrid.refresh
+QT.Grid.Grid.refresh" class="py-name" href="#" onclick="return doclink('link-81', 'refresh', 'link-39');">refresh</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L385"></a><tt class="py-lineno">385</tt>  <tt class="py-line"> </tt>
+<a name="L386"></a><tt class="py-lineno">386</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.posActual"></a><div id="Grid.posActual-def"><a name="L387"></a><tt class="py-lineno">387</tt> <a class="py-toggle" href="#" id="Grid.posActual-toggle" onclick="return toggle('Grid.posActual');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#posActual">posActual</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.posActual-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.posActual-expanded"><a name="L388"></a><tt class="py-lineno">388</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L389"></a><tt class="py-lineno">389</tt>  <tt class="py-line"><tt class="py-docstring">        Devuelve la posici&#243;n actual.</tt> </tt>
+<a name="L390"></a><tt class="py-lineno">390</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L391"></a><tt class="py-lineno">391</tt>  <tt class="py-line"><tt class="py-docstring">        @return: tupla con ( num fila, objeto columna )</tt> </tt>
+<a name="L392"></a><tt class="py-lineno">392</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L393"></a><tt class="py-lineno">393</tt>  <tt class="py-line">        <tt id="link-82" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-82', 'columna', 'link-3');">columna</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">oColumnasR</tt><tt class="py-op">.</tt><tt id="link-83" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-83', 'columna', 'link-3');">columna</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">currentIndex</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">column</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L394"></a><tt class="py-lineno">394</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">currentIndex</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-84" class="py-name"><a title="QT.Columnas.ListaColumnas.columna" class="py-name" href="#" onclick="return doclink('link-84', 'columna', 'link-3');">columna</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L395"></a><tt class="py-lineno">395</tt>  <tt class="py-line"> </tt>
+<a name="L396"></a><tt class="py-lineno">396</tt>  <tt class="py-line">    <tt class="py-comment">#--------------------------------------------------------------------------</tt> </tt>
+<a name="Grid.posActualN"></a><div id="Grid.posActualN-def"><a name="L397"></a><tt class="py-lineno">397</tt> <a class="py-toggle" href="#" id="Grid.posActualN-toggle" onclick="return toggle('Grid.posActualN');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="QT.Grid.Grid-class.html#posActualN">posActualN</a><tt class="py-op">(</tt> <tt class="py-param">self</tt> <tt class="py-op">)</tt> <tt class="py-op">:</tt> </tt>
+</div><div id="Grid.posActualN-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Grid.posActualN-expanded"><a name="L398"></a><tt class="py-lineno">398</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L399"></a><tt class="py-lineno">399</tt>  <tt class="py-line"><tt class="py-docstring">        Devuelve la posici&#243;n actual.</tt> </tt>
+<a name="L400"></a><tt class="py-lineno">400</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L401"></a><tt class="py-lineno">401</tt>  <tt class="py-line"><tt class="py-docstring">        @return: tupla con ( num fila, num  columna )</tt> </tt>
+<a name="L402"></a><tt class="py-lineno">402</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L403"></a><tt class="py-lineno">403</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">currentIndex</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">currentIndex</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">column</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L404"></a><tt class="py-lineno">404</tt>  <tt class="py-line"> </tt>
+<a name="L405"></a><tt class="py-lineno">405</tt>  <tt class="py-line"><tt class="py-comment"># ##############################################################################################################</tt> </tt>
+<a name="L406"></a><tt class="py-lineno">406</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >exten</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Nov 04 09:36:31 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

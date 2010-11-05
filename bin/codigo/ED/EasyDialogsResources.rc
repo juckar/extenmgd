@@ -1,0 +1,221 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+260 DIALOGEX 0, 0, 184, 41
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,127,20,50,14
+    EDITTEXT        1002,7,7,170,12,ES_MULTILINE | ES_READONLY | NOT
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+261 DIALOGEX 0, 0, 184, 58
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        1004,7,20,170,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,127,37,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,74,37,50,14
+    EDITTEXT        1003,7,7,170,12,ES_MULTILINE | ES_READONLY | NOT
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+262 DIALOGEX 0, 0, 184, 41
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes",IDYES,127,20,50,14
+    EDITTEXT        1005,7,7,170,12,ES_MULTILINE | ES_READONLY | NOT
+                    WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "No",IDNO,7,20,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,20,50,14
+END
+
+263 DIALOGEX 0, 0, 226, 41
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+BEGIN
+    CONTROL         "",1003,"msctls_progress32",WS_BORDER | WS_TABSTOP,7,20,
+                    151,14
+    EDITTEXT        1002,7,7,212,12,ES_MULTILINE | ES_READONLY | NOT
+                    WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "Cancel",IDCANCEL,169,20,50,14,NOT WS_TABSTOP
+END
+
+264 DIALOGEX 0, 0, 184, 58
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        1004,7,20,170,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,127,37,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,74,37,50,14
+    EDITTEXT        1003,7,7,170,12,ES_MULTILINE | ES_READONLY | NOT
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+265 DIALOGEX 0, 0, 217, 252
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,108,234,48,14
+    PUSHBUTTON      "Cancel",IDCANCEL,162,234,48,14
+    GROUPBOX        "",IDC_STATIC,6,6,204,78
+    COMBOBOX        3,72,18,132,100,CBS_DROPDOWNLIST | WS_VSCROLL |
+                    WS_TABSTOP
+    LTEXT           "",4,12,36,192,8
+    EDITTEXT        5,12,48,192,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add",6,156,66,48,14
+    GROUPBOX        "",IDC_STATIC,6,84,203,60
+    COMBOBOX        7,72,97,132,100,CBS_DROPDOWNLIST | WS_VSCROLL |
+                    WS_TABSTOP
+    LTEXT           "",8,12,114,192,8
+    PUSHBUTTON      "Add",9,156,126,48,14
+    PUSHBUTTON      "Add file...",10,6,150,66,14
+    PUSHBUTTON      "Add new file...",11,78,150,66,14
+    PUSHBUTTON      "Add folder...",12,6,168,66,14
+    GROUPBOX        "Command line:",IDC_STATIC,6,198,204,30
+    EDITTEXT        14,12,210,192,14,ES_AUTOHSCROLL
+    LTEXT           "Option:",30,12,20,60,8
+    LTEXT           "Command:",70,12,99,60,8
+END
+
+270 DIALOGEX 0, 0, 291, 26
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CTEXT           "Static",IDC_STATIC,0,7,291,8
+    LTEXT           "stc32",1119,0,18,291,8,NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    260, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+
+    261, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    264, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    262, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+
+    263, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+
+    270, DIALOG
+    BEGIN
+        RIGHTMARGIN, 79
+        TOPMARGIN, 7
+    END
+
+    265, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 245
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

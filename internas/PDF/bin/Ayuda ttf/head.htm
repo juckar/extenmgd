@@ -1,0 +1,223 @@
+<html><head><title>Font Header</title>
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso8859-1">
+<link rel="STYLESHEET" href="head_files/otspec.css" type="text/css"></head><body bottommargin="20" topmargin="0" leftmargin="0" bgcolor="#ffffff">
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+	
+<!--TOOLBAR_START--><!--TOOLBAR_EXEMPT--><!--TOOLBAR_END--><p><br>
+
+</p><center><p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="580">
+
+<tbody><tr>
+<td height="1" width="20"><img src="head_files/pixel.gif" alt="" height="1" width="20"></td>
+<td height="1" width="60"><img src="head_files/pixel.gif" alt="" height="1" width="60"></td>
+<td height="1" width="480"><img src="head_files/pixel.gif" alt="" height="1" width="480"></td>
+<td height="1" width="20"><img src="head_files/pixel.gif" alt="" height="1" width="20"></td>
+</tr>
+<tr>
+<td colspan="4" height="5" width="580"><img src="head_files/toprule.gif" height="5" width="580"></td>
+</tr>
+
+<tr>
+<td width="20"></td>
+<td colspan="3" valign="top" width="560"><font class="detail" face="Verdana, Arial, Helvetica" size="1">
+	<a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a>
+	 | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a>
+	 | <a href="http://www.microsoft.com/OpenType/OTSpec/default.htm">OpenType specification</a>
+	 | <a href="http://www.microsoft.com/OpenType/OTSpec/otff.htm#otttables">OpenType tables</a>
+	 | The head table
+</font></td>
+</tr>
+
+<tr>
+<td colspan="4" height="10" width="580"><img src="head_files/midrule.gif" alt="" height="10" width="580"></td>
+</tr>
+
+
+<tr>
+<td width="20"></td>
+<td valign="top" width="60"></td>
+<td valign="top" width="480">
+<p><br>
+<font class="heading" face="Verdana, Arial, Helvetica" size="5">head - Font Header</font>
+</p><p>
+
+This table gives global information about
+the font. The bounding box values should be computed using <i>only</i>
+glyphs that have contours. Glyphs with no contours should be ignored
+for the purposes of these calculations.
+
+</p><p>
+
+<table bgcolor="#f0f0f0" width="460">
+<tbody><tr>
+<td class="tab" bgcolor="#c0c0c0" width="18%">Type</td>
+<td class="tab" bgcolor="#c0c0c0" width="26%">Name</td>
+<td class="tab" bgcolor="#c0c0c0" width="56%">Description</td></tr>
+
+<tr><td class="tab" valign="top">Fixed</td>
+<td class="tab" valign="top">Table version number</td>
+<td class="tab" valign="top">0x00010000 for version 1.0.</td>
+</tr>
+<tr><td class="tab" valign="top">Fixed</td>
+<td class="tab" valign="top">fontRevision</td>
+<td class="tab" valign="top">Set by font manufacturer.</td>
+</tr>
+<tr><td class="tab" valign="top">ULONG</td>
+<td class="tab" valign="top">checkSumAdjustment</td>
+<td class="tab" valign="top">To compute: set it to 0, sum the entire font as ULONG, then store 0xB1B0AFBA - sum.</td>
+</tr>
+<tr><td class="tab" valign="top">ULONG</td>
+<td class="tab" valign="top">magicNumber</td>
+<td class="tab" valign="top">Set to 0x5F0F3CF5.</td>
+</tr>
+<tr><td class="tab" valign="top">USHORT</td>
+<td class="tab" valign="top">flags</td>
+<td class="tab" valign="top">Bit 0: Baseline for font at y=0;<br>
+Bit 1: Left sidebearing point at x=0;<br>
+Bit 2: Instructions may depend on point size; <br>
+Bit 3: Force ppem to integer values for all internal scaler math; may use fractional ppem sizes if this bit is clear; <br>
+Bit 4: Instructions may alter advance width (the advance widths might not scale linearly); <br>
+Bits 5-10: These should be set according to <a href="http://developer.apple.com/fonts/TTRefMan/RM06/Chap6head.html"> Apple's specification </a>. However, they are not implemented in OpenType.
+<br>
+Bit 11: Font data is 'lossless,' as a result of having been compressed and decompressed with the Agfa MicroType Express engine.<br>
+Bit 12: Font converted (produce compatible metrics)<br>
+Bit 13: Font optimised for ClearType<br>
+Bit 14: Reserved, set to 0<br>
+Bit 15: Reserved, set to 0 <br> 
+</td></tr>
+<tr><td class="tab" valign="top">USHORT</td>
+<td class="tab" valign="top">unitsPerEm</td>
+<td class="tab" valign="top">Valid range is from 16 to 16384. This value should be a power of 2 for fonts that have TrueType outlines.</td>
+</tr>
+<tr><td class="tab" valign="top">LONGDATETIME</td>
+<td class="tab" valign="top">created</td>
+<td class="tab" valign="top">Number of seconds since 12:00 midnight, January 1, 1904. 64-bit integer</td>
+</tr>
+<tr><td class="tab" valign="top">LONGDATETIME</td>
+<td class="tab" valign="top">modified</td>
+<td class="tab" valign="top">Number of seconds since 12:00 midnight, January 1, 1904. 64-bit integer</td>
+</tr>
+<tr><td class="tab" valign="top">SHORT</td>
+<td class="tab" valign="top">xMin</td>
+<td class="tab" valign="top">For all glyph bounding boxes.</td>
+</tr>
+<tr><td class="tab" valign="top">SHORT</td>
+<td class="tab" valign="top">yMin</td>
+<td class="tab" valign="top">For all glyph bounding boxes.</td>
+</tr>
+<tr><td class="tab" valign="top">SHORT</td>
+<td class="tab" valign="top">xMax</td>
+<td class="tab" valign="top">For all glyph bounding boxes.</td>
+</tr>
+<tr><td class="tab" valign="top">SHORT</td>
+<td class="tab" valign="top">yMax</td>
+<td class="tab" valign="top">For all glyph bounding boxes.</td>
+</tr>
+<tr><td class="tab" valign="top">USHORT</td>
+<td class="tab" valign="top">macStyle</td>
+<td class="tab" valign="top">Bit 0: Bold (if set to 1); <br>Bit 1: Italic (if set to 1) <br>  
+Bit 2: Underline (if set to 1) <br> Bit 3: Outline (if set to 1) <br> Bit 4: Shadow (if set to 1) <br> Bit 5: Condensed (if set to 1) <br> Bit 6: Extended (if set to 1) <br> Bits 7-15: Reserved (set to 0).  
+</td> 
+</tr>
+<tr><td class="tab" valign="top">USHORT</td>
+<td class="tab" valign="top">lowestRecPPEM</td>
+<td class="tab" valign="top">Smallest readable size in pixels.</td>
+</tr>
+<tr><td class="tab" valign="top">SHORT</td>
+<td class="tab" valign="top">fontDirectionHint</td>
+<td class="tab" valign="top"> 0: Fully mixed directional glyphs;
+<br>
+ 1: Only strongly left to right; <br>
+ 2: Like 1 but also contains neutrals; <br>
+-1: Only strongly right to left; <br>
+-2: Like -1 but also contains neutrals. <sup>1</sup></td>
+</tr>
+<tr><td class="tab" valign="top">SHORT</td>
+<td class="tab" valign="top">indexToLocFormat</td>
+<td class="tab" valign="top">0 for short offsets, 1 for long.</td>
+</tr>
+<tr><td class="tab" valign="top">SHORT</td>
+<td class="tab" valign="top">glyphDataFormat</td>
+<td class="tab" valign="top">0 for current format.</td>
+</tr>
+</tbody></table>
+</p><p>
+</p><hr>
+<p><sup>1</sup> A neutral character has no inherent directionality; it
+is not a character with zero (0) width. Spaces and punctuation are
+examples of neutral characters. Non-neutral characters are those with
+inherent directionality. For example, Roman letters (left-to-right) and
+Arabic letters(right-to-left) have directionality. In a "normal" Roman
+font where spaces and punctuation are present, the font direction hints
+should be set to two (2).
+</p><p></p><hr>
+
+<p>
+Note that the macStyle bits must agree with the <a href="http://www.microsoft.com/OpenType/OTSpec/os2.htm#fss">
+'OS/2' table fsSelection </a> bits. The fsSelection bits are used over
+the macStyle bits in Microsoft Windows. The PANOSE values and
+'post' table values are ignored for determining bold or italic
+fonts.
+</p><p>For historical reasons, the fontRevision value contained in this
+table is not used by Windows to determine the version of a font.
+Instead, Windows evaluates the version string (id 5) in the 'name'
+table.
+<font face="Verdana, Arial, Helvetica" size="1"></font></p><p class="detail"><font face="Verdana, Arial, Helvetica" size="1"><br><br>
+	this page was last updated 6 September 2002<br>
+	© 2001 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.<br>
+	comments to the MST group: 
+	<a href="http://www.microsoft.com/typography/AboutMST.mspx">how to contact us</a>.
+	</font></p><p><font face="Verdana, Arial, Helvetica" size="1">&nbsp;
+</font>
+</p></td>
+<td width="20"></td>
+</tr>
+
+<tr>
+<td width="20"></td>
+<td colspan="2" width="540"></td>
+<td width="20"></td>
+</tr>
+
+<tr>
+<td colspan="4" height="10" width="580"><img src="head_files/midrule.gif" alt="" height="10" width="580"></td>
+</tr>
+
+<tr>
+<td width="20"></td>
+<td colspan="3" valign="top" width="560"><font class="detail" face="Verdana, Arial, Helvetica" size="1">
+	<a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a>
+	 | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a>
+	 | <a href="http://www.microsoft.com/OpenType/OTSpec/default.htm">OpenType specification</a>
+	 | <a href="http://www.microsoft.com/OpenType/OTSpec/otff.htm#otttables">OpenType tables</a>
+	 | The head table
+</font></td>
+</tr>
+
+<tr>
+<td colspan="4" height="20" width="580"><img src="head_files/baserule.gif" height="20" width="580"></td>
+</tr>
+</tbody></table>
+
+</p></center>
+</body></html>
