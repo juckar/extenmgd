@@ -1,0 +1,1 @@
+Mantenimiento de una librería de acceso a datos de mgd y elaboración de extensiones en base a esa librería.
